@@ -165,4 +165,4 @@ MIT License
 
 ---
 
-**Author:** [ArkhAngelLifeJiggy](https://github.com/ArkhAngelLifeJiggy)
+**Author:** [ArkhAngelLifeJiggy](https://github.com/LifeJiggy)
