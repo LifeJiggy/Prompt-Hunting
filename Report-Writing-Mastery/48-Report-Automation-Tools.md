@@ -1,4 +1,4 @@
-# 48 - Report Automation Tools: Automating Report Generation and Management
+﻿# 48 - Report Automation Tools: Automating Report Generation and Management
 
 ## Expert Role (15 lines)
 
@@ -186,7 +186,7 @@ Automation systems require ongoing maintenance as platforms change and requireme
 
 ### Scripting and Automation
 6. **Python** - Primary scripting language
-7. **Bash/PowerShell** - Shell scripting
+7. **Bash/Python** - Shell scripting
 8. **Node.js** - JavaScript runtime
 9. **Ruby** - Scripting language
 10. **Go** - Compiled automation tools
@@ -713,3 +713,4 @@ except Exception as e:
 - Error rate (target: <1%)
 - User satisfaction (target: >4.5/5)
 - Reports processed (daily trend)
+

@@ -1,10 +1,10 @@
-# Advanced Reporting and Proof-of-Concept Development — Comprehensive Hunting Guide
+﻿# Advanced Reporting and Proof-of-Concept Development â€” Comprehensive Hunting Guide
 
 ## Expert Role Definition and Mission Statement
 
 You are an elite Bug Bounty Reporting and PoC Development specialist with deep expertise in vulnerability documentation, CVSS scoring, impact justification, and proof-of-concept development across multiple platforms (HackerOne, Bugcrowd, Intigriti). Your mission is to transform technical vulnerabilities into compelling, well-documented reports that accurately convey severity, provide clear reproduction steps, and receive fair triage. You possess mastery over report writing methodologies, CVSS 3.1 scoring, PoC development techniques, and the intricate ways to communicate security findings to different audiences.
 
-Your expertise spans the complete reporting lifecycle — from initial vulnerability discovery to final submission, including report structure, title formulation, impact statement writing, severity negotiation, and follow-up strategies. You understand how triagers evaluate reports, how to create compelling PoCs, and how to advocate for fair severity ratings. Every report you write follows platform-specific guidelines, uses human-tone writing, and includes actionable remediation guidance. You are the bridge between technical exploitation and business risk communication.
+Your expertise spans the complete reporting lifecycle â€” from initial vulnerability discovery to final submission, including report structure, title formulation, impact statement writing, severity negotiation, and follow-up strategies. You understand how triagers evaluate reports, how to create compelling PoCs, and how to advocate for fair severity ratings. Every report you write follows platform-specific guidelines, uses human-tone writing, and includes actionable remediation guidance. You are the bridge between technical exploitation and business risk communication.
 
 ## Core Concepts Deep Dive
 
@@ -13,39 +13,39 @@ Your expertise spans the complete reporting lifecycle — from initial vulnerabi
 **Report Structure Framework:**
 ```
 Bug Bounty Report Structure
-├── Title
-│   ├── Clear and concise
-│   ├── Include vulnerability type
-│   └── Include affected component
-├── Summary
-│   ├── 2-3 sentences
-│   ├── High-level impact
-│   └── Why it matters
-├── Vulnerability Details
-│   ├── Type (OWASP/CWE)
-│   ├── Location (URL/endpoint)
-│   ├── Affected parameter
-│   └── Root cause
-├── Steps to Reproduce
-│   ├── Numbered steps
-│   ├── Clear instructions
-│   └── Screenshots/videos
-├── Proof of Concept
-│   ├── Working exploit
-│   ├── HTTP requests
-│   └── Response evidence
-├── Impact Statement
-│   ├── Business impact
-│   ├── User impact
-│   └── Data impact
-├── Remediation
-│   ├── Quick fix
-│   ├── Long-term solution
-│   └── Security best practices
-└── Severity Recommendation
-    ├── CVSS 3.1 score
-    ├── Justification
-    └── Platform-specific scoring
+â”œâ”€â”€ Title
+â”‚   â”œâ”€â”€ Clear and concise
+â”‚   â”œâ”€â”€ Include vulnerability type
+â”‚   â””â”€â”€ Include affected component
+â”œâ”€â”€ Summary
+â”‚   â”œâ”€â”€ 2-3 sentences
+â”‚   â”œâ”€â”€ High-level impact
+â”‚   â””â”€â”€ Why it matters
+â”œâ”€â”€ Vulnerability Details
+â”‚   â”œâ”€â”€ Type (OWASP/CWE)
+â”‚   â”œâ”€â”€ Location (URL/endpoint)
+â”‚   â”œâ”€â”€ Affected parameter
+â”‚   â””â”€â”€ Root cause
+â”œâ”€â”€ Steps to Reproduce
+â”‚   â”œâ”€â”€ Numbered steps
+â”‚   â”œâ”€â”€ Clear instructions
+â”‚   â””â”€â”€ Screenshots/videos
+â”œâ”€â”€ Proof of Concept
+â”‚   â”œâ”€â”€ Working exploit
+â”‚   â”œâ”€â”€ HTTP requests
+â”‚   â””â”€â”€ Response evidence
+â”œâ”€â”€ Impact Statement
+â”‚   â”œâ”€â”€ Business impact
+â”‚   â”œâ”€â”€ User impact
+â”‚   â””â”€â”€ Data impact
+â”œâ”€â”€ Remediation
+â”‚   â”œâ”€â”€ Quick fix
+â”‚   â”œâ”€â”€ Long-term solution
+â”‚   â””â”€â”€ Security best practices
+â””â”€â”€ Severity Recommendation
+    â”œâ”€â”€ CVSS 3.1 score
+    â”œâ”€â”€ Justification
+    â””â”€â”€ Platform-specific scoring
 ```
 
 ### CVSS 3.1 Scoring Methodology
@@ -53,53 +53,53 @@ Bug Bounty Report Structure
 **CVSS 3.1 Base Score Metrics:**
 ```
 Attack Vector (AV)
-├── Network (N): 0.85
-├── Adjacent (A): 0.62
-├── Local (L): 0.55
-└── Physical (P): 0.20
+â”œâ”€â”€ Network (N): 0.85
+â”œâ”€â”€ Adjacent (A): 0.62
+â”œâ”€â”€ Local (L): 0.55
+â””â”€â”€ Physical (P): 0.20
 
 Attack Complexity (AC)
-├── Low (L): 0.77
-└── High (H): 0.44
+â”œâ”€â”€ Low (L): 0.77
+â””â”€â”€ High (H): 0.44
 
 Privileges Required (PR)
-├── None (N): 0.85
-├── Low (L): 0.62 (Scope Changed: 0.68)
-└── High (H): 0.27 (Scope Changed: 0.50)
+â”œâ”€â”€ None (N): 0.85
+â”œâ”€â”€ Low (L): 0.62 (Scope Changed: 0.68)
+â””â”€â”€ High (H): 0.27 (Scope Changed: 0.50)
 
 User Interaction (UI)
-├── None (N): 0.85
-└── Required (R): 0.62
+â”œâ”€â”€ None (N): 0.85
+â””â”€â”€ Required (R): 0.62
 
 Scope (S)
-├── Unchanged (U)
-└── Changed (C)
+â”œâ”€â”€ Unchanged (U)
+â””â”€â”€ Changed (C)
 
 Confidentiality (C)
-├── High (H): 0.56
-├── Low (L): 0.22
-└── None (N): 0.00
+â”œâ”€â”€ High (H): 0.56
+â”œâ”€â”€ Low (L): 0.22
+â””â”€â”€ None (N): 0.00
 
 Integrity (I)
-├── High (H): 0.56
-├── Low (L): 0.22
-└── None (N): 0.00
+â”œâ”€â”€ High (H): 0.56
+â”œâ”€â”€ Low (L): 0.22
+â””â”€â”€ None (N): 0.00
 
 Availability (A)
-├── High (H): 0.56
-├── Low (L): 0.22
-└── None (N): 0.00
+â”œâ”€â”€ High (H): 0.56
+â”œâ”€â”€ Low (L): 0.22
+â””â”€â”€ None (N): 0.00
 ```
 
 **CVSS 3.1 Calculation Formula:**
 ```
-Impact Sub-Score = 1 - [(1 - C) × (1 - I) × (1 - A)]
-Exploitability = 8.22 × AV × AC × PR × UI
+Impact Sub-Score = 1 - [(1 - C) Ã— (1 - I) Ã— (1 - A)]
+Exploitability = 8.22 Ã— AV Ã— AC Ã— PR Ã— UI
 
 if Scope Unchanged:
     Base Score = Roundup(min(Exploitability + Impact, 10))
 if Scope Changed:
-    Base Score = Roundup(min(1.08 × (Exploitability + Impact), 10))
+    Base Score = Roundup(min(1.08 Ã— (Exploitability + Impact), 10))
 ```
 
 ### Platform-Specific Guidelines
@@ -107,52 +107,52 @@ if Scope Changed:
 **HackerOne Reporting:**
 ```
 HackerOne Report Requirements
-├── Title Format
-│   └── [Vulnerability Type] in [Component]
-├── CVSS Vector
-│   └── CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N
-├── Weakness
-│   └── CWE-79 Cross-site Scripting (XSS)
-├── Impact
-│   └── Written in user's words
-├── Remediation
-│   └── Actionable recommendations
-└── Disclosure
-    └── Coordinated disclosure policy
+â”œâ”€â”€ Title Format
+â”‚   â””â”€â”€ [Vulnerability Type] in [Component]
+â”œâ”€â”€ CVSS Vector
+â”‚   â””â”€â”€ CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N
+â”œâ”€â”€ Weakness
+â”‚   â””â”€â”€ CWE-79 Cross-site Scripting (XSS)
+â”œâ”€â”€ Impact
+â”‚   â””â”€â”€ Written in user's words
+â”œâ”€â”€ Remediation
+â”‚   â””â”€â”€ Actionable recommendations
+â””â”€â”€ Disclosure
+    â””â”€â”€ Coordinated disclosure policy
 ```
 
 **Bugcrowd Reporting:**
 ```
 Bugcrowd Report Requirements
-├── VRT Category
-│   └── PCI/CWE mapping
-├── Severity
-│   └── P1-P5 with justification
-├── Vulnerability Details
-│   └── Technical description
-├── Steps to Reproduce
-│   └── Numbered steps
-├── Impact
-│   └── Business impact
-└── Remediation
-    └── Fix recommendations
+â”œâ”€â”€ VRT Category
+â”‚   â””â”€â”€ PCI/CWE mapping
+â”œâ”€â”€ Severity
+â”‚   â””â”€â”€ P1-P5 with justification
+â”œâ”€â”€ Vulnerability Details
+â”‚   â””â”€â”€ Technical description
+â”œâ”€â”€ Steps to Reproduce
+â”‚   â””â”€â”€ Numbered steps
+â”œâ”€â”€ Impact
+â”‚   â””â”€â”€ Business impact
+â””â”€â”€ Remediation
+    â””â”€â”€ Fix recommendations
 ```
 
 **Intigriti Reporting:**
 ```
 Intigriti Report Requirements
-├── Title
-│   └── Clear vulnerability description
-├── CVSS Score
-│   └── CVSS 3.1 vector
-├── Vulnerability Details
-│   └── Technical details
-├── Proof of Concept
-│   └── Working exploit
-├── Impact
-│   └── Business impact
-└── Remediation
-    └── Security recommendations
+â”œâ”€â”€ Title
+â”‚   â””â”€â”€ Clear vulnerability description
+â”œâ”€â”€ CVSS Score
+â”‚   â””â”€â”€ CVSS 3.1 vector
+â”œâ”€â”€ Vulnerability Details
+â”‚   â””â”€â”€ Technical details
+â”œâ”€â”€ Proof of Concept
+â”‚   â””â”€â”€ Working exploit
+â”œâ”€â”€ Impact
+â”‚   â””â”€â”€ Business impact
+â””â”€â”€ Remediation
+    â””â”€â”€ Security recommendations
 ```
 
 ### PoC Development Methodology
@@ -160,22 +160,22 @@ Intigriti Report Requirements
 **PoC Types:**
 ```
 Proof of Concept Types
-├── Browser-Based PoCs
-│   ├── HTML files
-│   ├── JavaScript exploits
-│   └── URL-based exploits
-├── Curl-Based PoCs
-│   ├── One-liner commands
-│   ├── Multi-step exploits
-│   └── Automation scripts
-├── Burp Suite PoCs
-│   ├── Repeater requests
-│   ├── Intruder attacks
-│   └── Sequencer analysis
-└── Video PoCs
-    ├── Screen recordings
-    ├── Step-by-step demonstrations
-    └── Impact visualization
+â”œâ”€â”€ Browser-Based PoCs
+â”‚   â”œâ”€â”€ HTML files
+â”‚   â”œâ”€â”€ JavaScript exploits
+â”‚   â””â”€â”€ URL-based exploits
+â”œâ”€â”€ Curl-Based PoCs
+â”‚   â”œâ”€â”€ One-liner commands
+â”‚   â”œâ”€â”€ Multi-step exploits
+â”‚   â””â”€â”€ Automation scripts
+â”œâ”€â”€ Burp Suite PoCs
+â”‚   â”œâ”€â”€ Repeater requests
+â”‚   â”œâ”€â”€ Intruder attacks
+â”‚   â””â”€â”€ Sequencer analysis
+â””â”€â”€ Video PoCs
+    â”œâ”€â”€ Screen recordings
+    â”œâ”€â”€ Step-by-step demonstrations
+    â””â”€â”€ Impact visualization
 ```
 
 ### Impact Justification Techniques
@@ -183,26 +183,26 @@ Proof of Concept Types
 **Impact Categories:**
 ```
 Impact Assessment Framework
-├── Confidentiality Impact
-│   ├── Data breach
-│   ├── PII exposure
-│   ├── Financial data exposure
-│   └── Intellectual property theft
-├── Integrity Impact
-│   ├── Data modification
-│   ├── Account takeover
-│   ├── Privilege escalation
-│   └── System compromise
-├── Availability Impact
-│   ├── Service disruption
-│   ├── Data loss
-│   ├── Denial of service
-│   └── Resource exhaustion
-└── Business Impact
-    ├── Financial loss
-    ├── Reputation damage
-    ├── Regulatory compliance
-    └── Legal liability
+â”œâ”€â”€ Confidentiality Impact
+â”‚   â”œâ”€â”€ Data breach
+â”‚   â”œâ”€â”€ PII exposure
+â”‚   â”œâ”€â”€ Financial data exposure
+â”‚   â””â”€â”€ Intellectual property theft
+â”œâ”€â”€ Integrity Impact
+â”‚   â”œâ”€â”€ Data modification
+â”‚   â”œâ”€â”€ Account takeover
+â”‚   â”œâ”€â”€ Privilege escalation
+â”‚   â””â”€â”€ System compromise
+â”œâ”€â”€ Availability Impact
+â”‚   â”œâ”€â”€ Service disruption
+â”‚   â”œâ”€â”€ Data loss
+â”‚   â”œâ”€â”€ Denial of service
+â”‚   â””â”€â”€ Resource exhaustion
+â””â”€â”€ Business Impact
+    â”œâ”€â”€ Financial loss
+    â”œâ”€â”€ Reputation damage
+    â”œâ”€â”€ Regulatory compliance
+    â””â”€â”€ Legal liability
 ```
 
 ## Pre-requisite Knowledge
@@ -785,7 +785,7 @@ pip install cvss
 
 # Scripting tools
 # Python
-# PowerShell
+# Python
 # Bash
 ```
 
@@ -1526,3 +1526,4 @@ Video: Screen recordings, demonstrations
 4. Use CVSS calculation
 5. Be professional and persistent
 ```
+

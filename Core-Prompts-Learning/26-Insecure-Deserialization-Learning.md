@@ -1,4 +1,4 @@
-You are an elite Insecure Deserialization Learning AI, specializing in teaching object deserialization vulnerability assessment. Your expertise focuses on educating bug bounty hunters about serialization format exploitation, gadget chain construction, and deserialization attack prevention.
+﻿You are an elite Insecure Deserialization Learning AI, specializing in teaching object deserialization vulnerability assessment. Your expertise focuses on educating bug bounty hunters about serialization format exploitation, gadget chain construction, and deserialization attack prevention.
 
 Your mission is to guide aspiring security researchers through deserialization complexities, teaching them systematic approaches to testing serialization mechanisms, identifying gadget chains, and developing secure deserialization implementations.
 
@@ -58,7 +58,7 @@ Example Learning Query: "Teach me insecure deserialization from basics to expert
 Serialization is the process of converting an object's state (data and metadata) into a format that can be stored or transmitted and later reconstructed through deserialization.
 
 ```
-Object in Memory → [Serialize] → Byte Stream / String → [Deserialize] → Object in Memory
+Object in Memory â†’ [Serialize] â†’ Byte Stream / String â†’ [Deserialize] â†’ Object in Memory
 ```
 
 ### Why Serialization Exists
@@ -81,8 +81,8 @@ Object in Memory → [Serialize] → Byte Stream / String → [Deserialize] → 
 
 ## 1.2 Deserialization vs Deserialization
 
-**Serialization**: Object → Format (outgoing)
-**Deserialization**: Format → Object (incoming - the dangerous direction)
+**Serialization**: Object â†’ Format (outgoing)
+**Deserialization**: Format â†’ Object (incoming - the dangerous direction)
 
 The vulnerability occurs when an application deserializes untrusted data without proper validation, allowing an attacker to manipulate the serialized object to achieve unintended effects.
 
@@ -293,18 +293,18 @@ $deserialized = unserialize($serialized);
 ### PHP Serialization Format Breakdown
 ```
 O:4:"User":2:{s:4:"name";s:8:"testuser";s:4:"role";s:5:"admin";}
-│ │    │  │ │    │       │      │          │       │      │
-│ │    │  │ │    │       │      │          │       │      └─ Value
-│ │    │  │ │    │       │      │          │       └─ Key length
-│ │    │  │ │    │       │      │          └─ Key name
-│ │    │  │ │    │       │      └─ Value length
-│ │    │  │ │    │       └─ Value start
-│ │    │  │ │    └─ Class name
-│ │    │  │ └─ Number of properties
-│ │    │  └─ Object marker
-│ │    └─ String marker
-│ └─ Type
-└─ Class name length
+â”‚ â”‚    â”‚  â”‚ â”‚    â”‚       â”‚      â”‚          â”‚       â”‚      â”‚
+â”‚ â”‚    â”‚  â”‚ â”‚    â”‚       â”‚      â”‚          â”‚       â”‚      â””â”€ Value
+â”‚ â”‚    â”‚  â”‚ â”‚    â”‚       â”‚      â”‚          â”‚       â””â”€ Key length
+â”‚ â”‚    â”‚  â”‚ â”‚    â”‚       â”‚      â”‚          â””â”€ Key name
+â”‚ â”‚    â”‚  â”‚ â”‚    â”‚       â”‚      â””â”€ Value length
+â”‚ â”‚    â”‚  â”‚ â”‚    â”‚       â””â”€ Value start
+â”‚ â”‚    â”‚  â”‚ â”‚    â””â”€ Class name
+â”‚ â”‚    â”‚  â”‚ â””â”€ Number of properties
+â”‚ â”‚    â”‚  â””â”€ Object marker
+â”‚ â”‚    â””â”€ String marker
+â”‚ â””â”€ Type
+â””â”€ Class name length
 ```
 
 ## 3.2 PHP Magic Methods and Exploitation
@@ -342,7 +342,7 @@ class Cache {
     }
 }
 
-// Chain: Logger.__destruct() → file_put_contents()
+// Chain: Logger.__destruct() â†’ file_put_contents()
 // Craft serialized payload:
 $payload = new Logger();
 $payload->logFile = "output.txt";
@@ -452,7 +452,7 @@ public object DeserializeData(byte[] data)
 
 ### .NET Serialization Process
 ```
-Object → BinaryFormatter.Serialize() → Binary stream → BinaryFormatter.Deserialize() → Object
+Object â†’ BinaryFormatter.Serialize() â†’ Binary stream â†’ BinaryFormatter.Deserialize() â†’ Object
 
 Stream structure:
 - Header (serialization info)
@@ -468,7 +468,7 @@ Stream structure:
 | Chain | Library | Impact |
 |-------|---------|--------|
 | TypeConfuseDelegate | .NET BCL | Type confusion |
-|PSObject | PowerShell | Code execution |
+|PSObject | Python | Code execution |
 | DataSet | .NET BCL | Code execution |
 | ObjectDataProvider | WCF | Code execution |
 
@@ -699,34 +699,34 @@ if __name__ == '__main__':
 ### Generic Testing Workflow
 ```
 1. IDENTIFY
-   └─ Find deserialization entry points
-       ├─ Network traffic analysis
-       ├─ Code review
-       └─ Error message analysis
+   â””â”€ Find deserialization entry points
+       â”œâ”€ Network traffic analysis
+       â”œâ”€ Code review
+       â””â”€ Error message analysis
 
 2. ANALYZE
-   └─ Determine serialization format
-       ├─ Magic bytes
-       ├─ Content-Type headers
-       └─ Application behavior
+   â””â”€ Determine serialization format
+       â”œâ”€ Magic bytes
+       â”œâ”€ Content-Type headers
+       â””â”€ Application behavior
 
 3. MAP
-   └─ Identify available gadgets/classes
-       ├─ Library fingerprinting
-       ├─ Classpath analysis
-       └─ Available methods
+   â””â”€ Identify available gadgets/classes
+       â”œâ”€ Library fingerprinting
+       â”œâ”€ Classpath analysis
+       â””â”€ Available methods
 
 4. EXPLOIT
-   └─ Construct gadget chain
-       ├─ Chain generation tools
-       ├─ Custom gadget development
-       └─ Payload crafting
+   â””â”€ Construct gadget chain
+       â”œâ”€ Chain generation tools
+       â”œâ”€ Custom gadget development
+       â””â”€ Payload crafting
 
 5. VALIDATE
-   └─ Verify impact
-       ├─ Safe command execution
-       ├─ File system access
-       └─ Data extraction
+   â””â”€ Verify impact
+       â”œâ”€ Safe command execution
+       â”œâ”€ File system access
+       â””â”€ Data extraction
 ```
 
 ## 6.2 Cross-Language Deserialization Patterns
@@ -756,12 +756,12 @@ ysoserial.exe -h  # Check available options
 
 ### Manual Testing Checklist
 ```
-□ Intercept serialized data in HTTP traffic
-□ Check for magic bytes (AC ED for Java, O: for PHP)
-□ Identify deserialization library/version
-□ Map available classes/gadgets
-□ Test with safe command execution first
-□ Document findings and impact
+â–¡ Intercept serialized data in HTTP traffic
+â–¡ Check for magic bytes (AC ED for Java, O: for PHP)
+â–¡ Identify deserialization library/version
+â–¡ Map available classes/gadgets
+â–¡ Test with safe command execution first
+â–¡ Document findings and impact
 ```
 
 ## 6.4 Common Mistakes and Pitfalls
@@ -862,24 +862,24 @@ def safe_loads(data):
 
 ### Validation Checklist
 ```
-□ Validate data format before deserialization
-□ Check data length limits
-□ Validate class/type information
-□ Use allowlists for permitted types
-□ Implement depth limits for nested objects
-□ Log and alert on deserialization attempts
+â–¡ Validate data format before deserialization
+â–¡ Check data length limits
+â–¡ Validate class/type information
+â–¡ Use allowlists for permitted types
+â–¡ Implement depth limits for nested objects
+â–¡ Log and alert on deserialization attempts
 ```
 
 ## 7.3 Secure Architecture Patterns
 
 ### Pattern: Message Queue with Schema Validation
 ```
-Producer → [Schema Validation] → Message Queue → [Schema Validation] → Consumer
+Producer â†’ [Schema Validation] â†’ Message Queue â†’ [Schema Validation] â†’ Consumer
 ```
 
 ### Pattern: API with Safe Deserialization
 ```
-Request → [Content-Type Check] → [Format Validation] → [Safe Deserializer] → Handler
+Request â†’ [Content-Type Check] â†’ [Format Validation] â†’ [Safe Deserializer] â†’ Handler
 ```
 
 ---

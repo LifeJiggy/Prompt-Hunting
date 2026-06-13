@@ -1,4 +1,4 @@
-# Proof-of-Concept Development for Bug Bounty Reports
+﻿# Proof-of-Concept Development for Bug Bounty Reports
 
 ## Expert Role
 
@@ -6,7 +6,7 @@ Proof-of-Concept (PoC) development is the bridge between identifying a vulnerabi
 
 The goal of every PoC is to answer three questions definitively: Is the vulnerability real? How severe is it? What is the worst-case scenario? Your PoC should be minimal enough to be reproducible by anyone, yet complete enough to demonstrate maximum impact. The art lies in finding this balance while respecting scope boundaries and responsible disclosure principles.
 
-In 2026, triagers evaluate dozens of reports daily. Your PoC must stand out through clarity, professionalism, and immediate reproducibility. First impressions matter enormously — a well-structured PoC signals a skilled researcher and builds trust before the triager even begins testing.
+In 2026, triagers evaluate dozens of reports daily. Your PoC must stand out through clarity, professionalism, and immediate reproducibility. First impressions matter enormously â€” a well-structured PoC signals a skilled researcher and builds trust before the triager even begins testing.
 
 ## Core Concepts
 
@@ -198,14 +198,14 @@ Determine what evidence the triage team needs:
 
 ```
 Evidence Checklist:
-□ Vulnerability existence proof
-□ Impact demonstration
-□ Reproducibility verification
-□ Scope compliance evidence
-□ Non-destructive testing proof
-□ Time-stamped execution
-□ Tool version documentation
-□ Environment details
+â–¡ Vulnerability existence proof
+â–¡ Impact demonstration
+â–¡ Reproducibility verification
+â–¡ Scope compliance evidence
+â–¡ Non-destructive testing proof
+â–¡ Time-stamped execution
+â–¡ Tool version documentation
+â–¡ Environment details
 ```
 
 #### Step 3: PoC Architecture
@@ -215,12 +215,12 @@ Design your PoC approach:
 ```
 Architecture Decision Tree:
 Is the vulnerability simple and obvious?
-├─ Yes → Minimal PoC (curl command)
-└─ No → Does it require multiple steps?
-    ├─ Yes → Complete PoC (multi-step with screenshots)
-    └─ No → Is automation needed for impact?
-        ├─ Yes → Scripted PoC (Python/Node.js)
-        └─ No → Standard PoC (curl + documentation)
+â”œâ”€ Yes â†’ Minimal PoC (curl command)
+â””â”€ No â†’ Does it require multiple steps?
+    â”œâ”€ Yes â†’ Complete PoC (multi-step with screenshots)
+    â””â”€ No â†’ Is automation needed for impact?
+        â”œâ”€ Yes â†’ Scripted PoC (Python/Node.js)
+        â””â”€ No â†’ Standard PoC (curl + documentation)
 ```
 
 ### Phase 2: PoC Development
@@ -415,15 +415,15 @@ For complex demonstrations requiring visual proof:
 
 ```
 Video Recording Checklist:
-□ Clear screen (close unnecessary applications)
-□ Record entire screen or browser window
-□ Include timestamps in recording
-□ Narrate actions (optional but helpful)
-□ Show URL bar in browser recordings
-□ Include request/response details
-□ Keep recording focused and concise
-□ Include title card with PoC details
-□ Export in widely compatible format (MP4)
+â–¡ Clear screen (close unnecessary applications)
+â–¡ Record entire screen or browser window
+â–¡ Include timestamps in recording
+â–¡ Narrate actions (optional but helpful)
+â–¡ Show URL bar in browser recordings
+â–¡ Include request/response details
+â–¡ Keep recording focused and concise
+â–¡ Include title card with PoC details
+â–¡ Export in widely compatible format (MP4)
 
 Video Structure:
 00:00 - Title card (PoC name, target, date)
@@ -479,16 +479,16 @@ Before submission, validate your PoC:
 
 ```
 Validation Checklist:
-□ PoC executes without errors
-□ Results are reproducible
-□ All steps are clearly documented
-□ Screenshots match described steps
-□ Video is clear and focused
-□ Impact is accurately demonstrated
-□ Scope compliance verified
-□ No real user data accessed
-□ Tool versions documented
-□ Environment details recorded
+â–¡ PoC executes without errors
+â–¡ Results are reproducible
+â–¡ All steps are clearly documented
+â–¡ Screenshots match described steps
+â–¡ Video is clear and focused
+â–¡ Impact is accurately demonstrated
+â–¡ Scope compliance verified
+â–¡ No real user data accessed
+â–¡ Tool versions documented
+â–¡ Environment details recorded
 ```
 
 #### Step 10: Documentation Enhancement
@@ -529,13 +529,13 @@ Get feedback before submission:
 
 ```
 Peer Review Checklist:
-□ Can someone else reproduce the PoC?
-□ Are instructions clear and unambiguous?
-□ Is the impact accurately represented?
-□ Are screenshots properly annotated?
-□ Is the video easy to follow?
-□ Does the PoC respect scope boundaries?
-□ Is the documentation professional?
+â–¡ Can someone else reproduce the PoC?
+â–¡ Are instructions clear and unambiguous?
+â–¡ Is the impact accurately represented?
+â–¡ Are screenshots properly annotated?
+â–¡ Is the video easy to follow?
+â–¡ Does the PoC respect scope boundaries?
+â–¡ Is the documentation professional?
 ```
 
 ### Phase 4: PoC by Vulnerability Type
@@ -789,7 +789,7 @@ Fiddler: Windows-based proxy
 Python: requests, httpx, asyncio libraries
 Node.js: axios, fetch, got libraries
 Bash/curl: Simple request scripting
-PowerShell: Windows-based HTTP clients
+Python: Windows-based HTTP clients
 Ruby: Net::HTTP, RestClient libraries
 ```
 
@@ -844,15 +844,15 @@ pip install requests httpx aiohttp beautifulsoup4 colorama
 
 # Project structure
 poc_project/
-├── poc.py
-├── requirements.txt
-├── README.md
-├── screenshots/
-│   ├── 01_login.png
-│   ├── 02_request.png
-│   └── 03_response.png
-└── videos/
-    └── poc_recording.mp4
+â”œâ”€â”€ poc.py
+â”œâ”€â”€ requirements.txt
+â”œâ”€â”€ README.md
+â”œâ”€â”€ screenshots/
+â”‚   â”œâ”€â”€ 01_login.png
+â”‚   â”œâ”€â”€ 02_request.png
+â”‚   â””â”€â”€ 03_response.png
+â””â”€â”€ videos/
+    â””â”€â”€ poc_recording.mp4
 ```
 
 ## Case Studies
@@ -1550,10 +1550,10 @@ Report Structure:
 1. Title and Summary
 2. Severity Assessment
 3. Vulnerability Details
-4. Steps to Reproduction ← PoC lives here
+4. Steps to Reproduction â† PoC lives here
 5. Impact Analysis
 6. Remediation Recommendations
-7. Supporting Materials ← PoC files here
+7. Supporting Materials â† PoC files here
 ```
 
 **Seamless Integration**:
@@ -1567,8 +1567,8 @@ Report Structure:
 **PoC Development Workflow**:
 
 ```
-Discovery → Analysis → Planning → Development → Testing → Documentation → Submission
-    ↓           ↓          ↓           ↓           ↓           ↓              ↓
+Discovery â†’ Analysis â†’ Planning â†’ Development â†’ Testing â†’ Documentation â†’ Submission
+    â†“           â†“          â†“           â†“           â†“           â†“              â†“
  Identify    Understand   Design     Write       Validate   Document      Submit
   Issue      Root Cause   Approach   Code        Results    Findings      Report
 ```
@@ -1578,8 +1578,8 @@ Discovery → Analysis → Planning → Development → Testing → Documentatio
 **Integrated PoC Environment**:
 
 ```
-Development Tools → Testing Tools → Documentation Tools → Submission
-     ↓                  ↓                  ↓                ↓
+Development Tools â†’ Testing Tools â†’ Documentation Tools â†’ Submission
+     â†“                  â†“                  â†“                â†“
    Python          Burp Suite          Markdown          Platform
    Node.js         Postman           Screenshots        API
    Bash            Nuclei            Videos             Email
@@ -1590,8 +1590,8 @@ Development Tools → Testing Tools → Documentation Tools → Submission
 **Collaborative PoC Development**:
 
 ```
-Researcher → Reviewer → Documentation → Submission
-    ↓           ↓            ↓              ↓
+Researcher â†’ Reviewer â†’ Documentation â†’ Submission
+    â†“           â†“            â†“              â†“
  Develop    Validate     Polish        Submit
   PoC       Results      Reports       Reports
 ```
@@ -1604,29 +1604,29 @@ Researcher → Reviewer → Documentation → Submission
 
 ```
 Required Elements:
-□ Vulnerability description
-□ Affected endpoint/feature
-□ Authentication requirements
-□ Step-by-step reproduction
-□ Request/response examples
-□ Screenshots with annotations
-□ Impact demonstration
-□ Environment details
-□ Tool versions
-□ Timestamps
+â–¡ Vulnerability description
+â–¡ Affected endpoint/feature
+â–¡ Authentication requirements
+â–¡ Step-by-step reproduction
+â–¡ Request/response examples
+â–¡ Screenshots with annotations
+â–¡ Impact demonstration
+â–¡ Environment details
+â–¡ Tool versions
+â–¡ Timestamps
 ```
 
 **Enhanced Documentation**:
 
 ```
 Optional but Valuable:
-□ Video walkthrough
-□ Automated script
-□ Multiple reproduction methods
-□ Edge case demonstrations
-□ Comparison with legitimate behavior
-□ Remediation verification
-□ Related vulnerability findings
+â–¡ Video walkthrough
+â–¡ Automated script
+â–¡ Multiple reproduction methods
+â–¡ Edge case demonstrations
+â–¡ Comparison with legitimate behavior
+â–¡ Remediation verification
+â–¡ Related vulnerability findings
 ```
 
 ### PoC Report Template
@@ -1895,12 +1895,12 @@ Prohibited Activities:
 **Decision Matrix**:
 
 ```
-Simple Vulnerability → curl command + screenshots
-Complex Vulnerability → Python script + video
-Chain Exploitation → Automated script + documentation
-Race Condition → Multi-threaded script + video
-Business Logic → Step-by-step guide + screenshots
-Authentication Bypass → Complete exploitation chain
+Simple Vulnerability â†’ curl command + screenshots
+Complex Vulnerability â†’ Python script + video
+Chain Exploitation â†’ Automated script + documentation
+Race Condition â†’ Multi-threaded script + video
+Business Logic â†’ Step-by-step guide + screenshots
+Authentication Bypass â†’ Complete exploitation chain
 ```
 
 **Essential curl Commands**:
@@ -1926,27 +1926,27 @@ curl -v 'https://target.com/api/endpoint' 2>&1 | tee response.txt
 **Screenshot Checklist**:
 
 ```
-□ URL bar visible
-□ Request in Burp/DevTools
-□ Response with evidence
-□ Before/after comparison
-□ Annotations added
-□ Sensitive data redacted
-□ High resolution
-□ Descriptive filename
+â–¡ URL bar visible
+â–¡ Request in Burp/DevTools
+â–¡ Response with evidence
+â–¡ Before/after comparison
+â–¡ Annotations added
+â–¡ Sensitive data redacted
+â–¡ High resolution
+â–¡ Descriptive filename
 ```
 
 **Video Recording Checklist**:
 
 ```
-□ Title card with details
-□ Clear narration (optional)
-□ All steps visible
-□ URL bar shown
-□ Timestamps included
-□ Focused content
-□ Appropriate length
-□ Export as MP4
+â–¡ Title card with details
+â–¡ Clear narration (optional)
+â–¡ All steps visible
+â–¡ URL bar shown
+â–¡ Timestamps included
+â–¡ Focused content
+â–¡ Appropriate length
+â–¡ Export as MP4
 ```
 
 **Documentation Template**:
@@ -1996,16 +1996,16 @@ Severity Discussion:
 
 ```
 Pre-Submission:
-□ PoC executes without errors
-□ Results are reproducible
-□ All steps documented
-□ Screenshots annotated
-□ Video clear and focused
-□ Impact demonstrated
-□ Scope compliant
-□ Tool versions documented
-□ Environment details recorded
-□ Documentation complete
+â–¡ PoC executes without errors
+â–¡ Results are reproducible
+â–¡ All steps documented
+â–¡ Screenshots annotated
+â–¡ Video clear and focused
+â–¡ Impact demonstrated
+â–¡ Scope compliant
+â–¡ Tool versions documented
+â–¡ Environment details recorded
+â–¡ Documentation complete
 ```
 
 **Common Fixes**:
@@ -2045,3 +2045,4 @@ Impact Not Clear:
 | Chain exploitation | +2.0 CVSS |
 | Automation capability | +0.5 CVSS |
 | Scale demonstration | +1.0 CVSS |
+

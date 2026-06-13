@@ -1217,7 +1217,7 @@ class MalwareAnalyzer:
         )
         interesting_patterns = [
             "http", "https", "ftp", ".exe", ".dll",
-            "cmd", "powershell", "registry", "HKLM",
+            "cmd", "Python", "registry", "HKLM",
             "password", "key", "encrypt", "decrypt",
             "socket", "connect", "send", "recv"
         ]
@@ -1800,3 +1800,4 @@ if __name__ == "__main__":
 - Capstone - Disassembly framework
 - Keystone - Assembly framework
 - Unicorn - CPU emulator framework
+

@@ -1,4 +1,4 @@
-# Prompt-Hunting
+﻿# Prompt-Hunting
 
 **A Comprehensive Bug Bounty Hunting Framework**
 
@@ -12,18 +12,18 @@ An advanced AI-powered prompt library and structured learning framework for bug 
 |--------|-------|-------------|
 | `Core-Prompts-Learning/` | 50 | Structured learning modules covering 50 security topics from XSS to cloud security |
 | `Core-Prompts-hunting/` | 50 | Practical hunting prompts for specific vulnerability classes |
-| `Reconnaissance-Deep-Dive/` | 50 | Advanced recon — subdomain enum, OSINT, fingerprinting, asset discovery, API mapping |
-| `Advanced-Chaining-Techniques/` | 49 | Vulnerability chaining for maximum impact — 200+ documented attack chains |
-| `Report-Writing-Mastery/` | 54 | High-acceptance report writing — templates, impact framing, triage strategy |
-| `Automation-Efficiency/` | 50 | Workflow automation — tool chaining, scripting, monitoring, CI/CD integration |
-| `Advanced-Persistence-Exploitation/` | 50 | Post-exploitation — web shells, persistence, lateral movement, C2, anti-forensics |
-| `Specialized-Targets/` | 50 | Target-specific playbooks — IoT, mobile, cloud, Kubernetes, blockchain, DeFi |
+| `Reconnaissance-Deep-Dive/` | 50 | Advanced recon â€” subdomain enum, OSINT, fingerprinting, asset discovery, API mapping |
+| `Advanced-Chaining-Techniques/` | 49 | Vulnerability chaining for maximum impact â€” 200+ documented attack chains |
+| `Report-Writing-Mastery/` | 54 | High-acceptance report writing â€” templates, impact framing, triage strategy |
+| `Automation-Efficiency/` | 50 | Workflow automation â€” tool chaining, scripting, monitoring, CI/CD integration |
+| `Advanced-Persistence-Exploitation/` | 50 | Post-exploitation â€” web shells, persistence, lateral movement, C2, anti-forensics |
+| `Specialized-Targets/` | 50 | Target-specific playbooks â€” IoT, mobile, cloud, Kubernetes, blockchain, DeFi |
 | `Real-World-Case-Studies/` | 50 | Analyzed disclosed reports from HackerOne, Bugcrowd, and other platforms |
-| `High-Level-World-Case-Studies/` | 46 | Major breach analysis — incident patterns, impact assessment, lessons learned |
+| `High-Level-World-Case-Studies/` | 46 | Major breach analysis â€” incident patterns, impact assessment, lessons learned |
 | `Bug-Bounty-Program-Strategy/` | 50 | Program selection, ROI optimization, time management, career development |
-| `Bug-Bounty-Support/` | 23 | Reference prompts — master prompts, vulnerability detection, exploitation, PoC |
-| `Advanced-Automation/` | 50 | Advanced automation — CI/CD pipelines, custom tooling, scaling operations |
-| `Brain/` | — | AI assistant configurations and specialized prompts |
+| `Bug-Bounty-Support/` | 23 | Reference prompts â€” master prompts, vulnerability detection, exploitation, PoC |
+| `Advanced-Automation/` | 50 | Advanced automation â€” CI/CD pipelines, custom tooling, scaling operations |
+| `Brain/` | â€” | AI assistant configurations and specialized prompts |
 
 **Total: 672 files** across 14 specialized categories.
 
@@ -33,50 +33,50 @@ An advanced AI-powered prompt library and structured learning framework for bug 
 
 Every prompt in the expanded folders follows a strict structure:
 
-- **Expert Role** — Who you're talking to
-- **Core Concepts** — Foundational knowledge
-- **Prerequisites** — What you need before starting
-- **Methodology** — Step-by-step workflow with ASCII attack flow diagrams
-- **Tool Arsenal** — Exact commands and tool configurations
-- **Case Studies** — Real-world examples with detailed walkthroughs
-- **Bypass Techniques** — How defenses are circumvented
-- **Advanced Techniques** — Expert-level strategies
-- **Detection Indicators** — What defenders look for
-- **Impact Assessment** — Business and technical impact
-- **Common Pitfalls** — Mistakes to avoid
-- **Integration Points** — How topics chain together
-- **Reporting Templates** — Ready-to-use submission formats
-- **Practice Labs** — Hands-on exercises
-- **Ethics** — Responsible disclosure guidelines
-- **Quick Reference** — Cheat sheets and command tables
+- **Expert Role** â€” Who you're talking to
+- **Core Concepts** â€” Foundational knowledge
+- **Prerequisites** â€” What you need before starting
+- **Methodology** â€” Step-by-step workflow with ASCII attack flow diagrams
+- **Tool Arsenal** â€” Exact commands and tool configurations
+- **Case Studies** â€” Real-world examples with detailed walkthroughs
+- **Bypass Techniques** â€” How defenses are circumvented
+- **Advanced Techniques** â€” Expert-level strategies
+- **Detection Indicators** â€” What defenders look for
+- **Impact Assessment** â€” Business and technical impact
+- **Common Pitfalls** â€” Mistakes to avoid
+- **Integration Points** â€” How topics chain together
+- **Reporting Templates** â€” Ready-to-use submission formats
+- **Practice Labs** â€” Hands-on exercises
+- **Ethics** â€” Responsible disclosure guidelines
+- **Quick Reference** â€” Cheat sheets and command tables
 
 ---
 
 ## Who This Is For
 
-**Bug Bounty Hunters** — Structured methodology for finding and reporting vulnerabilities across all major programs.
+**Bug Bounty Hunters** â€” Structured methodology for finding and reporting vulnerabilities across all major programs.
 
-**Penetration Testers** — Comprehensive attack playbooks, tool configurations, and chaining strategies for engagement work.
+**Penetration Testers** â€” Comprehensive attack playbooks, tool configurations, and chaining strategies for engagement work.
 
-**Security Engineers** — Defensive perspective — understanding attack patterns to build better defenses.
+**Security Engineers** â€” Defensive perspective â€” understanding attack patterns to build better defenses.
 
-**Students & Career Changers** — Progressive learning path from fundamentals to expert-level exploitation.
+**Students & Career Changers** â€” Progressive learning path from fundamentals to expert-level exploitation.
 
 ---
 
 ## Quick Start
 
 ### New to Bug Bounty
-1. Start with `Core-Prompts-Learning/` — work through all 50 modules
-2. Move to `Core-Prompts-hunting/` — practice hunting specific vuln classes
-3. Study `Real-World-Case-Studies/` — learn from disclosed reports
-4. Use `Report-Writing-Mastery/` — write reports that get accepted
+1. Start with `Core-Prompts-Learning/` â€” work through all 50 modules
+2. Move to `Core-Prompts-hunting/` â€” practice hunting specific vuln classes
+3. Study `Real-World-Case-Studies/` â€” learn from disclosed reports
+4. Use `Report-Writing-Mastery/` â€” write reports that get accepted
 
 ### Experienced Hunters
-1. Use `Reconnaissance-Deep-Dive/` — expand your attack surface mapping
-2. Study `Advanced-Chaining-Techniques/` — chain low-severity into critical
-3. Specialize with `Specialized-Targets/` — IoT, cloud, blockchain, mobile
-4. Optimize with `Automation-Efficiency/` — scale your operations
+1. Use `Reconnaissance-Deep-Dive/` â€” expand your attack surface mapping
+2. Study `Advanced-Chaining-Techniques/` â€” chain low-severity into critical
+3. Specialize with `Specialized-Targets/` â€” IoT, cloud, blockchain, mobile
+4. Optimize with `Automation-Efficiency/` â€” scale your operations
 
 ### Specialization Paths
 | Path | Folders |
@@ -94,14 +94,14 @@ Every prompt in the expanded folders follows a strict structure:
 
 | Platform | Coverage |
 |----------|----------|
-| Web Applications | Full coverage — XSS, SQLi, SSRF, CSRF, IDOR, auth bypass, business logic |
+| Web Applications | Full coverage â€” XSS, SQLi, SSRF, CSRF, IDOR, auth bypass, business logic |
 | Mobile (iOS/Android) | API testing, deeplink analysis, local storage, certificate pinning |
 | Cloud (AWS/Azure/GCP) | IAM misconfiguration, metadata abuse, S3/GCS exposure |
 | Kubernetes | API server exposure, pod escape, RBAC bypass, etcd access |
 | Blockchain/DeFi | Smart contract audit, reentrancy, flash loans, oracle manipulation |
 | IoT | Firmware analysis, network protocols, hardware interfaces |
 | GraphQL | Schema introspection, injection, authorization, batching attacks |
-| API Security | REST, gRPC, WebSocket — auth, rate limiting, mass assignment |
+| API Security | REST, gRPC, WebSocket â€” auth, rate limiting, mass assignment |
 
 ---
 
@@ -109,12 +109,12 @@ Every prompt in the expanded folders follows a strict structure:
 
 These prompts work with:
 
-- **Burp Suite** — Proxy, Repeater, Intruder, Scanner, custom extensions
-- **Browser DevTools** — Network tab, Console, Sources, Application
-- **VS Code** — Static analysis, regex search, extensions
-- **CLI Tools** — subfinder, httpx, nuclei, ffuf, katana, sqlmap, ffuf
-- **AI Assistants** — Claude, ChatGPT, custom GPTs, Copilot
-- **Custom Scripts** — Python, Bash, PowerShell automation
+- **Burp Suite** â€” Proxy, Repeater, Intruder, Scanner, custom extensions
+- **Browser DevTools** â€” Network tab, Console, Sources, Application
+- **VS Code** â€” Static analysis, regex search, extensions
+- **CLI Tools** â€” subfinder, httpx, nuclei, ffuf, katana, sqlmap, ffuf
+- **AI Assistants** â€” Claude, ChatGPT, custom GPTs, Copilot
+- **Custom Scripts** â€” Python, Bash, Python automation
 
 ---
 
@@ -166,3 +166,4 @@ MIT License
 ---
 
 **Author:** [ArkhAngelLifeJiggy](https://github.com/LifeJiggy)
+

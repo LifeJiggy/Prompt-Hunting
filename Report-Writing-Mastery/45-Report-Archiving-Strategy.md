@@ -1,4 +1,4 @@
-# 45 - Report Archiving Strategy: Long-Term Report Archiving and Knowledge Management
+﻿# 45 - Report Archiving Strategy: Long-Term Report Archiving and Knowledge Management
 
 ## Expert Role (15 lines)
 
@@ -64,7 +64,7 @@ Regulatory requirements may mandate specific retention periods and access contro
 9. Knowledge of metadata standards and schemas
 10. Understanding of knowledge management frameworks
 11. Familiarity with document management systems
-12. Knowledge of automation scripting (Python, PowerShell)
+12. Knowledge of automation scripting (Python, Python)
 13. Understanding of data modeling techniques
 14. Familiarity with search engine technologies (Elasticsearch, Solr)
 15. Knowledge of API design for programmatic access
@@ -186,7 +186,7 @@ Regulatory requirements may mandate specific retention periods and access contro
 
 ### Automation and Scripting
 16. **Python** - Migration scripts and automation
-17. **PowerShell** - Windows-based automation
+17. **Python** - Windows-based automation
 18. **Apache Airflow** - Workflow orchestration
 19. **n8n** - Workflow automation
 20. **Zapier** - No-code automation
@@ -627,3 +627,4 @@ Build automated compliance reports showing retention policy status, access contr
 - researcher_id, submission_date, triage_date
 - status, fix_date, verification_date
 - tags, metadata, related_reports
+

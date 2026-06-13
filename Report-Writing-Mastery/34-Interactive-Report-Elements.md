@@ -1,4 +1,4 @@
-# Interactive Report Elements
+﻿# Interactive Report Elements
 
 ## Expert Role: Report Interaction Designer
 
@@ -197,11 +197,11 @@ def exploit_idor(user_id):
 
 **Warning/Info Callouts**
 ```markdown
-> ⚠️ **WARNING**: This PoC involves active exploitation. Only test on systems you own or have permission to test.
+> âš ï¸ **WARNING**: This PoC involves active exploitation. Only test on systems you own or have permission to test.
 
-> ℹ️ **NOTE**: This vulnerability requires an authenticated session to exploit.
+> â„¹ï¸ **NOTE**: This vulnerability requires an authenticated session to exploit.
 
-> 🔴 **CRITICAL**: Data exfiltration demonstrated in Section 4.3.1
+> ðŸ”´ **CRITICAL**: Data exfiltration demonstrated in Section 4.3.1
 ```
 
 ---
@@ -238,27 +238,27 @@ def exploit_idor(user_id):
 **Step 1: Map Report Architecture**
 ```
 Report Structure Analysis:
-├── Executive Summary (top-level)
-├── Findings Overview (top-level)
-├── Detailed Findings (nested)
-│   ├── Finding 1 (CRITICAL)
-│   │   ├── Description (anchor)
-│   │   ├── Impact (anchor)
-│   │   ├── PoC (anchor with code blocks)
-│   │   ├── Remediation (anchor)
-│   │   └── References (links to evidence)
-│   ├── Finding 2 (HIGH)
-│   │   └── ...
-│   └── Finding 3 (MEDIUM)
-│       └── ...
-├── Appendix (reference material)
-│   ├── Tool Output (collapsible sections)
-│   ├── Raw Evidence (downloadable files)
-│   └── Supporting Data (tables)
-└── Navigation Elements
-    ├── Table of Contents
-    ├── Cross-References
-    └── Quick Links
+â”œâ”€â”€ Executive Summary (top-level)
+â”œâ”€â”€ Findings Overview (top-level)
+â”œâ”€â”€ Detailed Findings (nested)
+â”‚   â”œâ”€â”€ Finding 1 (CRITICAL)
+â”‚   â”‚   â”œâ”€â”€ Description (anchor)
+â”‚   â”‚   â”œâ”€â”€ Impact (anchor)
+â”‚   â”‚   â”œâ”€â”€ PoC (anchor with code blocks)
+â”‚   â”‚   â”œâ”€â”€ Remediation (anchor)
+â”‚   â”‚   â””â”€â”€ References (links to evidence)
+â”‚   â”œâ”€â”€ Finding 2 (HIGH)
+â”‚   â”‚   â””â”€â”€ ...
+â”‚   â””â”€â”€ Finding 3 (MEDIUM)
+â”‚       â””â”€â”€ ...
+â”œâ”€â”€ Appendix (reference material)
+â”‚   â”œâ”€â”€ Tool Output (collapsible sections)
+â”‚   â”œâ”€â”€ Raw Evidence (downloadable files)
+â”‚   â””â”€â”€ Supporting Data (tables)
+â””â”€â”€ Navigation Elements
+    â”œâ”€â”€ Table of Contents
+    â”œâ”€â”€ Cross-References
+    â””â”€â”€ Quick Links
 ```
 
 **Step 2: Identify Link Relationships**
@@ -290,32 +290,32 @@ Report Structure Analysis:
 - Keep meaningful words
 
 Examples:
-- "Critical Findings" → #critical-findings
-- "SQL Injection - Finding #1" → #sql-injection-finding-1
-- "Proof of Concept (Step 3)" → #proof-of-concept-step-3
+- "Critical Findings" â†’ #critical-findings
+- "SQL Injection - Finding #1" â†’ #sql-injection-finding-1
+- "Proof of Concept (Step 3)" â†’ #proof-of-concept-step-3
 ```
 
 **Step 2: Build Link Network**
 ```
 Link Dependency Map:
 TOC Links
-  ├── Executive Summary → #executive-summary
-  ├── Findings Overview → #findings-overview
-  │   ├── Critical → #critical-findings
-  │   ├── High → #high-findings
-  │   └── Medium → #medium-findings
-  └── Detailed Findings → #detailed-findings
-      ├── Finding 1 → #finding-1
-      │   ├── Description → #finding-1-description
-      │   ├── PoC → #finding-1-poc
-      │   └── Remediation → #finding-1-remediation
-      └── Finding 2 → #finding-2
-          └── ...
+  â”œâ”€â”€ Executive Summary â†’ #executive-summary
+  â”œâ”€â”€ Findings Overview â†’ #findings-overview
+  â”‚   â”œâ”€â”€ Critical â†’ #critical-findings
+  â”‚   â”œâ”€â”€ High â†’ #high-findings
+  â”‚   â””â”€â”€ Medium â†’ #medium-findings
+  â””â”€â”€ Detailed Findings â†’ #detailed-findings
+      â”œâ”€â”€ Finding 1 â†’ #finding-1
+      â”‚   â”œâ”€â”€ Description â†’ #finding-1-description
+      â”‚   â”œâ”€â”€ PoC â†’ #finding-1-poc
+      â”‚   â””â”€â”€ Remediation â†’ #finding-1-remediation
+      â””â”€â”€ Finding 2 â†’ #finding-2
+          â””â”€â”€ ...
 
 Cross-References:
-Finding 1 PoC → Finding 3 (chain)
-Finding 2 Impact → Finding 1 (prerequisite)
-Remediation → OWASP cheatsheet (external)
+Finding 1 PoC â†’ Finding 3 (chain)
+Finding 2 Impact â†’ Finding 1 (prerequisite)
+Remediation â†’ OWASP cheatsheet (external)
 ```
 
 **Step 3: Validate All Links**
@@ -352,7 +352,7 @@ done
 \`\`\`json       # API responses, configuration
 \`\`\`yaml       # Configuration files
 \`\`\`xml        # XML payloads, XXE vectors
-\`\`\`powershell # Windows exploitation
+\`\`\`Python # Windows exploitation
 \`\`\`ruby       # Metasploit modules
 ```
 
@@ -490,7 +490,7 @@ quadrantChart
 ## Finding Detail Structure
 
 <details open>
-<summary><strong>🔴 CRITICAL: SQL Injection in Login</strong></summary>
+<summary><strong>ðŸ”´ CRITICAL: SQL Injection in Login</strong></summary>
 
 ### Description
 Unparameterized SQL query in login endpoint...
@@ -509,7 +509,7 @@ Use parameterized queries...
 </details>
 
 <details>
-<summary><strong>🟠 HIGH: XSS in Search</strong></summary>
+<summary><strong>ðŸŸ  HIGH: XSS in Search</strong></summary>
 
 ### Description
 Reflected XSS in search parameter...
@@ -580,24 +580,24 @@ to achieve [Remote Code Execution](#rce-impact).
 **Step 1: Evidence Directory Structure**
 ```
 report/
-├── main-report.md
-├── evidence/
-│   ├── screenshots/
-│   │   ├── 01-login-page.png
-│   │   ├── 02-sqli-error.png
-│   │   └── 03-admin-panel.png
-│   ├── captures/
-│   │   ├── sqli-request.pcap
-│   │   └── session-hijack.har
-│   ├── exploits/
-│   │   ├── idor-exploit.py
-│   │   └── xss-payload.html
-│   └── logs/
-│       ├── burp-output.xml
-│       └── nuclei-results.json
-└── appendix/
-    ├── full-scans.md
-    └── raw-data.md
+â”œâ”€â”€ main-report.md
+â”œâ”€â”€ evidence/
+â”‚   â”œâ”€â”€ screenshots/
+â”‚   â”‚   â”œâ”€â”€ 01-login-page.png
+â”‚   â”‚   â”œâ”€â”€ 02-sqli-error.png
+â”‚   â”‚   â””â”€â”€ 03-admin-panel.png
+â”‚   â”œâ”€â”€ captures/
+â”‚   â”‚   â”œâ”€â”€ sqli-request.pcap
+â”‚   â”‚   â””â”€â”€ session-hijack.har
+â”‚   â”œâ”€â”€ exploits/
+â”‚   â”‚   â”œâ”€â”€ idor-exploit.py
+â”‚   â”‚   â””â”€â”€ xss-payload.html
+â”‚   â””â”€â”€ logs/
+â”‚       â”œâ”€â”€ burp-output.xml
+â”‚       â””â”€â”€ nuclei-results.json
+â””â”€â”€ appendix/
+    â”œâ”€â”€ full-scans.md
+    â””â”€â”€ raw-data.md
 ```
 
 **Step 2: Link to Evidence**
@@ -1288,3 +1288,4 @@ pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
 ---
 
 *Interactive elements transform static reports into engaging, navigable documents that stakeholders can explore efficiently.*
+

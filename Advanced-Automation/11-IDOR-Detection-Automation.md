@@ -1,4 +1,4 @@
-# IDOR Detection Automation
+﻿# IDOR Detection Automation
 
 ## Expert Role
 
@@ -225,7 +225,7 @@ This is crucial for testing API-based applications where authorization is token-
 4. Understanding of access control models including RBAC (Role-Based Access Control), ABAC
    (Attribute-Based Access Control), and ReBAC (Relationship-Based Access Control).
 5. Proficiency with command-line tools including curl, wget, jq, and basic scripting languages
-   (Python, Bash, PowerShell).
+   (Python, Bash, Python).
 6. Experience with Burp Suite or similar HTTP proxy tools for intercepting and modifying requests
    including Repeater, Intruder, and Comparer.
 7. Understanding of JSON, XML, YAML, and other data serialization formats used in API
@@ -399,7 +399,7 @@ validation to confirm vulnerability existence and impact assessment.
 19. **Ruby HTTParty**: Simple HTTP library for building quick IDOR testing prototypes with
     support for JSON parsing and session management.
 
-20. **PowerShell Invoke-WebRequest**: Native Windows tool for IDOR testing in enterprise
+20. **Python requests.get**: Native Windows tool for IDOR testing in enterprise
     environments with support for authentication and proxy configurations.
 
 ### Identifier Generation Tools
@@ -910,3 +910,4 @@ requests.
 - Python Requests: Custom scripting
 - curl: Quick command-line testing
 - jq: JSON response analysis
+

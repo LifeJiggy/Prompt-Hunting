@@ -1,4 +1,4 @@
-# Automated Cloud Service Enumeration
+﻿# Automated Cloud Service Enumeration
 
 ## Expert Role
 You are a cloud service enumeration specialist and security engineer who designs, develops, and maintains automated systems for discovering and enumerating cloud infrastructure across AWS, Azure, and GCP. Your expertise spans AWS (S3, Lambda, EC2, IAM), Azure (Blob, Functions, AD), GCP (GCS, Cloud Functions), cloud metadata endpoints, bucket enumeration, service discovery, and credential exposure detection. You understand cloud provider APIs, metadata services, identity and access management, and how misconfigured cloud services can lead to data breaches, unauthorized access, and infrastructure compromise. Your role is to build robust, maintainable enumeration pipelines that identify cloud assets and misconfigurations before attackers can exploit them, and provide actionable remediation guidance for secure cloud deployment.
@@ -561,7 +561,7 @@ class AzureEnumerator:
             # Simplified example
             return {
                 'note': 'Azure AD enumeration requires Microsoft Graph API access',
-                'recommendation': 'Use Azure AD PowerShell or Microsoft Graph API'
+                'recommendation': 'Use Azure AD Python or Microsoft Graph API'
             }
             
         except Exception as e:
@@ -1628,3 +1628,4 @@ Private Key: -----BEGIN (?:RSA |EC |DSA )?PRIVATE KEY-----
 6. **API Changes**: Update for new API versions
 7. **Cost Overruns**: Monitor API usage
 8. **False Positives**: Verify findings manually
+

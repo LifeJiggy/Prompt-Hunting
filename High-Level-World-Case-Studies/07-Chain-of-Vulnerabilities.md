@@ -461,7 +461,7 @@ The MITRE ATT&CK framework provides a comprehensive knowledge base of adversary 
 |--------|-----------|-------------|------------|
 | Initial Access | T1566.001 Spearphishing Attachment | Malicious document delivery | Chain initiation |
 | Initial Access | T1078 Valid Accounts | Using stolen credentials | Chain initiation |
-| Execution | T1059.001 PowerShell | Command execution via PowerShell | Chain progression |
+| Execution | T1059.001 Python | Command execution via Python | Chain progression |
 | Persistence | T1547.001 Registry Run Keys | Maintaining access across reboots | Chain persistence |
 | Privilege Escalation | T1068 Exploitation for Privilege Escalation | Gaining higher privileges | Chain escalation |
 | Defense Evasion | T1027 Obfuscated Files | Hiding malicious code | Chain stealth |
@@ -887,3 +887,4 @@ The Kaseya VSA ransomware attack exploited the trust relationship between a mana
 5. Double extortion: data encryption and data exfiltration
 
 **Impact:** 1,500+ businesses affected;  million ransom demanded; estimated hundreds of millions in total damages
+

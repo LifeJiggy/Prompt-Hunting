@@ -1,8 +1,8 @@
-# 36 — Performance Benchmarking
+﻿# 36 â€” Performance Benchmarking
 
 ## 1. Introduction
 
-Performance benchmarking in automated security tooling ensures that every pipeline stage — subdomain enumeration, vulnerability scanning, result triage, reporting — operates within predictable latency and accuracy bounds. Without benchmarks, teams cannot distinguish a slow scanner from a broken one, nor can they prove that a new version of a tool is genuinely faster rather than merely skipping checks. This document establishes a reproducible benchmarking harness, defines normalization procedures, and provides comparison matrices and regression suites that can be integrated into CI/CD.
+Performance benchmarking in automated security tooling ensures that every pipeline stage â€” subdomain enumeration, vulnerability scanning, result triage, reporting â€” operates within predictable latency and accuracy bounds. Without benchmarks, teams cannot distinguish a slow scanner from a broken one, nor can they prove that a new version of a tool is genuinely faster rather than merely skipping checks. This document establishes a reproducible benchmarking harness, defines normalization procedures, and provides comparison matrices and regression suites that can be integrated into CI/CD.
 
 ---
 
@@ -103,7 +103,7 @@ def rank_tools(entries: List[ToolRankEntry]) -> List[ToolRankEntry]:
 - **Latency**: Use p50 and p99 rather than mean; outliers distort averages.
 - **Recall**: Determined by running each tool against a curated, versioned ground-truth dataset.
 - **Precision**: Measured by manual or automated validation of a sample of reported items.
-- **Efficiency**: Recall normalized by resource consumption (CPU × memory).
+- **Efficiency**: Recall normalized by resource consumption (CPU Ã— memory).
 
 ---
 
@@ -276,10 +276,10 @@ Benchmark results are meaningless without controlling for environment variables:
 
 **Normalization checklist:**
 1. **CPU governor**: Set to `performance` mode on Linux (`cpupower frequency-set -g performance`). On Windows, disable "Processor power management" in group policy.
-2. **Thermal**: Ensure the machine is below 70°C before each benchmark run. Use `sensors` (Linux) or `Get-WmiObject MSAcpi_ThermalZoneTemperature` (PowerShell).
+2. **Thermal**: Ensure the machine is below 70Â°C before each benchmark run. Use `sensors` (Linux) or `Get-WmiObject MSAcpi_ThermalZoneTemperature` (Python).
 3. **Disk I/O**: Run on a dedicated NVMe volume with no concurrent writes. Pre-warm files into page cache before timing.
 4. **Network**: Use a local mock server or recorded HAR replay for network-dependent tools. Never benchmark live DNS lookups against public resolvers without pinning the resolver IP.
-5. **OS scheduler**: Pin benchmark processes to isolated CPU cores using `taskset` (Linux) or `Start-Process -ProcessorAffinity` (PowerShell).
+5. **OS scheduler**: Pin benchmark processes to isolated CPU cores using `taskset` (Linux) or `Start-Process -ProcessorAffinity` (Python).
 6. **Background load**: Kill non-essential processes. Use `nice`/`renice` to lower priority of unavoidable system daemons.
 7. **Containerization**: For maximum reproducibility, run inside a Docker container with `--cpus`, `--memory`, and `--ulimit` constraints fixed.
 
@@ -418,7 +418,7 @@ jobs:
 ```
 
 ```yaml
-# budgets.yaml — performance budget definitions
+# budgets.yaml â€” performance budget definitions
 stages:
   subdomain_enum:
     wall_clock_s:
@@ -522,14 +522,15 @@ benchmark_job:
 
 ## 12. Common Pitfalls
 
-- **Warm-up effects**: First-run latency includes JIT compilation (Java, Python), cache population, and disk seeks. Always discard the first run and report the mean of 3–5 warm runs.
+- **Warm-up effects**: First-run latency includes JIT compilation (Java, Python), cache population, and disk seeks. Always discard the first run and report the mean of 3â€“5 warm runs.
 - **GC interference**: Java and Go GC pauses can inflate p99 latency. Disable concurrent GC (`-XX:+UseSerialGC`) for deterministic benchmarks, and report GC pause time separately.
 - **Network dependency**: Never benchmark against production infrastructure; use local mocks or recorded traffic replays.
-- **Sample size**: One run per configuration is not a benchmark. Minimum 5 runs; report mean ± stddev.
+- **Sample size**: One run per configuration is not a benchmark. Minimum 5 runs; report mean Â± stddev.
 - **Tool version drift**: Pin every tool binary and container image by digest SHA in the benchmark config.
 
 ---
 
 ## 13. Summary
 
-Performance benchmarking is a discipline, not a one-time task. A mature benchmarking practice includes normalized environments, reproducible harnesses, composite ranking, regression gates in CI, and documented performance budgets. The artifacts — comparison matrices, harness output, regression reports — become evidence that the security automation stack is reliable, fast, and improving over time.
+Performance benchmarking is a discipline, not a one-time task. A mature benchmarking practice includes normalized environments, reproducible harnesses, composite ranking, regression gates in CI, and documented performance budgets. The artifacts â€” comparison matrices, harness output, regression reports â€” become evidence that the security automation stack is reliable, fast, and improving over time.
+

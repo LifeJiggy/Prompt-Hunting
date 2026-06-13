@@ -1,4 +1,4 @@
-# Timeline Documentation for Bug Bounty Reports
+﻿# Timeline Documentation for Bug Bounty Reports
 
 ## Expert Role
 
@@ -118,7 +118,7 @@ Example:
 
 ```
 Date/Time          Actor         Action                          Outcome
-─────────────────────────────────────────────────────────────────────────
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 2026-01-15 14:30   Researcher    Initial discovery               Found SQL injection
 2026-01-15 15:00   Researcher    Verification testing            Confirmed vulnerability
 2026-01-15 16:00   Researcher    Report submission               Report #12345 created
@@ -727,7 +727,7 @@ Formatting Standards:
 
 ```
 [2026-01-15 14:30:00 UTC] Researcher: Initial Discovery
-────────────────────────────────────────────────────────
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 Action: Identified potential SQL injection in /api/search endpoint
 Context: Testing during authorized reconnaissance phase
 Evidence: Screenshot of vulnerable parameter
@@ -926,7 +926,7 @@ Automation Tools:
 - Zapier: Workflow automation
 - IFTTT: Simple automation
 - Microsoft Power Automate: Enterprise automation
-- Custom scripts: Python, Bash, PowerShell
+- Custom scripts: Python, Bash, Python
 - CI/CD pipelines: GitHub Actions, GitLab CI
 ```
 
@@ -1349,8 +1349,8 @@ Report Structure:
 **Timeline Workflow**:
 
 ```
-Planning → Capture → Documentation → Analysis → Archival
-    ↓          ↓            ↓              ↓           ↓
+Planning â†’ Capture â†’ Documentation â†’ Analysis â†’ Archival
+    â†“          â†“            â†“              â†“           â†“
  Design     Record      Format         Evaluate    Preserve
  Timeline   Events      Timeline       Timeline    Timeline
 ```
@@ -1360,8 +1360,8 @@ Planning → Capture → Documentation → Analysis → Archival
 **Integrated Timeline Environment**:
 
 ```
-Capture Tools → Documentation Tools → Analysis Tools → Archive
-     ↓                ↓                   ↓              ↓
+Capture Tools â†’ Documentation Tools â†’ Analysis Tools â†’ Archive
+     â†“                â†“                   â†“              â†“
  Time Tracking    Markdown/         Analysis/      Version Control
  Logging          Spreadsheets      Visualization  Cloud Storage
 ```
@@ -1371,8 +1371,8 @@ Capture Tools → Documentation Tools → Analysis Tools → Archive
 **Collaborative Timeline Development**:
 
 ```
-Researcher → Reviewer → Editor → Finalizer
-    ↓           ↓          ↓          ↓
+Researcher â†’ Reviewer â†’ Editor â†’ Finalizer
+    â†“           â†“          â†“          â†“
  Capture    Validate    Polish    Archive
  Timeline   Timeline    Timeline  Timeline
 ```
@@ -1684,14 +1684,14 @@ Low (Days): Long-term projects, remediation
 **Quality Checklist**:
 
 ```
-□ Consistent timestamp format
-□ Clear actor identification
-□ Descriptive action language
-□ Specific outcome documentation
-□ Contextual notes
-□ Evidence references
-□ Complete phase coverage
-□ Logical organization
+â–¡ Consistent timestamp format
+â–¡ Clear actor identification
+â–¡ Descriptive action language
+â–¡ Specific outcome documentation
+â–¡ Contextual notes
+â–¡ Evidence references
+â–¡ Complete phase coverage
+â–¡ Logical organization
 ```
 
 **Common Formats**:
@@ -1717,49 +1717,49 @@ Total Timeline: Discovery to resolution
 
 ```
 Pre-Timeline:
-□ Timeline scope defined
-□ Format standards established
-□ Tools selected
-□ Actors identified
-□ Evidence collected
+â–¡ Timeline scope defined
+â–¡ Format standards established
+â–¡ Tools selected
+â–¡ Actors identified
+â–¡ Evidence collected
 
 During Timeline:
-□ Timestamps captured
-□ Actions documented
-□ Outcomes recorded
-□ Context added
-□ Evidence referenced
+â–¡ Timestamps captured
+â–¡ Actions documented
+â–¡ Outcomes recorded
+â–¡ Context added
+â–¡ Evidence referenced
 
 Post-Timeline:
-□ Format verified
-□ Completeness checked
-□ Accuracy confirmed
-□ Analysis added
-□ Archive prepared
+â–¡ Format verified
+â–¡ Completeness checked
+â–¡ Accuracy confirmed
+â–¡ Analysis added
+â–¡ Archive prepared
 ```
 
 **Quality Indicators**:
 
 ```
 Strong Timeline:
-✓ Complete coverage
-✓ Consistent format
-✓ Clear descriptions
-✓ Specific outcomes
-✓ Context provided
-✓ Evidence referenced
-✓ Logical organization
-✓ Professional presentation
+âœ“ Complete coverage
+âœ“ Consistent format
+âœ“ Clear descriptions
+âœ“ Specific outcomes
+âœ“ Context provided
+âœ“ Evidence referenced
+âœ“ Logical organization
+âœ“ Professional presentation
 
 Weak Timeline:
-✗ Missing phases
-✗ Inconsistent format
-✗ Vague descriptions
-✗ Missing outcomes
-✗ No context
-✗ No evidence
-✗ Poor organization
-✗ Unprofessional appearance
+âœ— Missing phases
+âœ— Inconsistent format
+âœ— Vague descriptions
+âœ— Missing outcomes
+âœ— No context
+âœ— No evidence
+âœ— Poor organization
+âœ— Unprofessional appearance
 ```
 
 **Communication Templates**:
@@ -1782,12 +1782,13 @@ the remediation process. Thank you for the detailed records."
 **Integration Checklist**:
 
 ```
-□ Timeline referenced in narrative
-□ Key dates highlighted
-□ Phases clearly defined
-□ Actors identified
-□ Outcomes documented
-□ Evidence connected
-□ Remediation tracked
-□ Disclosure planned
+â–¡ Timeline referenced in narrative
+â–¡ Key dates highlighted
+â–¡ Phases clearly defined
+â–¡ Actors identified
+â–¡ Outcomes documented
+â–¡ Evidence connected
+â–¡ Remediation tracked
+â–¡ Disclosure planned
 ```
+
