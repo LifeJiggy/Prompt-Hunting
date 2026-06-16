@@ -4,7 +4,7 @@
 
 An advanced AI-powered prompt library and structured learning framework for bug bounty hunters, security researchers, and penetration testers. Built for practical, real-world vulnerability discovery across web, mobile, cloud, IoT, and blockchain targets.
 
-This repository contains **572 files** with **350,000+ lines** of security content spanning **12 specialized categories**. Every prompt is designed to be immediately actionable with step-by-step methodologies, tool configurations, real-world case studies, and reporting templates.
+This repository contains **572 files** with **400,000+ lines** of security content spanning **12 specialized categories**. Every prompt is designed to be immediately actionable with step-by-step methodologies, tool configurations, real-world case studies, and reporting templates.
 
 ---
 
@@ -38,7 +38,7 @@ Prompt-Hunting/
 ├── Report-Writing-Mastery/         # 54 files  | 400-1200 lines | Report templates
 ├── Automation-Efficiency/          # 50 files  | 293-2331 lines | Workflow automation
 ├── Advanced-Automation/            # 49 files  | 531-1643 lines | CI/CD, custom tools
-├── Specialized-Targets/            # 50 files  | 33 lines      | Target-specific guides
+├── Specialized-Targets/            # 50 files  | 499-1698 lines | Target-specific guides
 ├── Real-World-Case-Studies/        # 50 files  | 440-1038 lines | Disclosed report analysis
 ├── High-Level-World-Case-Studies/  # 46 files  | 600-938 lines  | Major breach analysis
 ├── Bug-Bounty-Program-Strategy/    # 50 files  | 600-1176 lines | Strategy guides
@@ -86,7 +86,7 @@ Prompt-Hunting/
 
 | Folder | Files | Lines | Focus | Key Topics |
 |--------|-------|-------|-------|------------|
-| `Specialized-Targets/` | 50 | 33 | Targets | IoT, mobile, cloud, Kubernetes, blockchain, DeFi, healthcare, industrial |
+| `Specialized-Targets/` | 50 | 499-1698 | Targets | IoT, mobile, cloud, Kubernetes, blockchain, DeFi, healthcare, industrial |
 | `bug-bounty-support/` | 23 | 253-1068 | Support | Master prompts, vulnerability detection, exploitation, PoC generation |
 
 ---
@@ -178,7 +178,7 @@ Advanced automation capabilities:
 - **Infrastructure as Code** — Terraform, Ansible for security infrastructure
 - **Monitoring & Alerting** — Real-time dashboards, anomaly detection, incident response
 
-### Specialized-Targets/ (50 files, 33 lines)
+### Specialized-Targets/ (50 files, 499-1698 lines)
 
 Target-specific security testing playbooks:
 
@@ -515,16 +515,15 @@ Every prompt in the expanded folders follows a consistent structure:
 
 ```
 Total Files:           572
-Expanded Content:      522 files (293-2331 lines each)
-Template Content:      50 files (33 lines each)
-Total Lines:           ~350,000+ of security content
+Expanded Content:      572 files (293-2331 lines each)
+Total Lines:           ~400,000+ of security content
 Categories:            12 specialized domains
 Vuln Classes:          50+ vulnerability types covered
 Attack Chains:         200+ documented chaining strategies
 Case Studies:          100+ analyzed real-world reports
 Tool Configs:          50+ tool integration guides
 Learning Paths:        8 structured career paths
-Platform Coverage:     Web, Mobile, Cloud, IoT, Blockchain, ICS
+Platform Coverage:     Web, Mobile, Cloud, IoT, Blockchain, ICS, Telecom, Space
 ```
 
 ---
