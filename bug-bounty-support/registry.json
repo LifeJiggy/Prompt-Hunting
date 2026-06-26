@@ -1,0 +1,187 @@
+{
+  "domain": "bug-bounty-support",
+  "version": "1.0",
+  "description": "Master frameworks and foundational guides for bug bounty hunting and security research",
+  "total_files": 23,
+  "categories": {
+    "core_frameworks": {
+      "description": "Foundational documents establishing methodology and approach",
+      "files": [
+        {
+          "filename": "Advanced-Bug-Bounty-Prompt.md",
+          "purpose": "Advanced prompt engineering techniques tailored for bug bounty workflows",
+          "tags": ["prompt-engineering", "ai-assisted", "workflow", "advanced"]
+        },
+        {
+          "filename": "Core-Aspects-for-Bug-Security-Hunting.md",
+          "purpose": "Essential principles and foundational methodology for bug bounty hunting",
+          "tags": ["fundamentals", "methodology", "mindset", "principles"]
+        }
+      ]
+    },
+    "vulnerability_analysis": {
+      "description": "Deep-dive analysis of specific vulnerability classes and testing methodologies",
+      "files": [
+        {
+          "filename": "Advanced-Bug-Security-Hunting-Prompt.md",
+          "purpose": "Advanced prompt patterns for complex vulnerability discovery workflows",
+          "tags": ["advanced", "vulnerability-discovery", "prompt-patterns", "logic-flaws"]
+        },
+        {
+          "filename": "Advanced-Information-Disclosure-Analysis-Prompt.md",
+          "purpose": "Information disclosure methodology covering error handling, debug leaks, and sensitive data exposure",
+          "tags": ["information-disclosure", "error-handling", "debug-leaks", "data-exposure"]
+        },
+        {
+          "filename": "Advanced-JavaScript-Vulnerability-Analysis-Prompt.md",
+          "purpose": "JavaScript-specific vulnerability patterns including prototype pollution and DOM XSS",
+          "tags": ["javascript", "prototype-pollution", "dom-xss", "client-side"]
+        },
+        {
+          "filename": "JavaScript-Identification-Deobfuscation.md",
+          "purpose": "JavaScript identification, analysis, and deobfuscation techniques",
+          "tags": ["javascript", "deobfuscation", "reverse-engineering", "code-analysis"]
+        },
+        {
+          "filename": "parameters.md",
+          "purpose": "Parameter analysis, mutation, IDOR testing, and injection point discovery",
+          "tags": ["parameters", "idor", "injection", "mutation", "type-confusion"]
+        },
+        {
+          "filename": "Specific-Vulnerabilities-Hunting.md",
+          "purpose": "Targeted hunting approaches for XSS, SQLi, SSRF, XXE, and other vulnerability classes",
+          "tags": ["xss", "sqli", "ssrf", "xxe", "csrf", "targeted-hunting"]
+        },
+        {
+          "filename": "to-identify-injection-and-reflected-point-during-testing.md",
+          "purpose": "Injection point identification and reflection analysis for context-aware testing",
+          "tags": ["injection", "reflection", "input-analysis", "context-aware"]
+        },
+        {
+          "filename": "Vulnerability-Detection.md",
+          "purpose": "Vulnerability detection patterns and signatures for common vulnerability indicators",
+          "tags": ["detection", "patterns", "signatures", "automated"]
+        }
+      ]
+    },
+    "methodology": {
+      "description": "Strategic approaches to the hunting process from reconnaissance through exploitation",
+      "files": [
+        {
+          "filename": "Advanced-Techniques.md",
+          "purpose": "Advanced hunting techniques including WAF bypass, rate limit circumvention, and edge-case exploitation",
+          "tags": ["advanced", "waf-bypass", "rate-limit", "edge-case", "evasion"]
+        },
+        {
+          "filename": "Chaining.md",
+          "purpose": "Vulnerability chaining strategies for combining findings into critical attack paths",
+          "tags": ["chaining", "privilege-escalation", "attack-paths", "impact-amplification"]
+        },
+        {
+          "filename": "Exploitation.md",
+          "purpose": "Exploitation techniques for moving from discovery to proof-of-concept",
+          "tags": ["exploitation", "poc", "impact-demonstration", "privilege-escalation"]
+        },
+        {
+          "filename": "Reconnaissance.md",
+          "purpose": "Reconnaissance methodology including asset discovery, enumeration, and fingerprinting",
+          "tags": ["reconnaissance", "asset-discovery", "enumeration", "fingerprinting"]
+        },
+        {
+          "filename": "static-and-dynamic-testing.md",
+          "purpose": "Static and dynamic analysis methodologies with tool integration patterns",
+          "tags": ["sast", "dast", "source-code-review", "dynamic-analysis"]
+        }
+      ]
+    },
+    "tools": {
+      "description": "Tool-specific guidance and integration workflows",
+      "files": [
+        {
+          "filename": "Burp-AI.md",
+          "purpose": "Burp Suite integration with AI capabilities for enhanced scanning and analysis",
+          "tags": ["burp-suite", "ai-integration", "scanning", "automation"]
+        },
+        {
+          "filename": "debuging-using-browser-console-and-vscode-for-hunting.md",
+          "purpose": "Browser console and VSCode debugging techniques for vulnerability discovery",
+          "tags": ["browser-devtools", "vscode", "debugging", "javascript"]
+        },
+        {
+          "filename": "Tools-Integration.md",
+          "purpose": "Tool integration patterns, workflow optimization, and automation strategies",
+          "tags": ["integration", "automation", "workflow", "toolchain"]
+        }
+      ]
+    },
+    "reporting": {
+      "description": "Documentation, proof-of-concept development, and submission guidance",
+      "files": [
+        {
+          "filename": "PoC-Development.md",
+          "purpose": "Proof-of-concept development including reproducible demonstrations and impact evidence",
+          "tags": ["poc", "documentation", "reproducibility", "impact-evidence"]
+        },
+        {
+          "filename": "Reporting.md",
+          "purpose": "Report writing, severity assessment, and platform-specific submission guidance",
+          "tags": ["reporting", "severity", "submission", "hackerone", "bugcrowd"]
+        }
+      ]
+    },
+    "scope_and_ethics": {
+      "description": "Boundaries, legal considerations, and responsible hunting practices",
+      "files": [
+        {
+          "filename": "Ethical-Guidelines.md",
+          "purpose": "Ethical boundaries, responsible disclosure, and legal considerations",
+          "tags": ["ethics", "legal", "responsible-disclosure", "boundaries"]
+        },
+        {
+          "filename": "manual-testing-scope.md",
+          "purpose": "Manual testing scope definition, authorization requirements, and boundary analysis",
+          "tags": ["scope", "authorization", "boundaries", "testing-limits"]
+        },
+        {
+          "filename": "user-functionality.md",
+          "purpose": "User functionality mapping and attack surface analysis through feature enumeration",
+          "tags": ["functionality", "attack-surface", "user-flows", "enumeration"]
+        }
+      ]
+    }
+  },
+  "usage_patterns": {
+    "new_target_engagement": [
+      "scope_and_ethics",
+      "methodology:reconnaissance",
+      "core_frameworks",
+      "vulnerability_analysis"
+    ],
+    "deep_vulnerability_analysis": [
+      "vulnerability_analysis:injection-identification",
+      "vulnerability_analysis:target-class",
+      "methodology:exploitation",
+      "reporting"
+    ],
+    "tool_assisted_hunting": [
+      "core_frameworks:prompt-engineering",
+      "tools:burp-ai",
+      "tools:debugging",
+      "tools:integration"
+    ],
+    "report_writing": [
+      "reporting:poc-development",
+      "reporting:report-structure",
+      "core_frameworks:impact-framework"
+    ]
+  },
+  "cross_references": {
+    "Advanced-JavaScript-Vulnerability-Analysis-Prompt.md": ["JavaScript-Identification-Deobfuscation.md", "parameters.md"],
+    "Chaining.md": ["Exploitation.md", "Specific-Vulnerabilities-Hunting.md"],
+    "PoC-Development.md": ["Reporting.md", "Exploitation.md"],
+    "Reconnaissance.md": ["manual-testing-scope.md", "user-functionality.md"],
+    "Burp-AI.md": ["debuging-using-browser-console-and-vscode-for-hunting.md", "Tools-Integration.md"],
+    "Advanced-Techniques.md": ["Specific-Vulnerabilities-Hunting.md", "Chaining.md"],
+    "parameters.md": ["to-identify-injection-and-reflected-point-during-testing.md", "Specific-Vulnerabilities-Hunting.md"]
+  }
+}

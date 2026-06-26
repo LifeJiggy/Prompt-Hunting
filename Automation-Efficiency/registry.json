@@ -1,0 +1,422 @@
+{
+  "domain": "Automation-Efficiency",
+  "version": "1.0.0",
+  "last_updated": "2026-06-26",
+  "total_files": 50,
+  "categories": {
+    "workflow_design": {
+      "description": "Workflow composition, tool chaining, script development, and execution pipeline design",
+      "files": [
+        {
+          "id": 1,
+          "filename": "01-Workflow-Automation-Design.md",
+          "title": "Workflow Automation Design",
+          "complexity": "foundation",
+          "tags": ["workflow", "dag", "state-machine", "orchestration", "design-patterns"]
+        },
+        {
+          "id": 2,
+          "filename": "02-Tool-Chaining-Strategies.md",
+          "title": "Tool Chaining Strategies",
+          "complexity": "intermediate",
+          "tags": ["chaining", "composition", "data-flow", "pipelines", "middleware"]
+        },
+        {
+          "id": 3,
+          "filename": "03-Script-Development-Best-Practices.md",
+          "title": "Script Development Best Practices",
+          "complexity": "foundation",
+          "tags": ["scripting", "coding-standards", "python", "shell", "maintainability"]
+        },
+        {
+          "id": 4,
+          "filename": "04-API-Integration-Automation.md",
+          "title": "API Integration Automation",
+          "complexity": "intermediate",
+          "tags": ["api", "rest", "graphql", "authentication", "http", "integration"]
+        },
+        {
+          "id": 5,
+          "filename": "05-Result-Parsing-and-Analysis.md",
+          "title": "Result Parsing and Analysis",
+          "complexity": "intermediate",
+          "tags": ["parsing", "normalization", "extraction", "aggregation", "analytics"]
+        },
+        {
+          "id": 6,
+          "filename": "06-Notification-and-Alerting-Systems.md",
+          "title": "Notification and Alerting Systems",
+          "complexity": "foundation",
+          "tags": ["notification", "alerting", "escalation", "routing", "multi-channel"]
+        },
+        {
+          "id": 7,
+          "filename": "07-Report-Generation-Automation.md",
+          "title": "Report Generation Automation",
+          "complexity": "intermediate",
+          "tags": ["reporting", "templates", "visualization", "distribution", "pdf"]
+        },
+        {
+          "id": 8,
+          "filename": "08-Dashboard-and-Monitoring.md",
+          "title": "Dashboard and Monitoring",
+          "complexity": "intermediate",
+          "tags": ["dashboard", "monitoring", "visualization", "real-time", "grafana"]
+        },
+        {
+          "id": 9,
+          "filename": "09-Continuous-Scanning-Workflows.md",
+          "title": "Continuous Scanning Workflows",
+          "complexity": "advanced",
+          "tags": ["continuous", "scanning", "scheduling", "state-persistence", "pipelines"]
+        },
+        {
+          "id": 10,
+          "filename": "10-Change-Detection-Automation.md",
+          "title": "Change Detection Automation",
+          "complexity": "advanced",
+          "tags": ["change-detection", "diff", "snapshot", "drift", "alerting"]
+        }
+      ]
+    },
+    "target_management": {
+      "description": "Target discovery, classification, deduplication, and processing optimization",
+      "files": [
+        {
+          "id": 11,
+          "filename": "11-Target-Management-Systems.md",
+          "title": "Target Management Systems",
+          "complexity": "intermediate",
+          "tags": ["target", "discovery", "classification", "prioritization", "lifecycle"]
+        },
+        {
+          "id": 12,
+          "filename": "12-Result-Deduplication.md",
+          "title": "Result Deduplication",
+          "complexity": "intermediate",
+          "tags": ["deduplication", "fingerprinting", "consolidation", "hashing", "clustering"]
+        },
+        {
+          "id": 13,
+          "filename": "13-False-Positive-Reduction.md",
+          "title": "False Positive Reduction",
+          "complexity": "intermediate",
+          "tags": ["false-positive", "classification", "heuristics", "machine-learning", "accuracy"]
+        },
+        {
+          "id": 14,
+          "filename": "14-Parallel-Processing-Optimization.md",
+          "title": "Parallel Processing Optimization",
+          "complexity": "advanced",
+          "tags": ["parallel", "concurrency", "throughput", "work-distribution", "optimization"]
+        },
+        {
+          "id": 15,
+          "filename": "15-Resource-Management-Automation.md",
+          "title": "Resource Management Automation",
+          "complexity": "advanced",
+          "tags": ["resource", "cpu", "memory", "storage", "allocation", "monitoring"]
+        }
+      ]
+    },
+    "reliability": {
+      "description": "Error handling, performance monitoring, scalability, testing, and deployment reliability",
+      "files": [
+        {
+          "id": 16,
+          "filename": "16-Error-Handling-and-Recovery.md",
+          "title": "Error Handling and Recovery",
+          "complexity": "intermediate",
+          "tags": ["error-handling", "retry", "circuit-breaker", "recovery", "resilience"]
+        },
+        {
+          "id": 17,
+          "filename": "17-Performance-Monitoring.md",
+          "title": "Performance Monitoring",
+          "complexity": "intermediate",
+          "tags": ["monitoring", "latency", "throughput", "anomaly-detection", "metrics"]
+        },
+        {
+          "id": 18,
+          "filename": "18-Scalability-Design-Patterns.md",
+          "title": "Scalability Design Patterns",
+          "complexity": "advanced",
+          "tags": ["scalability", "horizontal", "vertical", "load-distribution", "capacity"]
+        },
+        {
+          "id": 19,
+          "filename": "19-Integration-Testing-Automation.md",
+          "title": "Integration Testing Automation",
+          "complexity": "advanced",
+          "tags": ["testing", "integration", "e2e", "mocking", "contract-testing"]
+        },
+        {
+          "id": 20,
+          "filename": "20-Deployment-Automation.md",
+          "title": "Deployment Automation",
+          "complexity": "advanced",
+          "tags": ["deployment", "cicd", "blue-green", "canary", "rollback"]
+        }
+      ]
+    },
+    "configuration": {
+      "description": "Environment configuration, version control, collaboration, knowledge management, and tool development",
+      "files": [
+        {
+          "id": 21,
+          "filename": "21-Configuration-Management.md",
+          "title": "Configuration Management",
+          "complexity": "foundation",
+          "tags": ["configuration", "environment", "parameters", "settings", "deployment"]
+        },
+        {
+          "id": 22,
+          "filename": "22-Version-Control-for-Tools.md",
+          "title": "Version Control for Tools",
+          "complexity": "intermediate",
+          "tags": ["git", "version-control", "branching", "release", "tagging"]
+        },
+        {
+          "id": 23,
+          "filename": "23-Collaboration-Workflows.md",
+          "title": "Collaboration Workflows",
+          "complexity": "intermediate",
+          "tags": ["collaboration", "code-review", "team", "ownership", "process"]
+        },
+        {
+          "id": 24,
+          "filename": "24-Knowledge-Base-Automation.md",
+          "title": "Knowledge Base Automation",
+          "complexity": "advanced",
+          "tags": ["knowledge-base", "documentation", "search", "indexing", "graph"]
+        },
+        {
+          "id": 25,
+          "filename": "25-Learning-and-Adaptation.md",
+          "title": "Learning and Adaptation",
+          "complexity": "advanced",
+          "tags": ["machine-learning", "feedback", "adaptation", "tuning", "evolution"]
+        },
+        {
+          "id": 26,
+          "filename": "26-Custom-Tool-Development.md",
+          "title": "Custom Tool Development",
+          "complexity": "advanced",
+          "tags": ["tool-development", "plugin", "extension", "framework", "api"]
+        }
+      ]
+    },
+    "data_security": {
+      "description": "Security controls, compliance, audit trails, disaster recovery, and secure automation practices",
+      "files": [
+        {
+          "id": 30,
+          "filename": "30-Security-for-Automation-Tools.md",
+          "title": "Security for Automation Tools",
+          "complexity": "advanced",
+          "tags": ["security", "secrets", "credentials", "access-control", "encryption"]
+        },
+        {
+          "id": 37,
+          "filename": "37-Automation-Security-Assessment.md",
+          "title": "Automation Security Assessment",
+          "complexity": "advanced",
+          "tags": ["security-audit", "penetration-testing", "vulnerability", "assessment"]
+        },
+        {
+          "id": 38,
+          "filename": "38-Compliance-and-Audit-Trails.md",
+          "title": "Compliance and Audit Trails",
+          "complexity": "advanced",
+          "tags": ["compliance", "audit", "regulatory", "logging", "evidence"]
+        },
+        {
+          "id": 39,
+          "filename": "39-Disaster-Recovery-Planning.md",
+          "title": "Disaster Recovery Planning",
+          "complexity": "expert",
+          "tags": ["disaster-recovery", "business-continuity", "backup", "restoration", "failover"]
+        }
+      ]
+    },
+    "maintenance": {
+      "description": "Cost optimization, lifecycle maintenance, and documentation automation",
+      "files": [
+        {
+          "id": 31,
+          "filename": "31-Cost-Optimization-Strategies.md",
+          "title": "Cost Optimization Strategies",
+          "complexity": "advanced",
+          "tags": ["cost", "optimization", "budget", "right-sizing", "resource-efficiency"]
+        },
+        {
+          "id": 32,
+          "filename": "32-Maintenance-and-Updates.md",
+          "title": "Maintenance and Updates",
+          "complexity": "advanced",
+          "tags": ["maintenance", "patching", "updates", "lifecycle", "dependency"]
+        },
+        {
+          "id": 33,
+          "filename": "33-Documentation-Automation.md",
+          "title": "Documentation Automation",
+          "complexity": "intermediate",
+          "tags": ["documentation", "auto-docs", "api-docs", "runbooks", "adr"]
+        }
+      ]
+    },
+    "operations": {
+      "description": "Testing workflows, debugging, benchmarking, metrics, and workflow optimization",
+      "files": [
+        {
+          "id": 34,
+          "filename": "34-Testing-Automation-Workflows.md",
+          "title": "Testing Automation Workflows",
+          "complexity": "intermediate",
+          "tags": ["testing", "regression", "validation", "frameworks", "automation"]
+        },
+        {
+          "id": 35,
+          "filename": "35-Debugging-and-Troubleshooting.md",
+          "title": "Debugging and Troubleshooting",
+          "complexity": "intermediate",
+          "tags": ["debugging", "troubleshooting", "diagnostics", "logging", "root-cause"]
+        },
+        {
+          "id": 36,
+          "filename": "36-Performance-Benchmarking.md",
+          "title": "Performance Benchmarking",
+          "complexity": "intermediate",
+          "tags": ["benchmarking", "load-testing", "stress-testing", "capacity", "profiling"]
+        },
+        {
+          "id": 40,
+          "filename": "40-Automation-Metrics-and-Analytics.md",
+          "title": "Automation Metrics and Analytics",
+          "complexity": "intermediate",
+          "tags": ["metrics", "kpi", "analytics", "data-collection", "dashboards"]
+        },
+        {
+          "id": 41,
+          "filename": "41-Workflow-Optimization.md",
+          "title": "Workflow Optimization",
+          "complexity": "advanced",
+          "tags": ["optimization", "bottleneck", "parallelization", "tuning", "profiling"]
+        }
+      ]
+    },
+    "integration": {
+      "description": "API rate limiting, data storage, backup recovery, tool integration frameworks, and custom API development",
+      "files": [
+        {
+          "id": 27,
+          "filename": "27-API-Rate-Limiting-Handling.md",
+          "title": "API Rate Limiting Handling",
+          "complexity": "intermediate",
+          "tags": ["rate-limiting", "backoff", "token-bucket", "quota", "throttling"]
+        },
+        {
+          "id": 28,
+          "filename": "28-Data-Storage-and-Retrieval.md",
+          "title": "Data Storage and Retrieval",
+          "complexity": "intermediate",
+          "tags": ["database", "storage", "schema", "indexing", "caching", "lifecycle"]
+        },
+        {
+          "id": 29,
+          "filename": "29-Backup-and-Recovery-Automation.md",
+          "title": "Backup and Recovery Automation",
+          "complexity": "advanced",
+          "tags": ["backup", "recovery", "scheduling", "integrity", "restoration"]
+        },
+        {
+          "id": 42,
+          "filename": "42-Tool-Integration-Frameworks.md",
+          "title": "Tool Integration Frameworks",
+          "complexity": "advanced",
+          "tags": ["integration", "framework", "adapter", "protocol", "bridge"]
+        },
+        {
+          "id": 43,
+          "filename": "43-Custom-API-Development.md",
+          "title": "Custom API Development",
+          "complexity": "advanced",
+          "tags": ["api-development", "endpoint", "gateway", "internal-api", "openapi"]
+        }
+      ]
+    },
+    "infrastructure": {
+      "description": "Database, network, cloud, container, and orchestration platform automation",
+      "files": [
+        {
+          "id": 44,
+          "filename": "44-Database-Automation.md",
+          "title": "Database Automation",
+          "complexity": "advanced",
+          "tags": ["database", "provisioning", "migration", "backup", "tuning"]
+        },
+        {
+          "id": 45,
+          "filename": "45-Network-Automation.md",
+          "title": "Network Automation",
+          "complexity": "advanced",
+          "tags": ["network", "devices", "configuration", "infrastructure-as-code", "netconf"]
+        },
+        {
+          "id": 46,
+          "filename": "46-Cloud-Automation.md",
+          "title": "Cloud Automation",
+          "complexity": "advanced",
+          "tags": ["cloud", "provisioning", "scaling", "cost-management", "multi-cloud"]
+        },
+        {
+          "id": 47,
+          "filename": "47-Container-Automation.md",
+          "title": "Container Automation",
+          "complexity": "advanced",
+          "tags": ["container", "docker", "lifecycle", "image", "runtime"]
+        },
+        {
+          "id": 48,
+          "filename": "48-Orchestration-Frameworks.md",
+          "title": "Orchestration Frameworks",
+          "complexity": "expert",
+          "tags": ["orchestration", "kubernetes", "nomad", "scheduling", "cluster"]
+        },
+        {
+          "id": 49,
+          "filename": "49-Automation-Standards.md",
+          "title": "Automation Standards",
+          "complexity": "foundation",
+          "tags": ["standards", "conventions", "quality-gates", "naming", "best-practices"]
+        },
+        {
+          "id": 50,
+          "filename": "50-Advanced-Automation-Architecture.md",
+          "title": "Advanced Automation Architecture",
+          "complexity": "expert",
+          "tags": ["architecture", "enterprise", "distributed", "design-patterns", "future-proofing"]
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "complexity_distribution": {
+      "foundation": 5,
+      "intermediate": 18,
+      "advanced": 24,
+      "expert": 3
+    },
+    "category_summary": {
+      "workflow_design": { "count": 10, "avg_complexity": "intermediate" },
+      "target_management": { "count": 5, "avg_complexity": "intermediate" },
+      "reliability": { "count": 5, "avg_complexity": "advanced" },
+      "configuration": { "count": 6, "avg_complexity": "advanced" },
+      "data_security": { "count": 4, "avg_complexity": "advanced" },
+      "maintenance": { "count": 3, "avg_complexity": "advanced" },
+      "operations": { "count": 5, "avg_complexity": "intermediate" },
+      "integration": { "count": 5, "avg_complexity": "advanced" },
+      "infrastructure": { "count": 7, "avg_complexity": "advanced" }
+    }
+  }
+}

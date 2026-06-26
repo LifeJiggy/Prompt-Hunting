@@ -1,0 +1,391 @@
+{
+  "domain": "Advanced Chaining Techniques",
+  "description": "Comprehensive vulnerability chaining techniques combining multiple low/medium-severity bugs into critical attack paths. Covers web applications, APIs, cloud infrastructure, containers, mobile, IoT, and advanced persistent threats across 49 files.",
+  "file_count": 49,
+  "categories": {
+    "foundational": {
+      "name": "Foundational Chaining",
+      "description": "Core concepts and basic chaining methodologies",
+      "files": ["01-Basic-Vulnerability-Chaining.md"]
+    },
+    "information-to-rce": {
+      "name": "Information Disclosure to RCE",
+      "description": "Chains starting from information leaks leading to code execution",
+      "files": ["02-Information-Disclosure-to-RCE.md"]
+    },
+    "client-side-chains": {
+      "name": "Client-Side Attack Chains",
+      "description": "Chains exploiting client-side vulnerabilities for account compromise",
+      "files": [
+        "03-XSS-to-Account-Takeover.md",
+        "07-CORS-Misconfiguration-Chains.md",
+        "08-CSRF-to-Privilege-Escalation.md",
+        "24-Open-Redirect-to-Phishing.md",
+        "25-Content-Spoofing-Chains.md",
+        "27-Clickjacking-to-Account-Compromise.md",
+        "33-Cross-Site-Script-Inclusion.md",
+        "35-Client-Side-Storage-Abuse.md"
+      ]
+    },
+    "injection-chains": {
+      "name": "Injection Vulnerability Chains",
+      "description": "Chains exploiting various injection vulnerabilities",
+      "files": [
+        "05-SQL-Injection-to-Shell-Access.md",
+        "10-XXE-to-Sensitive-Data-Access.md",
+        "15-NoSQL-Injection-to-Data-Breach.md",
+        "29-LDAP-Injection-Chains.md",
+        "30-XPath-Injection-Exploitation.md"
+      ]
+    },
+    "server-side-chains": {
+      "name": "Server-Side Attack Chains",
+      "description": "Chains exploiting server-side vulnerabilities",
+      "files": [
+        "04-IDOR-to-Mass-Data-Extraction.md",
+        "06-SSRF-to-Internal-Network-Compromise.md",
+        "09-File-Upload-to-Web-Shell.md",
+        "11-Deserialization-to-RCE.md",
+        "13-SSTI-to-Complete-Compromise.md",
+        "32-Insecure-File-Handling-Chains.md"
+      ]
+    },
+    "authentication-chains": {
+      "name": "Authentication and Session Chains",
+      "description": "Chains targeting authentication and session management",
+      "files": [
+        "12-JWT-Manipulation-Chains.md",
+        "31-Session-Puzzling-Techniques.md"
+      ]
+    },
+    "api-chains": {
+      "name": "API and Modern Architecture Chains",
+      "description": "Chains targeting APIs and modern web architectures",
+      "files": [
+        "16-GraphQL-Abuse-Chains.md",
+        "17-WebSocket-Security-Chains.md",
+        "40-Mobile-API-Chains.md"
+      ]
+    },
+    "protocol-chains": {
+      "name": "Protocol-Level Attack Chains",
+      "description": "Chains exploiting HTTP protocol complexities",
+      "files": [
+        "19-HTTP-Request-Smuggling-Chains.md",
+        "20-Host-Header-Injection-Chains.md",
+        "26-WebCache-Poisoning-Chains.md",
+        "28-Parameter-Pollution-Attacks.md",
+        "34-HTTP-Response-Splitting.md"
+      ]
+    },
+    "advanced-techniques": {
+      "name": "Advanced Exploitation Techniques",
+      "description": "Complex exploitation methodologies",
+      "files": [
+        "14-Open-Redirect-Chains.md",
+        "18-Prototype-Pollution-Exploitation.md",
+        "21-DNS-Rebinding-Attacks.md",
+        "22-Race-Condition-Exploitation.md",
+        "23-Subdomain-Takeover-Chains.md"
+      ]
+    },
+    "cryptography-chains": {
+      "name": "Cryptography Weakness Chains",
+      "description": "Chains exploiting cryptographic weaknesses",
+      "files": ["36-Cryptography-Weakness-Chains.md"]
+    },
+    "infrastructure-chains": {
+      "name": "Infrastructure Attack Chains",
+      "description": "Chains targeting network and infrastructure components",
+      "files": [
+        "37-Third-Party-Component-Chains.md",
+        "38-Configuration-Misconfiguration-Chains.md",
+        "39-Network-Infrastructure-Chains.md"
+      ]
+    },
+    "cloud-chains": {
+      "name": "Cloud and Container Chains",
+      "description": "Chains targeting cloud and container environments",
+      "files": [
+        "41-Cloud-Misconfiguration-Chains.md",
+        "42-Container-Escape-Chains.md",
+        "43-Kubernetes-Attack-Chains.md"
+      ]
+    },
+    "specialized-chains": {
+      "name": "Specialized Attack Chains",
+      "description": "Chains targeting specialized technologies",
+      "files": [
+        "44-Blockchain-Exploit-Chains.md",
+        "45-IoT-Device-Compromise-Chains.md"
+      ]
+    },
+    "advanced-persistent-threats": {
+      "name": "Advanced Persistent Threat Chains",
+      "description": "APT-style attack patterns and supply chain exploitation",
+      "files": [
+        "46-Supply-Chain-Attack-Chains.md",
+        "47-Zero-Day-Chaining-Strategies.md",
+        "48-Multi-Platform-Attack-Chains.md",
+        "49-Advanced-Persistent-Threat-Chains.md"
+      ]
+    },
+    "master-framework": {
+      "name": "Master Framework",
+      "description": "Comprehensive chaining methodology and framework",
+      "files": ["50-Master-Chaining-Framework.md"]
+    }
+  },
+  "files": [
+    {
+      "id": 1,
+      "filename": "01-Basic-Vulnerability-Chaining.md",
+      "title": "Basic Vulnerability Chaining"
+    },
+    {
+      "id": 2,
+      "filename": "02-Information-Disclosure-to-RCE.md",
+      "title": "Information Disclosure to RCE"
+    },
+    {
+      "id": 3,
+      "filename": "03-XSS-to-Account-Takeover.md",
+      "title": "XSS to Account Takeover"
+    },
+    {
+      "id": 4,
+      "filename": "04-IDOR-to-Mass-Data-Extraction.md",
+      "title": "IDOR to Mass Data Extraction"
+    },
+    {
+      "id": 5,
+      "filename": "05-SQL-Injection-to-Shell-Access.md",
+      "title": "SQL Injection to Shell Access"
+    },
+    {
+      "id": 6,
+      "filename": "06-SSRF-to-Internal-Network-Compromise.md",
+      "title": "SSRF to Internal Network Compromise"
+    },
+    {
+      "id": 7,
+      "filename": "07-CORS-Misconfiguration-Chains.md",
+      "title": "CORS Misconfiguration Chains"
+    },
+    {
+      "id": 8,
+      "filename": "08-CSRF-to-Privilege-Escalation.md",
+      "title": "CSRF to Privilege Escalation"
+    },
+    {
+      "id": 9,
+      "filename": "09-File-Upload-to-Web-Shell.md",
+      "title": "File Upload to Web Shell"
+    },
+    {
+      "id": 10,
+      "filename": "10-XXE-to-Sensitive-Data-Access.md",
+      "title": "XXE to Sensitive Data Access"
+    },
+    {
+      "id": 11,
+      "filename": "11-Deserialization-to-RCE.md",
+      "title": "Deserialization to RCE"
+    },
+    {
+      "id": 12,
+      "filename": "12-JWT-Manipulation-Chains.md",
+      "title": "JWT Manipulation Chains"
+    },
+    {
+      "id": 13,
+      "filename": "13-SSTI-to-Complete-Compromise.md",
+      "title": "SSTI to Complete Compromise"
+    },
+    {
+      "id": 14,
+      "filename": "14-Open-Redirect-Chains.md",
+      "title": "Open Redirect Chains"
+    },
+    {
+      "id": 15,
+      "filename": "15-NoSQL-Injection-to-Data-Breach.md",
+      "title": "NoSQL Injection to Data Breach"
+    },
+    {
+      "id": 16,
+      "filename": "16-GraphQL-Abuse-Chains.md",
+      "title": "GraphQL Abuse Chains"
+    },
+    {
+      "id": 17,
+      "filename": "17-WebSocket-Security-Chains.md",
+      "title": "WebSocket Security Chains"
+    },
+    {
+      "id": 18,
+      "filename": "18-Prototype-Pollution-Exploitation.md",
+      "title": "Prototype Pollution Exploitation"
+    },
+    {
+      "id": 19,
+      "filename": "19-HTTP-Request-Smuggling-Chains.md",
+      "title": "HTTP Request Smuggling Chains"
+    },
+    {
+      "id": 20,
+      "filename": "20-Host-Header-Injection-Chains.md",
+      "title": "Host Header Injection Chains"
+    },
+    {
+      "id": 21,
+      "filename": "21-DNS-Rebinding-Attacks.md",
+      "title": "DNS Rebinding Attacks"
+    },
+    {
+      "id": 22,
+      "filename": "22-Race-Condition-Exploitation.md",
+      "title": "Race Condition Exploitation"
+    },
+    {
+      "id": 23,
+      "filename": "23-Subdomain-Takeover-Chains.md",
+      "title": "Subdomain Takeover Chains"
+    },
+    {
+      "id": 24,
+      "filename": "24-Open-Redirect-to-Phishing.md",
+      "title": "Open Redirect to Phishing"
+    },
+    {
+      "id": 25,
+      "filename": "25-Content-Spoofing-Chains.md",
+      "title": "Content Spoofing Chains"
+    },
+    {
+      "id": 26,
+      "filename": "26-WebCache-Poisoning-Chains.md",
+      "title": "WebCache Poisoning Chains"
+    },
+    {
+      "id": 27,
+      "filename": "27-Clickjacking-to-Account-Compromise.md",
+      "title": "Clickjacking to Account Compromise"
+    },
+    {
+      "id": 28,
+      "filename": "28-Parameter-Pollution-Attacks.md",
+      "title": "Parameter Pollution Attacks"
+    },
+    {
+      "id": 29,
+      "filename": "29-LDAP-Injection-Chains.md",
+      "title": "LDAP Injection Chains"
+    },
+    {
+      "id": 30,
+      "filename": "30-XPath-Injection-Exploitation.md",
+      "title": "XPath Injection Exploitation"
+    },
+    {
+      "id": 31,
+      "filename": "31-Session-Puzzling-Techniques.md",
+      "title": "Session Puzzling Techniques"
+    },
+    {
+      "id": 32,
+      "filename": "32-Insecure-File-Handling-Chains.md",
+      "title": "Insecure File Handling Chains"
+    },
+    {
+      "id": 33,
+      "filename": "33-Cross-Site-Script-Inclusion.md",
+      "title": "Cross-Site Script Inclusion"
+    },
+    {
+      "id": 34,
+      "filename": "34-HTTP-Response-Splitting.md",
+      "title": "HTTP Response Splitting"
+    },
+    {
+      "id": 35,
+      "filename": "35-Client-Side-Storage-Abuse.md",
+      "title": "Client-Side Storage Abuse"
+    },
+    {
+      "id": 36,
+      "filename": "36-Cryptography-Weakness-Chains.md",
+      "title": "Cryptography Weakness Chains"
+    },
+    {
+      "id": 37,
+      "filename": "37-Third-Party-Component-Chains.md",
+      "title": "Third-Party Component Chains"
+    },
+    {
+      "id": 38,
+      "filename": "38-Configuration-Misconfiguration-Chains.md",
+      "title": "Configuration Misconfiguration Chains"
+    },
+    {
+      "id": 39,
+      "filename": "39-Network-Infrastructure-Chains.md",
+      "title": "Network Infrastructure Chains"
+    },
+    {
+      "id": 40,
+      "filename": "40-Mobile-API-Chains.md",
+      "title": "Mobile API Chains"
+    },
+    {
+      "id": 41,
+      "filename": "41-Cloud-Misconfiguration-Chains.md",
+      "title": "Cloud Misconfiguration Chains"
+    },
+    {
+      "id": 42,
+      "filename": "42-Container-Escape-Chains.md",
+      "title": "Container Escape Chains"
+    },
+    {
+      "id": 43,
+      "filename": "43-Kubernetes-Attack-Chains.md",
+      "title": "Kubernetes Attack Chains"
+    },
+    {
+      "id": 44,
+      "filename": "44-Blockchain-Exploit-Chains.md",
+      "title": "Blockchain Exploit Chains"
+    },
+    {
+      "id": 45,
+      "filename": "45-IoT-Device-Compromise-Chains.md",
+      "title": "IoT Device Compromise Chains"
+    },
+    {
+      "id": 46,
+      "filename": "46-Supply-Chain-Attack-Chains.md",
+      "title": "Supply Chain Attack Chains"
+    },
+    {
+      "id": 47,
+      "filename": "47-Zero-Day-Chaining-Strategies.md",
+      "title": "Zero-Day Chaining Strategies"
+    },
+    {
+      "id": 48,
+      "filename": "48-Multi-Platform-Attack-Chains.md",
+      "title": "Multi-Platform Attack Chains"
+    },
+    {
+      "id": 49,
+      "filename": "49-Advanced-Persistent-Threat-Chains.md",
+      "title": "Advanced Persistent Threat Chains"
+    },
+    {
+      "id": 50,
+      "filename": "50-Master-Chaining-Framework.md",
+      "title": "Master Chaining Framework"
+    }
+  ]
+}

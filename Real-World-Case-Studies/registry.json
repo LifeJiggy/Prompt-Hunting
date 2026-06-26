@@ -1,0 +1,646 @@
+{
+  "collection": "Real-World Case Studies: Vulnerability Disclosure Analysis",
+  "version": "1.0.0",
+  "last_updated": "2026-06-12",
+  "total_files": 50,
+  "total_cases_documented": 500,
+  "categories": {
+    "access_control": {
+      "label": "Access Control",
+      "owasp_ref": "A01:2021",
+      "files": [
+        {
+          "id": 1,
+          "filename": "01-IDOR-Account-Takeover-Case-Studies.md",
+          "title": "IDOR - Account Takeover",
+          "cwe": "CWE-639",
+          "cvss_range": "7.5-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["idor", "object-ref", "account-takeover", "authorization-bypass"]
+        },
+        {
+          "id": 5,
+          "filename": "05-CSRF-State-Changing-Attacks.md",
+          "title": "CSRF - State-Changing Attacks",
+          "cwe": "CWE-352",
+          "cvss_range": "5.4-9.1",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["csrf", "cross-site-request", "state-changing", "forgery"]
+        },
+        {
+          "id": 12,
+          "filename": "12-Authentication-Bypass.md",
+          "title": "Authentication Bypass",
+          "cwe": "CWE-287",
+          "cvss_range": "7.5-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["auth-bypass", "authentication", "login-bypass", "access-control"]
+        },
+        {
+          "id": 13,
+          "filename": "13-Privilege-Escalation.md",
+          "title": "Privilege Escalation",
+          "cwe": "CWE-269",
+          "cvss_range": "7.0-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["privilege-escalation", "horizontal", "vertical", "role-manipulation"]
+        }
+      ]
+    },
+    "injection": {
+      "label": "Injection",
+      "owasp_ref": "A03:2021",
+      "files": [
+        {
+          "id": 2,
+          "filename": "02-XSS-Stored-Persistent-Attacks.md",
+          "title": "XSS - Stored Persistent Attacks",
+          "cwe": "CWE-79",
+          "cvss_range": "6.1-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["xss", "stored-xss", "persistent-xss", "cross-site-scripting"]
+        },
+        {
+          "id": 3,
+          "filename": "03-SQL-Injection-Data-Breaches.md",
+          "title": "SQL Injection - Data Breaches",
+          "cwe": "CWE-89",
+          "cvss_range": "8.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["sqli", "sql-injection", "data-breach", "database"]
+        },
+        {
+          "id": 6,
+          "filename": "06-Command-Injection-RCE.md",
+          "title": "Command Injection - RCE",
+          "cwe": "CWE-78",
+          "cvss_range": "9.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["command-injection", "rce", "os-command", "code-execution"]
+        },
+        {
+          "id": 9,
+          "filename": "09-XXE-XML-External-Entity-Attacks.md",
+          "title": "XXE - XML External Entity Attacks",
+          "cwe": "CWE-611",
+          "cvss_range": "6.5-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["xxe", "xml-external-entity", "xml-injection", "file-read"]
+        },
+        {
+          "id": 10,
+          "filename": "10-SSTI-Server-Side-Template-Injection.md",
+          "title": "SSTI - Server-Side Template Injection",
+          "cwe": "CWE-1336",
+          "cvss_range": "8.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["ssti", "template-injection", "jinja2", "twig", "rce"]
+        },
+        {
+          "id": 28,
+          "filename": "28-LDAP-Injection-Attacks.md",
+          "title": "LDAP Injection Attacks",
+          "cwe": "CWE-90",
+          "cvss_range": "7.0-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["ldap-injection", "directory-injection", "authentication-bypass"]
+        },
+        {
+          "id": 29,
+          "filename": "29-XPath-Injection-Attacks.md",
+          "title": "XPath Injection Attacks",
+          "cwe": "CWE-91",
+          "cvss_range": "7.0-9.0",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["xpath-injection", "xml-query", "authentication-bypass"]
+        },
+        {
+          "id": 30,
+          "filename": "30-NoSQL-Injection-MongoDB.md",
+          "title": "NoSQL Injection - MongoDB",
+          "cwe": "CWE-943",
+          "cvss_range": "6.5-9.1",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["nosql-injection", "mongodb", "operator-injection", "json-injection"]
+        }
+      ]
+    },
+    "deserialization": {
+      "label": "Deserialization",
+      "owasp_ref": "A08:2021",
+      "files": [
+        {
+          "id": 7,
+          "filename": "07-Deserialization-Remote-Code-Execution.md",
+          "title": "Deserialization - Remote Code Execution",
+          "cwe": "CWE-502",
+          "cvss_range": "8.5-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["deserialization", "rce", "object-injection", "gadget-chain"]
+        },
+        {
+          "id": 17,
+          "filename": "17-Deserialization-Java-Deserialization.md",
+          "title": "Deserialization - Java",
+          "cwe": "CWE-502",
+          "cvss_range": "8.5-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["java-deserialization", "t3-protocol", "weblogic", "commons-collections"]
+        },
+        {
+          "id": 18,
+          "filename": "18-Deserialization-PHP-Unserialize.md",
+          "title": "Deserialization - PHP Unserialize",
+          "cwe": "CWE-502",
+          "cvss_range": "8.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["php-unserialize", "magic-methods", "__wakeup", "object-injection"]
+        },
+        {
+          "id": 19,
+          "filename": "19-Deserialization-Python-Pickle.md",
+          "title": "Deserialization - Python Pickle",
+          "cwe": "CWE-502",
+          "cvss_range": "8.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["python-pickle", "__reduce__", "rce", "session-hijack"]
+        }
+      ]
+    },
+    "ssrf": {
+      "label": "Server-Side Request Forgery",
+      "owasp_ref": "A10:2021",
+      "files": [
+        {
+          "id": 4,
+          "filename": "04-SSRF-Internal-Network-Access.md",
+          "title": "SSRF - Internal Network Access",
+          "cwe": "CWE-918",
+          "cvss_range": "7.5-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["ssrf", "internal-network", "cloud-metadata", "imds"]
+        },
+        {
+          "id": 46,
+          "filename": "46-Server-Side-Request-Forgery.md",
+          "title": "SSRF",
+          "cwe": "CWE-918",
+          "cvss_range": "7.5-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["ssrf", "url-fetch", "cloud-metadata", "internal-access"]
+        }
+      ]
+    },
+    "file_handling": {
+      "label": "File Handling",
+      "owasp_ref": "A04:2021",
+      "files": [
+        {
+          "id": 8,
+          "filename": "08-File-Upload-Arbitrary-Upload.md",
+          "title": "File Upload - Arbitrary Upload",
+          "cwe": "CWE-434",
+          "cvss_range": "7.0-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["file-upload", "webshell", "unrestricted-upload", "rce"]
+        },
+        {
+          "id": 43,
+          "filename": "43-Path-Traversal-File-Inclusion.md",
+          "title": "Path Traversal - File Inclusion",
+          "cwe": "CWE-22",
+          "cvss_range": "7.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["path-traversal", "directory-traversal", "file-include", "dot-dot-slash"]
+        },
+        {
+          "id": 44,
+          "filename": "44-Local-File-Inclusion-LFI.md",
+          "title": "Local File Inclusion - LFI",
+          "cwe": "CWE-98",
+          "cvss_range": "7.0-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["lfi", "local-file-inclusion", "php-include", "log-poisoning"]
+        },
+        {
+          "id": 45,
+          "filename": "45-Remote-File-Inclusion-RFI.md",
+          "title": "Remote File Inclusion - RFI",
+          "cwe": "CWE-98",
+          "cvss_range": "8.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["rfi", "remote-file-inclusion", "url-include", "rce"]
+        }
+      ]
+    },
+    "authentication": {
+      "label": "Authentication & Session",
+      "owasp_ref": "A07:2021",
+      "files": [
+        {
+          "id": 11,
+          "filename": "11-JWT-Token-Manipulation.md",
+          "title": "JWT - Token Manipulation",
+          "cwe": "CWE-798",
+          "cvss_range": "7.0-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["jwt", "json-web-token", "algorithm-confusion", "token-forgery"]
+        },
+        {
+          "id": 21,
+          "filename": "21-Host-Header-Injection.md",
+          "title": "Host Header Injection",
+          "cwe": "CWE-644",
+          "cvss_range": "5.3-8.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["host-header", "password-reset-poisoning", "web-cache-poisoning"]
+        },
+        {
+          "id": 39,
+          "filename": "39-Token-Leakage-URL-Parameters.md",
+          "title": "Token Leakage - URL Parameters",
+          "cwe": "CWE-598",
+          "cvss_range": "5.0-8.0",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["token-leakage", "referer-leak", "url-parameters", "session-hijack"]
+        },
+        {
+          "id": 50,
+          "filename": "50-API-Authentication-Bypass.md",
+          "title": "API Authentication Bypass",
+          "cwe": "CWE-287",
+          "cvss_range": "7.5-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["api-auth-bypass", "api-key", "missing-auth", "broken-auth"]
+        }
+      ]
+    },
+    "data_exposure": {
+      "label": "Data Exposure & Cryptography",
+      "owasp_ref": "A02:2021",
+      "files": [
+        {
+          "id": 15,
+          "filename": "15-Information-Disclosure.md",
+          "title": "Information Disclosure",
+          "cwe": "CWE-200",
+          "cvss_range": "3.5-7.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["info-disclosure", "verbose-errors", "stack-trace", "version-disclosure"]
+        },
+        {
+          "id": 40,
+          "filename": "40-Sensitive-Data-Exposure.md",
+          "title": "Sensitive Data Exposure",
+          "cwe": "CWE-200",
+          "cvss_range": "5.0-8.5",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["data-exposure", "pii-leak", "over-fetching", "sensitive-data"]
+        },
+        {
+          "id": 41,
+          "filename": "41-Weak-Encryption-Algorithms.md",
+          "title": "Weak Encryption Algorithms",
+          "cwe": "CWE-327",
+          "cvss_range": "5.0-7.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["weak-encryption", "md5", "sha1", "des", "rc4"]
+        },
+        {
+          "id": 42,
+          "filename": "42-Insecure-Cryptographic-Storage.md",
+          "title": "Insecure Cryptographic Storage",
+          "cwe": "CWE-312",
+          "cvss_range": "5.5-8.0",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["crypto-storage", "hardcoded-key", "plaintext", "weak-hash"]
+        }
+      ]
+    },
+    "memory_corruption": {
+      "label": "Memory Corruption",
+      "owasp_ref": "N/A (Low-Level)",
+      "files": [
+        {
+          "id": 16,
+          "filename": "16-Memory-Corruption-Heap-Overflow.md",
+          "title": "Memory Corruption - Heap Overflow",
+          "cwe": "CWE-119",
+          "cvss_range": "8.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["heap-overflow", "buffer-overflow", "memory-corruption", "rce"]
+        }
+      ]
+    },
+    "race_conditions": {
+      "label": "Race Conditions",
+      "owasp_ref": "A04:2021",
+      "files": [
+        {
+          "id": 20,
+          "filename": "20-Race-Condition-Time-of-Check.md",
+          "title": "Race Condition - TOCTOU",
+          "cwe": "CWE-367",
+          "cvss_range": "5.5-9.1",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["race-condition", "toctou", "concurrency", "double-spend"]
+        }
+      ]
+    },
+    "web_protocols": {
+      "label": "Web Protocol Attacks",
+      "owasp_ref": "Various",
+      "files": [
+        {
+          "id": 22,
+          "filename": "22-DNS-Rebinding-Attacks.md",
+          "title": "DNS Rebinding Attacks",
+          "cwe": "CWE-346",
+          "cvss_range": "7.0-9.1",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["dns-rebinding", "origin-bypass", "local-network", "ssrf"]
+        },
+        {
+          "id": 23,
+          "filename": "23-WebSocket-Security-Issues.md",
+          "title": "WebSocket Security Issues",
+          "cwe": "CWE-346",
+          "cvss_range": "5.0-8.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["websocket", "ws-security", "origin-validation", "hijacking"]
+        },
+        {
+          "id": 27,
+          "filename": "27-HTTP-Response-Splitting.md",
+          "title": "HTTP Response Splitting",
+          "cwe": "CWE-113",
+          "cvss_range": "6.5-8.5",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["response-splitting", "crlf-injection", "header-injection", "cache-poisoning"]
+        },
+        {
+          "id": 35,
+          "filename": "35-WebCache-Poisoning.md",
+          "title": "Web Cache Poisoning",
+          "cwe": "CWE-349",
+          "cvss_range": "5.0-8.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["cache-poisoning", "unkeyed-header", "cdn", "web-cache"]
+        },
+        {
+          "id": 36,
+          "filename": "36-HTTP-Request-Smuggling.md",
+          "title": "HTTP Request Smuggling",
+          "cwe": "CWE-444",
+          "cvss_range": "7.0-10.0",
+          "severity": "CRITICAL",
+          "cases_count": 10,
+          "keywords": ["request-smuggling", "cl-te", "te-cl", "h2-smuggling"]
+        }
+      ]
+    },
+    "client_side": {
+      "label": "Client-Side Attacks",
+      "owasp_ref": "Various",
+      "files": [
+        {
+          "id": 24,
+          "filename": "24-GraphQL-Introspection-Attacks.md",
+          "title": "GraphQL Introspection Attacks",
+          "cwe": "CWE-200",
+          "cvss_range": "5.0-8.0",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["graphql", "introspection", "schema-disclosure", "api-enumeration"]
+        },
+        {
+          "id": 25,
+          "filename": "25-CSP-Bypass-Techniques.md",
+          "title": "CSP Bypass Techniques",
+          "cwe": "CWE-16",
+          "cvss_range": "5.0-7.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["csp-bypass", "content-security-policy", "xss-circumvention", "base-uri"]
+        },
+        {
+          "id": 26,
+          "filename": "26-Clickjacking-UI-Redressing.md",
+          "title": "Clickjacking - UI Redressing",
+          "cwe": "CWE-1021",
+          "cvss_range": "3.5-6.5",
+          "severity": "LOW",
+          "cases_count": 10,
+          "keywords": ["clickjacking", "ui-redressing", "frame-embedding", "overlay"]
+        },
+        {
+          "id": 31,
+          "filename": "31-Prototype-Pollution-JavaScript.md",
+          "title": "Prototype Pollution - JavaScript",
+          "cwe": "CWE-1321",
+          "cvss_range": "6.0-9.8",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["prototype-pollution", "__proto__", "deep-merge", "property-injection"]
+        },
+        {
+          "id": 33,
+          "filename": "33-Open-Redirect-Phishing.md",
+          "title": "Open Redirect - Phishing",
+          "cwe": "CWE-601",
+          "cvss_range": "5.0-7.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["open-redirect", "phishing", "url-redirect", "oauth-theft"]
+        },
+        {
+          "id": 34,
+          "filename": "34-Content-Spoofing-Attacks.md",
+          "title": "Content Spoofing Attacks",
+          "cwe": "CWE-451",
+          "cvss_range": "4.0-6.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["content-spoofing", "text-injection", "error-page", "phishing"]
+        },
+        {
+          "id": 37,
+          "filename": "37-WebSocket-Hijacking.md",
+          "title": "WebSocket Hijacking",
+          "cwe": "CWE-346",
+          "cvss_range": "6.0-8.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["websocket-hijacking", "cross-site-websocket", "origin-bypass"]
+        },
+        {
+          "id": 38,
+          "filename": "38-CORS-Misconfiguration.md",
+          "title": "CORS Misconfiguration",
+          "cwe": "CWE-942",
+          "cvss_range": "5.0-8.0",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["cors", "access-control-allow-origin", "null-origin", "credential-theft"]
+        },
+        {
+          "id": 47,
+          "filename": "47-Client-Side-Request-Forgery.md",
+          "title": "Client-Side Request Forgery",
+          "cwe": "CWE-918",
+          "cvss_range": "5.0-7.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["csrf", "client-side", "fetch-abuse", "internal-api"]
+        }
+      ]
+    },
+    "api_security": {
+      "label": "API Security",
+      "owasp_ref": "API Security Top 10",
+      "files": [
+        {
+          "id": 32,
+          "filename": "32-Subdomain-Takeover.md",
+          "title": "Subdomain Takeover",
+          "cwe": "CWE-829",
+          "cvss_range": "6.5-8.5",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["subdomain-takeover", "cname", "dangling-dns", "dns-takeover"]
+        },
+        {
+          "id": 48,
+          "filename": "48-Mobile-API-Security-Issues.md",
+          "title": "Mobile API Security Issues",
+          "cwe": "CWE-939",
+          "cvss_range": "5.5-9.1",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["mobile-api", "android", "ios", "api-security", "device-binding"]
+        }
+      ]
+    },
+    "cloud_security": {
+      "label": "Cloud Security",
+      "owasp_ref": "A05:2021",
+      "files": [
+        {
+          "id": 49,
+          "filename": "49-Cloud-Misconfiguration-AWS.md",
+          "title": "Cloud Misconfiguration - AWS",
+          "cwe": "CWE-16",
+          "cvss_range": "5.0-9.1",
+          "severity": "HIGH",
+          "cases_count": 10,
+          "keywords": ["cloud-misconfig", "aws", "s3", "iam", "lambda", "metadata"]
+        }
+      ]
+    },
+    "business_logic": {
+      "label": "Business Logic",
+      "owasp_ref": "A04:2021",
+      "files": [
+        {
+          "id": 14,
+          "filename": "14-Business-Logic-Flaws.md",
+          "title": "Business Logic Flaws",
+          "cwe": "CWE-840",
+          "cvss_range": "4.0-9.1",
+          "severity": "MEDIUM",
+          "cases_count": 10,
+          "keywords": ["business-logic", "workflow-bypass", "price-manipulation", "race-condition"]
+        }
+      ]
+    }
+  },
+  "severity_summary": {
+    "CRITICAL": {
+      "count": 14,
+      "percentage": 28,
+      "files": [3, 6, 7, 10, 12, 16, 17, 18, 19, 36, 43, 45, 50]
+    },
+    "HIGH": {
+      "count": 22,
+      "percentage": 44,
+      "files": [1, 2, 4, 5, 8, 9, 13, 14, 20, 22, 27, 28, 29, 30, 31, 38, 40, 44, 46, 48, 49, 11]
+    },
+    "MEDIUM": {
+      "count": 13,
+      "percentage": 26,
+      "files": [15, 21, 23, 24, 25, 32, 33, 34, 35, 37, 39, 41, 42]
+    },
+    "LOW": {
+      "count": 1,
+      "percentage": 2,
+      "files": [26]
+    }
+  },
+  "owasp_coverage": {
+    "A01_2021_Broken_Access_Control": [1, 5, 12, 13],
+    "A02_2021_Cryptographic_Failures": [40, 41, 42],
+    "A03_2021_Injection": [2, 3, 6, 9, 10, 28, 29, 30],
+    "A04_2021_Insecure_Design": [14, 20],
+    "A05_2021_Security_Misconfiguration": [21, 24, 25, 26, 38, 49],
+    "A06_2021_Vulnerable_Components": [31],
+    "A07_2021_Authentication_Failures": [11, 39, 50],
+    "A08_2021_Data_Integrity_Failures": [7, 17, 18, 19],
+    "A09_2021_Logging_Monitoring": [],
+    "A10_2021_SSRF": [4, 46]
+  },
+  "use_cases": {
+    "bug_bounty_hunting": [1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 32, 33, 46],
+    "penetration_testing": [3, 6, 8, 9, 10, 17, 18, 19, 28, 29, 30, 43, 44, 45],
+    "security_audit": [1, 5, 11, 12, 13, 14, 20, 21, 38, 39, 40, 41, 42, 48, 49, 50],
+    "ctf_practice": [2, 6, 7, 9, 10, 16, 17, 18, 19, 28, 29, 43, 44, 45],
+    "security_training": [1, 2, 3, 4, 5, 6, 8, 12, 14, 15, 26, 32, 33, 40]
+  },
+  "tech_stack_coverage": {
+    "java": [7, 9, 10, 16, 17],
+    "php": [3, 8, 18, 43, 44, 45],
+    "python": [6, 10, 19, 28],
+    "javascript": [2, 31, 38],
+    "nodejs": [7, 31, 46],
+    "ruby": [3, 10, 43],
+    "go": [3, 6, 46],
+    "mobile": [48],
+    "cloud": [4, 46, 49],
+    "database": [3, 29, 30]
+  }
+}

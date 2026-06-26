@@ -1,0 +1,493 @@
+{
+  "collection": "High-Level World Case Studies",
+  "version": "1.0",
+  "total_files": 46,
+  "last_updated": "2025",
+  "description": "Comprehensive collection of real-world security breach case studies covering critical infrastructure, zero-day exploitation, supply chain attacks, and advanced persistent threats.",
+  "categories": {
+    "critical_infrastructure": {
+      "name": "Critical Infrastructure & Industrial Control Systems",
+      "files": [
+        {
+          "id": 5,
+          "filename": "05-Critical-Infrastructure-Breach.md",
+          "title": "Critical Infrastructure Breach",
+          "focus": "ICS/SCADA attacks on power grids, water systems, transportation",
+          "key_incidents": ["Colonial Pipeline", "Oldsmar Water Treatment", "Ukrainian Power Grid", "Triton/TRISIS"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Lateral Movement", "Impact"]
+        },
+        {
+          "id": 23,
+          "filename": "23-IoT-Device-Compromise.md",
+          "title": "IoT Device Compromise",
+          "focus": "Smart device exploitation, industrial IoT breaches",
+          "key_incidents": ["Mirai Botnet", "Ripple20", "Amnesia:33"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Execution", "Persistence"]
+        },
+        {
+          "id": 28,
+          "filename": "28-Network-Infrastructure-Attack.md",
+          "title": "Network Infrastructure Attack",
+          "focus": "DNS hijacking, BGP manipulation, core router compromises",
+          "key_incidents": ["Sea Turtle", "BGP Hijack incidents", "DNSpionage"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Collection", "Exfiltration"]
+        }
+      ]
+    },
+    "vulnerability_research": {
+      "name": "Vulnerability Research & Exploitation",
+      "files": [
+        {
+          "id": 6,
+          "filename": "06-Zero-Day-Exploitation-Case.md",
+          "title": "Zero-Day Exploitation Case",
+          "focus": "Zero-day discovery, weaponization, and exploitation",
+          "key_incidents": ["Stuxnet", "EternalBlue", "ProxyLogon", "Log4Shell", "Pegasus"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Execution", "Privilege Escalation"]
+        },
+        {
+          "id": 7,
+          "filename": "07-Chain-of-Vulnerabilities.md",
+          "title": "Chain of Vulnerabilities",
+          "focus": "Multi-stage attack chains combining multiple flaws",
+          "key_incidents": ["ProxyShell", "PrintNightmare chains", "OAuth abuse chains"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Privilege Escalation", "Lateral Movement"]
+        },
+        {
+          "id": 34,
+          "filename": "34-Input-Validation-Failure.md",
+          "title": "Input Validation Failure",
+          "focus": "SQL injection, XSS, command injection, format string bugs",
+          "key_incidents": ["Equifax SQLi", "MOVEit SQLi", "Log4Shell injection"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Execution", "Collection"]
+        },
+        {
+          "id": 37,
+          "filename": "37-Weak-Cryptography-Example.md",
+          "title": "Weak Cryptography Example",
+          "focus": "Broken ciphers, weak key generation, hardcoded secrets",
+          "key_incidents": ["ROCA vulnerability", "Debian OpenSSL bug", "KeePass keyfile flaw"],
+          "severity": "medium",
+          "mitre_tactics": ["Credential Access", "Defense Evasion"]
+        }
+      ]
+    },
+    "application_security": {
+      "name": "Application Security",
+      "files": [
+        {
+          "id": 18,
+          "filename": "18-Mobile-App-Vulnerability-Case.md",
+          "title": "Mobile App Vulnerability Case",
+          "focus": "Android/iOS application flaws, API key exposure",
+          "key_incidents": ["Supermassive data leak", "Pegasus zero-click", "Banking trojans"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Collection", "Exfiltration"]
+        },
+        {
+          "id": 19,
+          "filename": "19-Web-Application-Security-Case.md",
+          "title": "Web Application Security Case",
+          "focus": "OWASP Top 10 exploitation patterns",
+          "key_incidents": ["SolarWinds web compromise", "Parler data scrape", "Facebook data leak"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Execution", "Collection"]
+        },
+        {
+          "id": 20,
+          "filename": "20-API-Security-Breach-Analysis.md",
+          "title": "API Security Breach Analysis",
+          "focus": "Broken authentication, mass assignment, SSRF",
+          "key_incidents": ["Parler API abuse", "T-Mobile API breach", "Optus API exposure"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Collection", "Exfiltration"]
+        },
+        {
+          "id": 24,
+          "filename": "24-Blockchain-Smart-Contract-Bug.md",
+          "title": "Blockchain Smart Contract Bug",
+          "focus": "Reentrancy, flash loan attacks, oracle manipulation",
+          "key_incidents": ["The DAO hack", "Beanstalk governance", "Wormhole bridge exploit"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Collection"]
+        },
+        {
+          "id": 25,
+          "filename": "25-Cryptocurrency-Exchange-Hack.md",
+          "title": "Cryptocurrency Exchange Hack",
+          "focus": "Hot wallet theft, private key compromise",
+          "key_incidents": ["Mt. Gox", "Ronin Bridge", "FTX collapse", "Binance hack"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Collection", "Exfiltration"]
+        }
+      ]
+    },
+    "authentication_authorization": {
+      "name": "Authentication & Authorization",
+      "files": [
+        {
+          "id": 31,
+          "filename": "31-Authentication-Bypass-Case.md",
+          "title": "Authentication Bypass Case",
+          "focus": "Broken authentication flows, credential stuffing",
+          "key_incidents": ["GitLab OAuth bypass", "Fortinet auth bypass", "Atlassian CVE"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Credential Access"]
+        },
+        {
+          "id": 32,
+          "filename": "32-Authorization-Flaw-Study.md",
+          "title": "Authorization Flaw Study",
+          "focus": "IDOR, horizontal/vertical privilege escalation",
+          "key_incidents": ["Instagram IDOR", "Uber privilege escalation", "Shopify partner abuse"],
+          "severity": "medium",
+          "mitre_tactics": ["Privilege Escalation", "Lateral Movement"]
+        },
+        {
+          "id": 33,
+          "filename": "33-Session-Management-Issue.md",
+          "title": "Session Management Issue",
+          "focus": "Session fixation, token theft, cookie manipulation",
+          "key_incidents": ["Session fixation attacks", "JWT none algorithm", "Cookie injection"],
+          "severity": "medium",
+          "mitre_tactics": ["Initial Access", "Defense Evasion"]
+        },
+        {
+          "id": 42,
+          "filename": "42-Multi-Factor-Authentication-Bypass.md",
+          "title": "Multi-Factor Authentication Bypass",
+          "focus": "SIM swapping, prompt bombing, phishing kits",
+          "key_incidents": ["Lapsus$ MFA bypass", "Uber 2FA bypass", "Twitter crypto scam"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Credential Access", "Defense Evasion"]
+        },
+        {
+          "id": 43,
+          "filename": "43-Privilege-Escalation-Case.md",
+          "title": "Privilege Escalation Case",
+          "focus": "Local and domain privilege escalation chains",
+          "key_incidents": ["PrintNightmare", "HiveNightmare", "ZeroLogon"],
+          "severity": "critical",
+          "mitre_tactics": ["Privilege Escalation", "Lateral Movement"]
+        }
+      ]
+    },
+    "cloud_container": {
+      "name": "Cloud & Container Security",
+      "files": [
+        {
+          "id": 21,
+          "filename": "21-Cloud-Configuration-Error.md",
+          "title": "Cloud Configuration Error",
+          "focus": "S3 bucket exposures, IAM policy flaws, misconfigurations",
+          "key_incidents": ["Capital One breach", "Accenture S3 leak", "Facebook AWS config"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Collection", "Exfiltration"]
+        },
+        {
+          "id": 22,
+          "filename": "22-Container-Escape-Case-Study.md",
+          "title": "Container Escape Case Study",
+          "focus": "Docker/Kubernetes escape, registry poisoning",
+          "key_incidents": ["Kubernetes CVE-2020-8558", "Docker socket abuse", "Helm chart poisoning"],
+          "severity": "critical",
+          "mitre_tactics": ["Privilege Escalation", "Lateral Movement"]
+        },
+        {
+          "id": 41,
+          "filename": "41-Zero-Trust-Bypass-Analysis.md",
+          "title": "Zero-Trust Bypass Analysis",
+          "focus": "Bypassing modern access control architectures",
+          "key_incidents": ["Okta compromise chain", "Cloudflare bypass", "BeyondCorp evasion"],
+          "severity": "high",
+          "mitre_tactics": ["Defense Evasion", "Lateral Movement", "Privilege Escalation"]
+        }
+      ]
+    },
+    "network_infrastructure": {
+      "name": "Network & Infrastructure Attacks",
+      "files": [
+        {
+          "id": 26,
+          "filename": "26-Social-Engineering-Success.md",
+          "title": "Social Engineering Success",
+          "focus": "Pretexting, phishing campaigns, vishing",
+          "key_incidents": ["Twitter employee social engineering", "Ubiquiti breach", "Google/Facebook $100M scam"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Collection"]
+        },
+        {
+          "id": 27,
+          "filename": "27-Physical-Security-Bypass.md",
+          "title": "Physical Security Bypass",
+          "focus": "Tailgating, lock picking, hardware implants",
+          "key_incidents": ["Building infiltration tests", "USB drop attacks", "Badge cloning"],
+          "severity": "medium",
+          "mitre_tactics": ["Initial Access", "Collection"]
+        },
+        {
+          "id": 29,
+          "filename": "29-Database-Compromise-Case.md",
+          "title": "Database Compromise Case",
+          "focus": "SQL injection, credential theft, data exposure",
+          "key_incidents": ["Yahoo breach", "LinkedIn breach", "Equifax breach"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Collection", "Exfiltration"]
+        },
+        {
+          "id": 30,
+          "filename": "30-File-System-Attack-Analysis.md",
+          "title": "File System Attack Analysis",
+          "focus": "Path traversal, symlink attacks, race conditions",
+          "key_incidents": ["ZIP slip vulnerabilities", "Path traversal RCE", "TOCTOU exploits"],
+          "severity": "medium",
+          "mitre_tactics": ["Initial Access", "Privilege Escalation"]
+        },
+        {
+          "id": 38,
+          "filename": "38-Insecure-Communication-Study.md",
+          "title": "Insecure Communication Study",
+          "focus": "MITM attacks, TLS downgrade, certificate pinning bypass",
+          "key_incidents": ["Superfish Lenovo", "DigiNotar breach", "Certificate transparency abuse"],
+          "severity": "high",
+          "mitre_tactics": ["Collection", "Credential Access"]
+        }
+      ]
+    },
+    "business_logic_data": {
+      "name": "Business Logic & Data Security",
+      "files": [
+        {
+          "id": 35,
+          "filename": "35-Business-Logic-Flaw-Analysis.md",
+          "title": "Business Logic Flaw Analysis",
+          "focus": "Price manipulation, workflow abuse, race conditions",
+          "key_incidents": ["Ticketmaster vulnerability", "E-commerce price manipulation", "Coupon bypass"],
+          "severity": "medium",
+          "mitre_tactics": ["Initial Access", "Collection"]
+        },
+        {
+          "id": 36,
+          "filename": "36-Information-Disclosure-Case.md",
+          "title": "Information Disclosure Case",
+          "focus": "Verbose errors, debug endpoints, metadata exposure",
+          "key_incidents": ["GitHub secret leaks", "Cloud metadata exposure", "Stack trace leaks"],
+          "severity": "medium",
+          "mitre_tactics": ["Discovery", "Collection"]
+        },
+        {
+          "id": 45,
+          "filename": "45-Data-Exfiltration-Method.md",
+          "title": "Data Exfiltration Method",
+          "focus": "Covert channels, DNS exfiltration, cloud storage abuse",
+          "key_incidents": ["DNS-over-HTTPS exfil", "ICMP tunneling", "Steganography exfil"],
+          "severity": "high",
+          "mitre_tactics": ["Exfiltration", "Command and Control"]
+        }
+      ]
+    },
+    "supply_chain": {
+      "name": "Supply Chain & Third-Party Risk",
+      "files": [
+        {
+          "id": 39,
+          "filename": "39-Third-Party-Component-Vulnerability.md",
+          "title": "Third-Party Component Vulnerability",
+          "focus": "Library vulnerabilities, npm/PyPI attacks",
+          "key_incidents": ["event-stream incident", "ua-parser-js compromise", "colors.js sabotage"],
+          "severity": "high",
+          "mitre_tactics": ["Initial Access", "Execution"]
+        },
+        {
+          "id": 40,
+          "filename": "40-Supply-Chain-Attack-Case.md",
+          "title": "Supply Chain Attack Case",
+          "focus": "SolarWinds, Codecov, 3CX incident",
+          "key_incidents": ["SolarWinds Sunburst", "Codecov Bash Uploader", "3CX Desktop App"],
+          "severity": "critical",
+          "mitre_tactics": ["Initial Access", "Execution", "Persistence"]
+        }
+      ]
+    },
+    "apt_post_exploitation": {
+      "name": "Advanced Persistent Threat & Post-Exploitation",
+      "files": [
+        {
+          "id": 44,
+          "filename": "44-Lateral-Movement-Study.md",
+          "title": "Lateral Movement Study",
+          "focus": "Pass-the-hash, RDP hopping, tunneling",
+          "key_incidents": ["NotPetya lateral spread", "DarkSide pipeline movement", "APT29 techniques"],
+          "severity": "critical",
+          "mitre_tactics": ["Lateral Movement", "Collection"]
+        },
+        {
+          "id": 46,
+          "filename": "46-Persistence-Mechanism-Analysis.md",
+          "title": "Persistence Mechanism Analysis",
+          "focus": "Registry persistence, scheduled tasks, DLL hijacking",
+          "key_incidents": ["APT28 persistence", "Cobalt Strike beacons", "Turla backdoors"],
+          "severity": "high",
+          "mitre_tactics": ["Persistence", "Defense Evasion"]
+        },
+        {
+          "id": 47,
+          "filename": "47-Anti-Forensic-Technique-Study.md",
+          "title": "Anti-Forensic Technique Study",
+          "focus": "Log tampering, timestomping, memory-only payloads",
+          "key_incidents": ["Fileless malware", "Memory-only implants", "Log deletion scripts"],
+          "severity": "high",
+          "mitre_tactics": ["Defense Evasion", "Impact"]
+        }
+      ]
+    },
+    "incident_response_compliance": {
+      "name": "Incident Response & Compliance",
+      "files": [
+        {
+          "id": 8,
+          "filename": "08-Real-World-Impact-Assessment.md",
+          "title": "Real-World Impact Assessment",
+          "focus": "Financial, operational, reputational damage analysis",
+          "key_incidents": ["Equifax impact", "Colonial Pipeline economic impact", "Maersk disruption"],
+          "severity": "critical",
+          "mitre_tactics": ["Impact"]
+        },
+        {
+          "id": 9,
+          "filename": "09-Timeline-from-Discovery-to-Fix.md",
+          "title": "Timeline from Discovery to Fix",
+          "focus": "Mean time to detect, contain, and remediate",
+          "key_incidents": ["Average breach timelines", "Industry benchmarks", "Best practices"],
+          "severity": "high",
+          "mitre_tactics": ["Detection", "Response"]
+        },
+        {
+          "id": 48,
+          "filename": "48-Incident-Response-Failure.md",
+          "title": "Incident Response Failure",
+          "focus": "Delayed detection, poor communication, evidence loss",
+          "key_incidents": ["Target breach IR failure", "Uber cover-up", "SolarWinds response gaps"],
+          "severity": "high",
+          "mitre_tactics": ["Defense Evasion"]
+        },
+        {
+          "id": 49,
+          "filename": "49-Compliance-Violation-Case.md",
+          "title": "Compliance Violation Case",
+          "focus": "GDPR, HIPAA, PCI DSS violations",
+          "key_incidents": ["British Airways GDPR fine", "Anthem HIPAA breach", "T-Mobile PCI violations"],
+          "severity": "high",
+          "mitre_tactics": ["Compliance"]
+        },
+        {
+          "id": 50,
+          "filename": "50-Post-Mortem-Analysis.md",
+          "title": "Post-Mortem Analysis",
+          "focus": "Root cause analysis, process improvements",
+          "key_incidents": ["Industry post-mortems", "Blameless retrospectives", "Systemic improvements"],
+          "severity": "medium",
+          "mitre_tactics": ["Process Improvement"]
+        }
+      ]
+    },
+    "bug_bounty_process": {
+      "name": "Bug Bounty & Research Process",
+      "files": [
+        {
+          "id": 10,
+          "filename": "10-Reward-Maximization-Strategies.md",
+          "title": "Reward Maximization Strategies",
+          "focus": "Chaining, severity framing, scope analysis",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 11,
+          "filename": "11-Report-Quality-Analysis.md",
+          "title": "Report Quality Analysis",
+          "focus": "Clear PoCs, impact statements, reproducibility",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 12,
+          "filename": "12-Triage-Process-Understanding.md",
+          "title": "Triage Process Understanding",
+          "focus": "How programs evaluate and prioritize reports",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 13,
+          "filename": "13-Program-Response-Analysis.md",
+          "title": "Program Response Analysis",
+          "focus": "Response patterns, dispute resolution",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 14,
+          "filename": "14-Disclosure-Timeline-Study.md",
+          "title": "Disclosure Timeline Study",
+          "focus": "Coordinated disclosure, legal considerations",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 15,
+          "filename": "15-Collaborative-Hunting-Case.md",
+          "title": "Collaborative Hunting Case",
+          "focus": "Multi-researcher collaboration, knowledge sharing",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 16,
+          "filename": "16-Cross-Program-Vulnerability-Patterns.md",
+          "title": "Cross-Program Vulnerability Patterns",
+          "focus": "Common flaws across different programs",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        },
+        {
+          "id": 17,
+          "filename": "17-Industry-Specific-Findings.md",
+          "title": "Industry-Specific Findings",
+          "focus": "Healthcare, fintech, government-specific issues",
+          "severity": "info",
+          "mitre_tactics": ["Methodology"]
+        }
+      ]
+    }
+  },
+  "severity_distribution": {
+    "critical": 11,
+    "high": 22,
+    "medium": 12,
+    "info": 1
+  },
+  "mitre_tactic_coverage": {
+    "Initial Access": 28,
+    "Execution": 12,
+    "Persistence": 8,
+    "Privilege Escalation": 10,
+    "Defense Evasion": 12,
+    "Credential Access": 6,
+    "Discovery": 4,
+    "Lateral Movement": 10,
+    "Collection": 22,
+    "Exfiltration": 14,
+    "Command and Control": 4,
+    "Impact": 10,
+    "Methodology": 8
+  },
+  "total_words": "1,000,000+",
+  "total_lines": "20,000+"
+}

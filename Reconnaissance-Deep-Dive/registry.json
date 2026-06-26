@@ -1,0 +1,382 @@
+{
+  "name": "Reconnaissance Deep Dive",
+  "version": "1.0",
+  "description": "50 advanced reconnaissance prompts covering subdomain enumeration, OSINT, active discovery, fingerprinting, cloud resources, API discovery, code analysis, configuration extraction, enterprise recon, and advanced techniques",
+  "total_files": 50,
+  "categories": [
+    {
+      "id": "subdomain_dns",
+      "name": "Subdomain & DNS",
+      "description": "Subdomain enumeration, DNS record analysis, and certificate transparency log mining",
+      "files": [
+        {
+          "id": 1,
+          "file": "01-Advanced-Subdomain-Enumeration.md",
+          "title": "Advanced Subdomain Enumeration",
+          "tags": ["subdomain", "dns", "brute-force", "ct-logs", "permutation", "recursive"]
+        },
+        {
+          "id": 16,
+          "file": "16-DNS-Enumeration-Advanced.md",
+          "title": "DNS Enumeration Advanced",
+          "tags": ["dns", "zone-transfer", "record-analysis", "dnssec"]
+        },
+        {
+          "id": 17,
+          "file": "17-Certificate-Transparency-Logs.md",
+          "title": "Certificate Transparency Logs",
+          "tags": ["ct-logs", "certificates", "ssl", "subdomain"]
+        }
+      ]
+    },
+    {
+      "id": "osint_passive",
+      "name": "OSINT & Passive Recon",
+      "description": "Passive intelligence gathering from public sources without direct target interaction",
+      "files": [
+        {
+          "id": 2,
+          "file": "02-Passive-OSINT-Collection.md",
+          "title": "Passive OSINT Collection",
+          "tags": ["osint", "passive", "intelligence", "multi-source"]
+        },
+        {
+          "id": 18,
+          "file": "18-Historical-Data-Analysis.md",
+          "title": "Historical Data Analysis",
+          "tags": ["wayback", "dns-history", "historical", "archive"]
+        },
+        {
+          "id": 19,
+          "file": "19-Social-Media-OSINT.md",
+          "title": "Social Media OSINT",
+          "tags": ["social-media", "linkedin", "twitter", "facebook", "personnel"]
+        },
+        {
+          "id": 20,
+          "file": "20-Employee-Linked-Assets.md",
+          "title": "Employee-Linked Assets",
+          "tags": ["employees", "personal-domains", "digital-footprint", "linkedin"]
+        },
+        {
+          "id": 22,
+          "file": "22-Web-Archive-Analysis.md",
+          "title": "Web Archive Analysis",
+          "tags": ["web-archive", "wayback-machine", "historical-content", "crawling"]
+        },
+        {
+          "id": 23,
+          "file": "23-Pastebin-and-Leak-Searching.md",
+          "title": "Pastebin and Leak Searching",
+          "tags": ["pastebin", "leaks", "breach-data", "paste-sites", "monitoring"]
+        },
+        {
+          "id": 32,
+          "file": "32-Email-Address-Harvesting.md",
+          "title": "Email Address Harvesting",
+          "tags": ["email", "harvesting", "validation", "enumeration"]
+        },
+        {
+          "id": 33,
+          "file": "33-Phone-Number-Enumeration.md",
+          "title": "Phone Number Enumeration",
+          "tags": ["phone", "enumeration", "social-engineering", "mfa"]
+        }
+      ]
+    },
+    {
+      "id": "active_discovery",
+      "name": "Active Discovery & Enumeration",
+      "description": "Active probing, scanning, and enumeration of target infrastructure",
+      "files": [
+        {
+          "id": 3,
+          "file": "03-Active-Asset-Discovery.md",
+          "title": "Active Asset Discovery",
+          "tags": ["active", "host-discovery", "port-scanning", "service-enum"]
+        },
+        {
+          "id": 10,
+          "file": "10-Content-Discovery-Automation.md",
+          "title": "Content Discovery Automation",
+          "tags": ["content-discovery", "automation", "hidden-content", "parameter-discovery"]
+        },
+        {
+          "id": 11,
+          "file": "11-Directory-Brute-Forcing.md",
+          "title": "Directory Brute-Forcing",
+          "tags": ["directory", "brute-force", "wordlist", "path-enumeration"]
+        },
+        {
+          "id": 26,
+          "file": "26-IoT-Device-Discovery.md",
+          "title": "IoT Device Discovery",
+          "tags": ["iot", "embedded", "device-discovery", "scada", "ics"]
+        },
+        {
+          "id": 31,
+          "file": "31-XML-RPC-and-SOAP-Discovery.md",
+          "title": "XML-RPC and SOAP Discovery",
+          "tags": ["xml-rpc", "soap", "legacy-api", "web-services"]
+        },
+        {
+          "id": 48,
+          "file": "48-Debug-Endpoint-Discovery.md",
+          "title": "Debug Endpoint Discovery",
+          "tags": ["debug", "admin-panel", "development", "debugging-tools"]
+        }
+      ]
+    },
+    {
+      "id": "fingerprinting",
+      "name": "Fingerprinting & Technology ID",
+      "description": "Web server, framework, CMS, and technology stack identification and version detection",
+      "files": [
+        {
+          "id": 4,
+          "file": "04-Technology-Stack-Fingerprinting.md",
+          "title": "Technology Stack Fingerprinting",
+          "tags": ["fingerprinting", "technology", "stack", "server", "framework"]
+        },
+        {
+          "id": 9,
+          "file": "09-Version-Detection-Techniques.md",
+          "title": "Version Detection Techniques",
+          "tags": ["version", "detection", "cve", "fingerprint"]
+        },
+        {
+          "id": 41,
+          "file": "41-Content-Management-System-Detection.md",
+          "title": "CMS Detection",
+          "tags": ["cms", "wordpress", "drupal", "joomla", "detection"]
+        },
+        {
+          "id": 42,
+          "file": "42-Framework-and-Library-Identification.md",
+          "title": "Framework and Library Identification",
+          "tags": ["framework", "library", "javascript", "frontend", "backend"]
+        },
+        {
+          "id": 43,
+          "file": "43-Server-Configuration-Analysis.md",
+          "title": "Server Configuration Analysis",
+          "tags": ["server", "configuration", "apache", "nginx", "iis"]
+        },
+        {
+          "id": 44,
+          "file": "44-SSL-TLS-Certificate-Analysis.md",
+          "title": "SSL/TLS Certificate Analysis",
+          "tags": ["ssl", "tls", "certificate", "cipher", "tls-config"]
+        }
+      ]
+    },
+    {
+      "id": "cloud_resources",
+      "name": "Cloud Resources",
+      "description": "AWS, Azure, GCP cloud resource enumeration and container registry discovery",
+      "files": [
+        {
+          "id": 5,
+          "file": "05-Cloud-Resource-Enumeration.md",
+          "title": "Cloud Resource Enumeration",
+          "tags": ["cloud", "aws", "azure", "gcp", "s3", "misconfiguration"]
+        },
+        {
+          "id": 25,
+          "file": "25-Container-Registry-Enumeration.md",
+          "title": "Container Registry Enumeration",
+          "tags": ["container", "docker", "registry", "ghcr", "ecr", "acr"]
+        }
+      ]
+    },
+    {
+      "id": "api_discovery",
+      "name": "API Discovery",
+      "description": "REST, GraphQL, WebSocket, and legacy API endpoint discovery and analysis",
+      "files": [
+        {
+          "id": 6,
+          "file": "06-API-Endpoint-Discovery.md",
+          "title": "API Endpoint Discovery",
+          "tags": ["api", "rest", "endpoint", "discovery", "swagger"]
+        },
+        {
+          "id": 28,
+          "file": "28-API-Documentation-Extraction.md",
+          "title": "API Documentation Extraction",
+          "tags": ["api-docs", "swagger", "openapi", "postman", "documentation"]
+        },
+        {
+          "id": 29,
+          "file": "29-WebSocket-Endpoint-Discovery.md",
+          "title": "WebSocket Endpoint Discovery",
+          "tags": ["websocket", "ws", "wss", "realtime", "endpoint"]
+        },
+        {
+          "id": 30,
+          "file": "30-GraphQL-Introspection.md",
+          "title": "GraphQL Introspection",
+          "tags": ["graphql", "introspection", "schema", "query", "mutation"]
+        },
+        {
+          "id": 45,
+          "file": "45-HTTP-Header-Intelligence.md",
+          "title": "HTTP Header Intelligence",
+          "tags": ["headers", "http", "server", "security-headers", "info-disclosure"]
+        }
+      ]
+    },
+    {
+      "id": "code_analysis",
+      "name": "Code & Source Analysis",
+      "description": "JavaScript analysis, source code leaks, git repository analysis, and code repository mining",
+      "files": [
+        {
+          "id": 7,
+          "file": "07-JavaScript-Source-Analysis.md",
+          "title": "JavaScript Source Analysis",
+          "tags": ["javascript", "js", "client-side", "endpoints", "secrets"]
+        },
+        {
+          "id": 8,
+          "file": "08-Configuration-File-Extraction.md",
+          "title": "Configuration File Extraction",
+          "tags": ["config", "configuration", "sensitive-data", "env-files"]
+        },
+        {
+          "id": 14,
+          "file": "14-Source-Code-Leak-Detection.md",
+          "title": "Source Code Leak Detection",
+          "tags": ["source-code", "leak", "exposure", "source-map", "minified"]
+        },
+        {
+          "id": 15,
+          "file": "15-Git-Repository-Analysis.md",
+          "title": "Git Repository Analysis",
+          "tags": ["git", "git-dump", "commit-history", "secret-extraction"]
+        },
+        {
+          "id": 24,
+          "file": "24-Code-Repository-Mining.md",
+          "title": "Code Repository Mining",
+          "tags": ["github", "gitlab", "bitbucket", "code-mining", "secrets"]
+        }
+      ]
+    },
+    {
+      "id": "enterprise_recon",
+      "name": "Enterprise & Organizational Recon",
+      "description": "Enterprise-level reconnaissance including supply chain, partners, subsidiaries, and physical intel",
+      "files": [
+        {
+          "id": 12,
+          "file": "12-File-Type-Detection.md",
+          "title": "File Type Detection",
+          "tags": ["file-type", "content-type", "mime", "detection"]
+        },
+        {
+          "id": 13,
+          "file": "13-Backup-File-Discovery.md",
+          "title": "Backup File Discovery",
+          "tags": ["backup", "backup-files", "naming-conventions", "recovery"]
+        },
+        {
+          "id": 21,
+          "file": "21-Third-Party-Integration-Discovery.md",
+          "title": "Third-Party Integration Discovery",
+          "tags": ["third-party", "saas", "integration", "vendor"]
+        },
+        {
+          "id": 27,
+          "file": "27-Mobile-App-Analysis.md",
+          "title": "Mobile App Analysis",
+          "tags": ["mobile", "android", "ios", "apk", "api-endpoints"]
+        },
+        {
+          "id": 34,
+          "file": "34-Physical-Location-Intelligence.md",
+          "title": "Physical Location Intelligence",
+          "tags": ["physical", "location", "geo", "infrastructure"]
+        },
+        {
+          "id": 35,
+          "file": "35-Supply-Chain-Asset-Mapping.md",
+          "title": "Supply Chain Asset Mapping",
+          "tags": ["supply-chain", "vendor", "dependency", "risk"]
+        },
+        {
+          "id": 36,
+          "file": "36-Competitor-Analysis.md",
+          "title": "Competitor Analysis",
+          "tags": ["competitor", "intelligence", "market", "attack-surface"]
+        },
+        {
+          "id": 37,
+          "file": "37-Partner-Network-Discovery.md",
+          "title": "Partner Network Discovery",
+          "tags": ["partner", "affiliate", "network", "interconnection"]
+        },
+        {
+          "id": 38,
+          "file": "38-Acquisition-Target-Analysis.md",
+          "title": "Acquisition Target Analysis",
+          "tags": ["acquisition", "merger", "target", "infrastructure"]
+        },
+        {
+          "id": 39,
+          "file": "39-Subsidiary-Asset-Mapping.md",
+          "title": "Subsidiary Asset Mapping",
+          "tags": ["subsidiary", "division", "asset-mapping", "enumeration"]
+        }
+      ]
+    },
+    {
+      "id": "advanced_techniques",
+      "name": "Advanced Techniques & Strategy",
+      "description": "Regional infrastructure analysis, staging detection, and master reconnaissance strategy",
+      "files": [
+        {
+          "id": 40,
+          "file": "40-Regional-Infrastructure-Mapping.md",
+          "title": "Regional Infrastructure Mapping",
+          "tags": ["regional", "geographic", "infrastructure", "distribution"]
+        },
+        {
+          "id": 46,
+          "file": "46-Cookie-Analysis-and-Session-Management.md",
+          "title": "Cookie Analysis and Session Management",
+          "tags": ["cookies", "session", "authentication", "token-analysis"]
+        },
+        {
+          "id": 47,
+          "file": "47-Error-Page-Analysis.md",
+          "title": "Error Page Analysis",
+          "tags": ["error-page", "stack-trace", "info-disclosure", "debug"]
+        },
+        {
+          "id": 49,
+          "file": "49-Staging-Environment-Detection.md",
+          "title": "Staging Environment Detection",
+          "tags": ["staging", "development", "qa", "environment"]
+        },
+        {
+          "id": 50,
+          "file": "50-Advanced-Reconnaissance-Strategy.md",
+          "title": "Advanced Reconnaissance Strategy",
+          "tags": ["strategy", "methodology", "workflow", "planning", "synthesis"]
+        }
+      ]
+    }
+  ],
+  "category_summary": {
+    "subdomain_dns": 3,
+    "osint_passive": 8,
+    "active_discovery": 6,
+    "fingerprinting": 6,
+    "cloud_resources": 2,
+    "api_discovery": 5,
+    "code_analysis": 5,
+    "enterprise_recon": 10,
+    "advanced_techniques": 5
+  }
+}

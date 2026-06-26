@@ -1,0 +1,488 @@
+{
+  "name": "Core-Prompts-hunting",
+  "version": "1.0.0",
+  "description": "50 vulnerability hunting prompt modules — comprehensive web application security assessment domain",
+  "domain": "hunting",
+  "total_files": 50,
+  "last_updated": "2026-06-26",
+  "files": [
+    {
+      "id": 1,
+      "filename": "1-Reconnaissance-and-Asset-Discovery.md",
+      "title": "Reconnaissance and Asset Discovery",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Subdomain enumeration, technology fingerprinting, asset mapping, and attack surface discovery",
+      "tags": ["recon", "subdomain", "fingerprinting", "asset-discovery", "osint"]
+    },
+    {
+      "id": 2,
+      "filename": "2-JavaScript-Analysis-and-Deobfuscation.md",
+      "title": "JavaScript Analysis and Deobfuscation",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "JS bundle audit, source map extraction, minification reversal, and client-side code analysis",
+      "tags": ["javascript", "deobfuscation", "source-maps", "bundle-analysis", "frontend"]
+    },
+    {
+      "id": 3,
+      "filename": "3-API-Endpoint-Analysis.md",
+      "title": "API Endpoint Analysis",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "REST/GraphQL API discovery, endpoint enumeration, parameter fuzzing, and documentation extraction",
+      "tags": ["api", "rest", "graphql", "endpoint", "enumeration", "fuzzing"]
+    },
+    {
+      "id": 4,
+      "filename": "4-Authentication-and-Session-Management.md",
+      "title": "Authentication and Session Management",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Authentication flows, session handling, token lifecycle, credential stuffing, and MFA analysis",
+      "tags": ["authentication", "session", "mfa", "tokens", "credentials"]
+    },
+    {
+      "id": 5,
+      "filename": "5-Authorization-and-Access-Control.md",
+      "title": "Authorization and Access Control",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "IDOR, privilege escalation, RBAC/ABAC bypass, horizontal and vertical access control flaws",
+      "tags": ["authorization", "idor", "privilege-escalation", "rbac", "access-control"]
+    },
+    {
+      "id": 6,
+      "filename": "6-Input-Validation-and-Sanitization.md",
+      "title": "Input Validation and Sanitization",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Injection vectors, encoding bypass, sanitization escape, XSS, SQLi fundamentals",
+      "tags": ["input-validation", "sanitization", "xss", "sqli", "injection"]
+    },
+    {
+      "id": 7,
+      "filename": "7-Business-Logic-Flaws.md",
+      "title": "Business Logic Flaws",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Race conditions, workflow bypass, price manipulation, coupon abuse, and logic errors",
+      "tags": ["business-logic", "race-condition", "price-manipulation", "workflow-bypass"]
+    },
+    {
+      "id": 8,
+      "filename": "8-Client-Side-Storage-Security.md",
+      "title": "Client-Side Storage Security",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "LocalStorage, cookies, IndexedDB, DOM clobbering, and client-side data exposure",
+      "tags": ["client-side", "storage", "cookies", "localstorage", "dom-clobbering"]
+    },
+    {
+      "id": 9,
+      "filename": "9-Cryptography-and-Data-Protection.md",
+      "title": "Cryptography and Data Protection",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Weak cryptographic algorithms, key management, TLS misconfiguration, data exposure",
+      "tags": ["cryptography", "tls", "encryption", "key-management", "data-protection"]
+    },
+    {
+      "id": 10,
+      "filename": "10-Error-Handling-and-Information-Disclosure.md",
+      "title": "Error Handling and Information Disclosure",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Stack traces, debug endpoints, verbose errors, version leaks, and information leakage",
+      "tags": ["error-handling", "information-disclosure", "stack-traces", "debug", "version-leak"]
+    },
+    {
+      "id": 11,
+      "filename": "11-File-Upload-and-Processing.md",
+      "title": "File Upload and Processing",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Webshell upload, type bypass, path traversal, SSRF via upload, magic byte manipulation",
+      "tags": ["file-upload", "webshell", "path-traversal", "type-bypass", "upload-bypass"]
+    },
+    {
+      "id": 12,
+      "filename": "12-Server-Side-Request-Forgery-SSRF.md",
+      "title": "Server-Side Request Forgery (SSRF)",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Internal network access, cloud metadata, blind SSRF, DNS rebinding, protocol smuggling",
+      "tags": ["ssrf", "cloud-metadata", "blind-ssrf", "internal-network", "dns-rebinding"]
+    },
+    {
+      "id": 13,
+      "filename": "13-Cross-Site-Request-Forgery-CSRF.md",
+      "title": "Cross-Site Request Forgery (CSRF)",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "State-changing action forgery, SameSite bypass, token predictability, subdomain CSRF",
+      "tags": ["csrf", "forgery", "samesite", "token-predictability", "state-changing"]
+    },
+    {
+      "id": 14,
+      "filename": "14-Cross-Origin-Resource-Sharing-CORS.md",
+      "title": "Cross-Origin Resource Sharing (CORS)",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Origin reflection, null origin abuse, wildcard misconfig, credentialed CORS exploitation",
+      "tags": ["cors", "origin-reflection", "null-origin", "wildcard", "cross-origin"]
+    },
+    {
+      "id": 15,
+      "filename": "15-Race-Conditions-and-Concurrency-Issues.md",
+      "title": "Race Conditions and Concurrency Issues",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "TOCTOU, double-spend, concurrent state mutation, thread-safe bypass techniques",
+      "tags": ["race-condition", "concurrency", "toctou", "double-spend", "atomicity"]
+    },
+    {
+      "id": 16,
+      "filename": "16-Third-Party-Component-Analysis.md",
+      "title": "Third-Party Component Analysis",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Dependency audit, known CVEs, supply chain risks, SBOM generation",
+      "tags": ["third-party", "dependencies", "cve", "supply-chain", "sbom"]
+    },
+    {
+      "id": 17,
+      "filename": "17-Configuration-and-Misconfiguration-Hunting.md",
+      "title": "Configuration and Misconfiguration Hunting",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Default credentials, debug mode, directory listing, backup files, exposed admin panels",
+      "tags": ["misconfiguration", "default-creds", "debug-mode", "directory-listing", "backup-files"]
+    },
+    {
+      "id": 18,
+      "filename": "18-Network-and-Infrastructure-Security.md",
+      "title": "Network and Infrastructure Security",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Port scanning, service fingerprinting, network segmentation, firewall analysis",
+      "tags": ["network", "infrastructure", "port-scan", "fingerprinting", "segmentation"]
+    },
+    {
+      "id": 19,
+      "filename": "19-Mobile-and-API-Specific-Vulnerabilities.md",
+      "title": "Mobile and API-Specific Vulnerabilities",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Mobile API abuse, certificate pinning bypass, OAuth in mobile, API versioning flaws",
+      "tags": ["mobile", "api", "certificate-pinning", "oauth-mobile", "api-versioning"]
+    },
+    {
+      "id": 20,
+      "filename": "20-Reporting-and-Proof-of-Concept-Development.md",
+      "title": "Reporting and Proof of Concept Development",
+      "category": "core",
+      "tier": "fundamentals",
+      "description": "Report writing, PoC construction, CVSS severity scoring, submission guidelines",
+      "tags": ["reporting", "poc", "cvss", "severity", "submission"]
+    },
+    {
+      "id": 21,
+      "filename": "21-Web-Application-Firewall-WAF-Bypass.md",
+      "title": "Web Application Firewall (WAF) Bypass",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "Encoding tricks, payload fragmentation, HTTP/2 abuse, AI-based WAF evasion",
+      "tags": ["waf", "bypass", "evasion", "encoding", "fragmentation", "http2"]
+    },
+    {
+      "id": 22,
+      "filename": "22-HTTP-Request-Smuggling.md",
+      "title": "HTTP Request Smuggling",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "CL.TE, TE.CL, H2.CL, H2.TE smuggling, cache poisoning chains, request queue abuse",
+      "tags": ["smuggling", "cl-te", "te-cl", "h2", "cache-poisoning"]
+    },
+    {
+      "id": 23,
+      "filename": "23-Subdomain-Takeover.md",
+      "title": "Subdomain Takeover",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "CNAME dangling, S3/Azure/GCP bucket takeover, wildcard abuse, DNS verification",
+      "tags": ["subdomain-takeover", "cname", "dangling", "s3", "azure", "gcp"]
+    },
+    {
+      "id": 24,
+      "filename": "24-Host-Header-Injection.md",
+      "title": "Host Header Injection",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "Password reset poisoning, cache poisoning via Host, SSRF via Host header manipulation",
+      "tags": ["host-header", "injection", "password-reset-poisoning", "cache-poisoning"]
+    },
+    {
+      "id": 25,
+      "filename": "25-XML-External-Entity-XXE-Injection.md",
+      "title": "XML External Entity (XXE) Injection",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "Blind XXE, SSRF via XXE, file read, DoS via entity expansion, out-of-band exfil",
+      "tags": ["xxe", "xml", "external-entity", "blind-xxe", "file-read"]
+    },
+    {
+      "id": 26,
+      "filename": "26-Insecure-Deserialization.md",
+      "title": "Insecure Deserialization",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "Java deserialization, Python pickle, PHP object injection, gadget chain exploitation",
+      "tags": ["deserialization", "java", "pickle", "php-object-injection", "gadget-chain"]
+    },
+    {
+      "id": 27,
+      "filename": "27-Command-Injection.md",
+      "title": "Command Injection",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "OS command injection, blind injection, time-based detection, filter bypass",
+      "tags": ["command-injection", "os-command", "blind-injection", "time-based", "filter-bypass"]
+    },
+    {
+      "id": 28,
+      "filename": "28-NoSQL-Injection.md",
+      "title": "NoSQL Injection",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "MongoDB operator injection, CouchDB injection, Redis injection, JSON parameter abuse",
+      "tags": ["nosql", "mongodb", "couchdb", "redis", "operator-injection"]
+    },
+    {
+      "id": 29,
+      "filename": "29-GraphQL-Vulnerabilities.md",
+      "title": "GraphQL Vulnerabilities",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "Introspection abuse, batching attacks, IDOR via GraphQL, depth/complexity bypass",
+      "tags": ["graphql", "introspection", "batching", "idor-graphql", "depth-bypass"]
+    },
+    {
+      "id": 30,
+      "filename": "30-WebSocket-Security.md",
+      "title": "WebSocket Security",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "WebSocket hijacking, cross-site WebSocket, message injection, origin validation bypass",
+      "tags": ["websocket", "hijacking", "cross-site-ws", "message-injection", "origin-validation"]
+    },
+    {
+      "id": 31,
+      "filename": "31-Server-Side-Template-Injection.md",
+      "title": "Server-Side Template Injection (SSTI)",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "SSTI in Jinja2, Twig, Freemarker, ERB — detection, fingerprinting, RCE escalation",
+      "tags": ["ssti", "template-injection", "jinja2", "twig", "freemarker", "erb", "rce"]
+    },
+    {
+      "id": 32,
+      "filename": "32-JSON-Web-Token-JWT-Vulnerabilities.md",
+      "title": "JSON Web Token (JWT) Vulnerabilities",
+      "category": "advanced",
+      "tier": "advanced",
+      "description": "Alg:none, key confusion, token confusion, claim manipulation, JKU/JWK injection",
+      "tags": ["jwt", "json-web-token", "alg-none", "key-confusion", "claim-manipulation"]
+    },
+    {
+      "id": 33,
+      "filename": "33-Content-Security-Policy-CSP-Bypass.md",
+      "title": "Content Security Policy (CSP) Bypass",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "CSP misconfig analysis, nonce abuse, base-uri bypass, script-src holes, reporting abuse",
+      "tags": ["csp", "content-security-policy", "nonce", "base-uri", "script-src"]
+    },
+    {
+      "id": 34,
+      "filename": "34-Clickjacking-and-UI-Redressing.md",
+      "title": "Clickjacking and UI Redressing",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Frame options bypass, nested widget attacks, drag-and-drop data theft, cursorjacking",
+      "tags": ["clickjacking", "ui-redressing", "frame-options", "nested-widgets", "cursorjacking"]
+    },
+    {
+      "id": 35,
+      "filename": "35-HTTP-Parameter-Pollution.md",
+      "title": "HTTP Parameter Pollution",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Backend vs frontend parameter parsing, HPP-based auth bypass, filter evasion",
+      "tags": ["hpp", "parameter-pollution", "auth-bypass", "filter-evasion", "parsing-differential"]
+    },
+    {
+      "id": 36,
+      "filename": "36-LDAP-Injection.md",
+      "title": "LDAP Injection",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "LDAP filter injection, blind LDAP extraction, authentication bypass, attribute manipulation",
+      "tags": ["ldap", "ldap-injection", "filter-injection", "blind-ldap", "auth-bypass"]
+    },
+    {
+      "id": 37,
+      "filename": "37-Session-Puzzling-and-Fixation.md",
+      "title": "Session Puzzling and Fixation",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Session variable overloading, pre-auth session injection, fixation attacks, session migration flaws",
+      "tags": ["session-puzzling", "session-fixation", "variable-overloading", "pre-auth-injection"]
+    },
+    {
+      "id": 38,
+      "filename": "38-Insecure-File-Handling.md",
+      "title": "Insecure File Handling",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Path traversal, symlink attacks, temp file race conditions, arbitrary file overwrite",
+      "tags": ["file-handling", "path-traversal", "symlink", "temp-file", "arbitrary-overwrite"]
+    },
+    {
+      "id": 39,
+      "filename": "39-Cross-Site-Script-Inclusion-XSSI.md",
+      "title": "Cross-Site Script Inclusion (XSSI)",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "JSON hijacking, script inclusion attacks, data exfiltration via cross-origin includes",
+      "tags": ["xssi", "json-hijacking", "script-inclusion", "data-exfil", "cross-origin-include"]
+    },
+    {
+      "id": 40,
+      "filename": "40-Prototype-Pollution.md",
+      "title": "Prototype Pollution",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "JavaScript prototype chain pollution, property injection, RCE via pollution sinks",
+      "tags": ["prototype-pollution", "javascript", "property-injection", "rce", "__proto__"]
+    },
+    {
+      "id": 41,
+      "filename": "41-HTTP-Response-Splitting.md",
+      "title": "HTTP Response Splitting",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "CRLF injection, header injection, cache poisoning via response splitting, XSS escalation",
+      "tags": ["response-splitting", "crlf", "header-injection", "cache-poisoning", "xss"]
+    },
+    {
+      "id": 42,
+      "filename": "42-XPath-Injection.md",
+      "title": "XPath Injection",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "XPath query injection, blind data extraction, authentication bypass, error-based extraction",
+      "tags": ["xpath", "xpath-injection", "blind-xpath", "data-extraction", "auth-bypass"]
+    },
+    {
+      "id": 43,
+      "filename": "43-Cross-Site-Request-Forgery-CSRF.md",
+      "title": "Cross-Site Request Forgery (CSRF) — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Advanced CSRF patterns, SameSite bypass techniques, subdomain-based CSRF, JSON-based CSRF",
+      "tags": ["csrf", "advanced-csrf", "samesite-bypass", "subdomain-csrf", "json-csrf"]
+    },
+    {
+      "id": 44,
+      "filename": "44-Cross-Origin-Resource-Sharing-CORS.md",
+      "title": "Cross-Origin Resource Sharing (CORS) — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Advanced CORS exploitation, preflight abuse, credentialed requests, regex bypass",
+      "tags": ["cors", "advanced-cors", "preflight-abuse", "credentialed", "regex-bypass"]
+    },
+    {
+      "id": 45,
+      "filename": "45-Race-Conditions-and-Concurrency-Issues.md",
+      "title": "Race Conditions and Concurrency Issues — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Advanced race exploitation, thread-safe bypass, atomicity flaws, distributed race conditions",
+      "tags": ["race-condition", "advanced-race", "thread-safe", "atomicity", "distributed"]
+    },
+    {
+      "id": 46,
+      "filename": "46-Third-Party-Component-Analysis.md",
+      "title": "Third-Party Component Analysis — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Deep dependency analysis, transitive CVE chains, SBOM generation, license compliance",
+      "tags": ["third-party", "transitive-cve", "sbom", "dependency-analysis", "license"]
+    },
+    {
+      "id": 47,
+      "filename": "47-Configuration-and-Misconfiguration-Hunting.md",
+      "title": "Configuration and Misconfiguration Hunting — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Cloud misconfiguration, container escape, Kubernetes exposure, IaC scanning",
+      "tags": ["misconfiguration", "cloud", "container-escape", "kubernetes", "iac"]
+    },
+    {
+      "id": 48,
+      "filename": "48-Network-and-Infrastructure-Security.md",
+      "title": "Network and Infrastructure Security — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Advanced network attacks, lateral movement, segmentation testing, VPN exploitation",
+      "tags": ["network", "lateral-movement", "segmentation", "vpn", "advanced-network"]
+    },
+    {
+      "id": 49,
+      "filename": "49-Mobile-and-API-Specific-Vulnerabilities.md",
+      "title": "Mobile and API-Specific Vulnerabilities — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Deep mobile testing, APK static analysis, API versioning abuse, backend-for-frontend flaws",
+      "tags": ["mobile", "apk-analysis", "api-versioning", "bff", "deep-mobile"]
+    },
+    {
+      "id": 50,
+      "filename": "50-Reporting-and-Proof-of-Concept-Development.md",
+      "title": "Reporting and Proof of Concept Development — Advanced",
+      "category": "niche",
+      "tier": "specialized",
+      "description": "Advanced reporting, chained finding documentation, executive summaries, remediation roadmaps",
+      "tags": ["reporting", "chained-findings", "executive-summary", "remediation", "advanced-poc"]
+    }
+  ],
+  "categories": {
+    "core": {
+      "count": 20,
+      "description": "Foundational vulnerability hunting skills"
+    },
+    "advanced": {
+      "count": 12,
+      "description": "Specialized attack vectors requiring deeper expertise"
+    },
+    "niche": {
+      "count": 18,
+      "description": "Edge cases, protocol-specific, and framework-specific modules"
+    }
+  },
+  "tiers": {
+    "fundamentals": {
+      "range": "01-20",
+      "description": "Core hunting fundamentals"
+    },
+    "advanced": {
+      "range": "21-32",
+      "description": "Advanced exploitation techniques"
+    },
+    "specialized": {
+      "range": "33-50",
+      "description": "Niche and specialized attack vectors"
+    }
+  }
+}

@@ -1,0 +1,936 @@
+{
+  "metadata": {
+    "name": "Security Testing Learning Modules Registry",
+    "version": "1.0.0",
+    "description": "Comprehensive registry of 50 security testing learning modules organized by difficulty level and category",
+    "created": "2024-01-15",
+    "updated": "2024-01-15",
+    "author": "Security Learning Framework",
+    "total_modules": 50,
+    "categories": {
+      "foundational": {
+        "count": 10,
+        "modules": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      },
+      "intermediate": {
+        "count": 10,
+        "modules": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+      },
+      "advanced": {
+        "count": 10,
+        "modules": [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+      },
+      "specialized": {
+        "count": 10,
+        "modules": [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+      },
+      "expert": {
+        "count": 10,
+        "modules": [41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+      }
+    }
+  },
+  "modules": [
+    {
+      "id": 1,
+      "filename": "1-Reconnaissance-and-Asset-Discovery-Learning.md",
+      "title": "Reconnaissance and Asset Discovery",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": [],
+      "topics": ["passive reconnaissance", "active reconnaissance", "subdomain enumeration", "technology fingerprinting", "asset inventory"],
+      "learning_objectives": [
+        "Understand passive vs active reconnaissance",
+        "Perform subdomain enumeration using multiple tools",
+        "Identify technology stack through fingerprinting",
+        "Create comprehensive asset inventory"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 2,
+      "filename": "2-JavaScript-Analysis-Learning.md",
+      "title": "JavaScript Analysis",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["basic web development"],
+      "topics": ["client-side code analysis", "source map analysis", "secret detection", "API endpoint discovery"],
+      "learning_objectives": [
+        "Analyze client-side JavaScript code",
+        "Extract sensitive information from JS bundles",
+        "Discover API endpoints through code analysis",
+        "Use source maps for debugging"
+      ],
+      "estimated_hours": 6,
+      "status": "published"
+    },
+    {
+      "id": 3,
+      "filename": "3-API-Security-Fundamentals-Learning.md",
+      "title": "API Security Fundamentals",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["basic HTTP knowledge"],
+      "topics": ["REST API security", "authentication testing", "authorization testing", "rate limiting", "business logic"],
+      "learning_objectives": [
+        "Understand REST API security principles",
+        "Test API authentication mechanisms",
+        "Identify common API vulnerabilities",
+        "Evaluate rate limiting implementations"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 4,
+      "filename": "4-Authentication-Mechanisms-Learning.md",
+      "title": "Authentication Mechanisms",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["basic web security"],
+      "topics": ["authentication protocols", "session management", "credential handling", "multi-factor authentication"],
+      "learning_objectives": [
+        "Analyze authentication protocol implementations",
+        "Test session management security",
+        "Evaluate credential storage mechanisms",
+        "Assess multi-factor authentication strength"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 5,
+      "filename": "5-Authorization-and-Access-Control-Learning.md",
+      "title": "Authorization and Access Control",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["authentication mechanisms"],
+      "topics": ["RBAC", "privilege escalation", "IDOR", "access control testing"],
+      "learning_objectives": [
+        "Understand role-based access control",
+        "Identify privilege escalation vulnerabilities",
+        "Test for insecure direct object references",
+        "Evaluate access control implementations"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 6,
+      "filename": "6-Input-Validation-and-Sanitization-Learning.md",
+      "title": "Input Validation and Sanitization",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["basic web technology"],
+      "topics": ["input handling", "injection identification", "filtering techniques", "encoding methods"],
+      "learning_objectives": [
+        "Analyze input validation mechanisms",
+        "Identify injection points in applications",
+        "Test filtering and encoding bypasses",
+        "Evaluate input sanitization effectiveness"
+      ],
+      "estimated_hours": 7,
+      "status": "published"
+    },
+    {
+      "id": 7,
+      "filename": "7-Business-Logic-Vulnerabilities-Learning.md",
+      "title": "Business Logic Vulnerabilities",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["web application basics"],
+      "topics": ["logic flaws", "workflow manipulation", "state management", "race conditions basics"],
+      "learning_objectives": [
+        "Identify logic flaws in applications",
+        "Manipulate application workflows",
+        "Test state management security",
+        "Understand basic race condition concepts"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 8,
+      "filename": "8-Client-Side-Vulnerabilities-Learning.md",
+      "title": "Client-Side Vulnerabilities",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["JavaScript basics"],
+      "topics": ["XSS attack vectors", "DOM vulnerabilities", "client-side storage", "browser security"],
+      "learning_objectives": [
+        "Understand different XSS attack types",
+        "Identify DOM-based vulnerabilities",
+        "Test client-side storage security",
+        "Evaluate browser security features"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 9,
+      "filename": "9-Cryptographic-Implementations-Learning.md",
+      "title": "Cryptographic Implementations",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["basic cryptography"],
+      "topics": ["algorithm analysis", "key management", "hash functions", "random number generation"],
+      "learning_objectives": [
+        "Analyze cryptographic algorithm implementations",
+        "Test key management practices",
+        "Identify hash function vulnerabilities",
+        "Evaluate random number generation"
+      ],
+      "estimated_hours": 7,
+      "status": "published"
+    },
+    {
+      "id": 10,
+      "filename": "10-Error-Handling-and-Information-Disclosure-Learning.md",
+      "title": "Error Handling and Information Disclosure",
+      "category": "foundational",
+      "difficulty": "beginner",
+      "prerequisites": ["basic web application testing"],
+      "topics": ["error analysis", "stack traces", "debug mode", "information leakage"],
+      "learning_objectives": [
+        "Analyze error message information",
+        "Identify stack trace leaks",
+        "Detect debug mode in applications",
+        "Exploit verbose error information"
+      ],
+      "estimated_hours": 6,
+      "status": "published"
+    },
+    {
+      "id": 11,
+      "filename": "11-File-Upload-Vulnerabilities-Learning.md",
+      "title": "File Upload Vulnerabilities",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["foundational modules"],
+      "topics": ["upload mechanisms", "type validation bypass", "web shell upload", "storage testing"],
+      "learning_objectives": [
+        "Analyze file upload mechanisms",
+        "Bypass file type validation",
+        "Upload and execute web shells",
+        "Test storage and execution security"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 12,
+      "filename": "12-Server-Side-Request-Forgery-Learning.md",
+      "title": "Server-Side Request Forgery",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["network protocols", "HTTP basics"],
+      "topics": ["SSRF vectors", "internal network access", "cloud metadata", "filter bypass"],
+      "learning_objectives": [
+        "Understand SSRF attack mechanisms",
+        "Access internal network resources",
+        "Exploit cloud metadata endpoints",
+        "Bypass SSRF filters"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 13,
+      "filename": "13-Cross-Site-Request-Forgery-Learning.md",
+      "title": "Cross-Site Request Forgery",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["web security basics"],
+      "topics": ["CSRF mechanisms", "token analysis", "same-site cookies", "advanced techniques"],
+      "learning_objectives": [
+        "Understand CSRF attack mechanisms",
+        "Analyze and bypass CSRF tokens",
+        "Test same-site cookie implementations",
+        "Execute advanced CSRF attacks"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 14,
+      "filename": "14-Cross-Origin-Resource-Sharing-Learning.md",
+      "title": "Cross-Origin Resource Sharing",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["browser security model"],
+      "topics": ["CORS misconfiguration", "origin validation", "credential inclusion", "bypass techniques"],
+      "learning_objectives": [
+        "Identify CORS misconfigurations",
+        "Test origin validation mechanisms",
+        "Evaluate credential inclusion settings",
+        "Bypass CORS protections"
+      ],
+      "estimated_hours": 7,
+      "status": "published"
+    },
+    {
+      "id": 15,
+      "filename": "15-Race-Conditions-and-Concurrency-Learning.md",
+      "title": "Race Conditions and Concurrency",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["application logic testing"],
+      "topics": ["race condition identification", "TOCTOU", "atomic operations", "concurrency attacks"],
+      "learning_objectives": [
+        "Identify race condition vulnerabilities",
+        "Understand time-of-check to time-of-use",
+        "Test atomic operation implementations",
+        "Execute concurrency-based attacks"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 16,
+      "filename": "16-Third-Party-Component-Analysis-Learning.md",
+      "title": "Third-Party Component Analysis",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["web application architecture"],
+      "topics": ["dependency scanning", "supply chain attacks", "third-party services", "integration testing"],
+      "learning_objectives": [
+        "Scan for vulnerable dependencies",
+        "Identify supply chain attack vectors",
+        "Test third-party service integrations",
+        "Evaluate integration point security"
+      ],
+      "estimated_hours": 7,
+      "status": "published"
+    },
+    {
+      "id": 17,
+      "filename": "17-Security-Configuration-Analysis-Learning.md",
+      "title": "Security Configuration Analysis",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["system administration basics"],
+      "topics": ["default configurations", "hardening verification", "security headers", "TLS/SSL testing"],
+      "learning_objectives": [
+        "Identify default configuration vulnerabilities",
+        "Verify system hardening measures",
+        "Analyze security header implementations",
+        "Test TLS/SSL configurations"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 18,
+      "filename": "18-Network-Protocol-Security-Learning.md",
+      "title": "Network Protocol Security",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["networking fundamentals"],
+      "topics": ["HTTP/HTTPS analysis", "WebSocket testing", "DNS rebinding", "network vulnerabilities"],
+      "learning_objectives": [
+        "Analyze HTTP/HTTPS protocol security",
+        "Test WebSocket implementations",
+        "Understand DNS rebinding attacks",
+        "Identify network-level vulnerabilities"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 19,
+      "filename": "19-Mobile-API-Security-Learning.md",
+      "title": "Mobile API Security",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["API security basics"],
+      "topics": ["mobile API testing", "certificate pinning", "mobile authentication", "endpoint discovery"],
+      "learning_objectives": [
+        "Test mobile API security mechanisms",
+        "Bypass certificate pinning",
+        "Evaluate mobile authentication",
+        "Discover hidden API endpoints"
+      ],
+      "estimated_hours": 9,
+      "status": "published"
+    },
+    {
+      "id": 20,
+      "filename": "20-Security-Reporting-and-Documentation-Learning.md",
+      "title": "Security Reporting and Documentation",
+      "category": "intermediate",
+      "difficulty": "intermediate",
+      "prerequisites": ["security testing experience"],
+      "topics": ["report writing", "evidence collection", "vulnerability documentation", "remediation guidance"],
+      "learning_objectives": [
+        "Write professional security reports",
+        "Collect and preserve evidence",
+        "Document vulnerabilities effectively",
+        "Provide actionable remediation guidance"
+      ],
+      "estimated_hours": 6,
+      "status": "published"
+    },
+    {
+      "id": 21,
+      "filename": "21-WAF-Bypass-Techniques-Learning.md",
+      "title": "WAF Bypass Techniques",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["intermediate modules"],
+      "topics": ["WAF detection", "encoding techniques", "payload fragmentation", "protocol bypass"],
+      "learning_objectives": [
+        "Detect and fingerprint WAF implementations",
+        "Apply encoding and obfuscation techniques",
+        "Fragment payloads to bypass detection",
+        "Exploit protocol-level weaknesses"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 22,
+      "filename": "22-HTTP-Request-Smuggling-Learning.md",
+      "title": "HTTP Request Smuggling",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["HTTP protocol knowledge"],
+      "topics": ["CL.TE attacks", "TE.CL attacks", "HTTP/2 smuggling", "cache poisoning"],
+      "learning_objectives": [
+        "Understand CL.TE and TE.CL vulnerabilities",
+        "Execute HTTP/2 smuggling attacks",
+        "Chain smuggling with cache poisoning",
+        "Detect and prevent request smuggling"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    },
+    {
+      "id": 23,
+      "filename": "23-Subdomain-Takeover-Learning.md",
+      "title": "Subdomain Takeover",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["DNS knowledge", "cloud services"],
+      "topics": ["dangling DNS", "CNAME analysis", "cloud service takeover", "prevention"],
+      "learning_objectives": [
+        "Identify dangling DNS records",
+        "Analyze CNAME configurations",
+        "Exploit cloud service misconfigurations",
+        "Implement prevention measures"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 24,
+      "filename": "24-Host-Header-Injection-Learning.md",
+      "title": "Host Header Injection",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["HTTP protocol"],
+      "topics": ["host manipulation", "password reset poisoning", "cache poisoning", "virtual host confusion"],
+      "learning_objectives": [
+        "Manipulate Host header values",
+        "Poison password reset mechanisms",
+        "Exploit cache via host header",
+        "Understand virtual host confusion"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 25,
+      "filename": "25-XML-External-Entity-Attacks-Learning.md",
+      "title": "XML External Entity Attacks",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["XML basics"],
+      "topics": ["XXE injection", "blind XXE", "SSRF via XXE", "file inclusion"],
+      "learning_objectives": [
+        "Execute XXE injection attacks",
+        "Exploit blind XXE vulnerabilities",
+        "Chain XXE with SSRF",
+        "Perform file inclusion via XXE"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 26,
+      "filename": "26-Deserialization-Vulnerabilities-Learning.md",
+      "title": "Deserialization Vulnerabilities",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["programming languages"],
+      "topics": ["object deserialization", "Java attacks", "PHP object injection", ".NET flaws"],
+      "learning_objectives": [
+        "Analyze object deserialization mechanisms",
+        "Execute Java deserialization attacks",
+        "Exploit PHP object injection",
+        "Identify .NET deserialization flaws"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    },
+    {
+      "id": 27,
+      "filename": "27-Command-Injection-Learning.md",
+      "title": "Command Injection",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["operating system basics"],
+      "topics": ["OS command injection", "blind injection", "time-based detection", "filter bypass"],
+      "learning_objectives": [
+        "Execute OS command injection attacks",
+        "Exploit blind command injection",
+        "Use time-based detection methods",
+        "Bypass command injection filters"
+      ],
+      "estimated_hours": 9,
+      "status": "published"
+    },
+    {
+      "id": 28,
+      "filename": "28-NoSQL-Injection-Learning.md",
+      "title": "NoSQL Injection",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["database concepts"],
+      "topics": ["MongoDB injection", "JSON operators", "array operators", "authentication bypass"],
+      "learning_objectives": [
+        "Perform MongoDB injection attacks",
+        "Exploit JSON and array operators",
+        "Bypass authentication via NoSQL",
+        "Test NoSQL database security"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 29,
+      "filename": "29-GraphQL-Security-Testing-Learning.md",
+      "title": "GraphQL Security Testing",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["API security", "GraphQL basics"],
+      "topics": ["introspection analysis", "authorization testing", "query complexity", "injection"],
+      "learning_objectives": [
+        "Analyze GraphQL introspection endpoints",
+        "Test GraphQL authorization mechanisms",
+        "Exploit query complexity vulnerabilities",
+        "Identify injection points in GraphQL"
+      ],
+      "estimated_hours": 9,
+      "status": "published"
+    },
+    {
+      "id": 30,
+      "filename": "30-WebSocket-Security-Learning.md",
+      "title": "WebSocket Security",
+      "category": "advanced",
+      "difficulty": "advanced",
+      "prerequisites": ["HTTP protocol", "JavaScript"],
+      "topics": ["handshake testing", "message interception", "origin validation", "hijacking"],
+      "learning_objectives": [
+        "Test WebSocket handshake security",
+        "Intercept WebSocket messages",
+        "Bypass origin validation",
+        "Perform cross-site WebSocket hijacking"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 31,
+      "filename": "31-Server-Side-Template-Injection-Learning.md",
+      "title": "Server-Side Template Injection",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["advanced modules"],
+      "topics": ["template engine identification", "SSTI to RCE", "multi-language SSTI", "filter bypass"],
+      "learning_objectives": [
+        "Identify template engine implementations",
+        "Escalate SSTI to remote code execution",
+        "Test multiple template languages",
+        "Bypass SSTI filters and protections"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 32,
+      "filename": "32-JSON-Web-Token-Security-Learning.md",
+      "title": "JSON Web Token Security",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["authentication", "cryptography"],
+      "topics": ["JWT structure", "algorithm confusion", "key injection", "token manipulation"],
+      "learning_objectives": [
+        "Analyze JWT structure and components",
+        "Execute algorithm confusion attacks",
+        "Perform key injection techniques",
+        "Manipulate JWT tokens"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 33,
+      "filename": "33-Content-Security-Policy-Bypass-Learning.md",
+      "title": "Content Security Policy Bypass",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["browser security", "XSS knowledge"],
+      "topics": ["CSP directive analysis", "bypass techniques", "script injection", "reporting endpoints"],
+      "learning_objectives": [
+        "Analyze CSP directive implementations",
+        "Apply CSP bypass techniques",
+        "Inject scripts despite CSP",
+        "Test CSP reporting endpoints"
+      ],
+      "estimated_hours": 9,
+      "status": "published"
+    },
+    {
+      "id": 34,
+      "filename": "34-Clickjacking-and-UI-Redress-Learning.md",
+      "title": "Clickjacking and UI Redress",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["browser security model"],
+      "topics": ["clickjacking vectors", "frame busting bypass", "UI redress", "drag-and-drop"],
+      "learning_objectives": [
+        "Understand clickjacking attack mechanisms",
+        "Bypass frame busting protections",
+        "Execute UI redress attacks",
+        "Perform drag-and-drop attacks"
+      ],
+      "estimated_hours": 7,
+      "status": "published"
+    },
+    {
+      "id": 35,
+      "filename": "35-HTTP-Parameter-Pollution-Learning.md",
+      "title": "HTTP Parameter Pollution",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["HTTP protocol knowledge"],
+      "topics": ["HPP vectors", "backend parsing", "parameter injection", "WAF bypass"],
+      "learning_objectives": [
+        "Understand HPP attack vectors",
+        "Analyze backend parameter parsing",
+        "Execute parameter injection attacks",
+        "Bypass WAF via HPP techniques"
+      ],
+      "estimated_hours": 7,
+      "status": "published"
+    },
+    {
+      "id": 36,
+      "filename": "36-LDAP-Injection-Learning.md",
+      "title": "LDAP Injection",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["directory services basics"],
+      "topics": ["LDAP query construction", "authentication bypass", "information disclosure", "filter manipulation"],
+      "learning_objectives": [
+        "Construct LDAP injection payloads",
+        "Bypass LDAP authentication",
+        "Extract information via LDAP injection",
+        "Manipulate LDAP filters"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 37,
+      "filename": "37-Session-Puzzling-and-Manipulation-Learning.md",
+      "title": "Session Puzzling and Manipulation",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["session management"],
+      "topics": ["session fixation", "variable manipulation", "cross-session leakage", "management flaws"],
+      "learning_objectives": [
+        "Execute session fixation attacks",
+        "Manipulate session variables",
+        "Identify cross-session data leakage",
+        "Exploit session management flaws"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 38,
+      "filename": "38-File-Handling-Vulnerabilities-Learning.md",
+      "title": "File Handling Vulnerabilities",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["file system concepts"],
+      "topics": ["path traversal", "local file inclusion", "remote file inclusion", "directory traversal"],
+      "learning_objectives": [
+        "Execute path traversal attacks",
+        "Perform local file inclusion",
+        "Exploit remote file inclusion",
+        "Bypass directory traversal filters"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 39,
+      "filename": "39-Advanced-Client-Side-Attacks-Learning.md",
+      "title": "Advanced Client-Side Attacks",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["JavaScript", "browser security"],
+      "topics": ["prototype pollution", "DOM clobbering", "browser API abuse", "client-side manipulation"],
+      "learning_objectives": [
+        "Exploit prototype pollution vulnerabilities",
+        "Perform DOM clobbering attacks",
+        "Abuse browser APIs for attacks",
+        "Manipulate client-side code execution"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 40,
+      "filename": "40-Cloud-Security-Testing-Learning.md",
+      "title": "Cloud Security Testing",
+      "category": "specialized",
+      "difficulty": "specialized",
+      "prerequisites": ["cloud computing basics"],
+      "topics": ["AWS security", "Azure assessment", "GCP evaluation", "misconfiguration exploitation"],
+      "learning_objectives": [
+        "Test AWS security configurations",
+        "Assess Azure security implementations",
+        "Evaluate GCP security measures",
+        "Exploit cloud misconfigurations"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    },
+    {
+      "id": 41,
+      "filename": "41-Third-Party-Integration-Security-Learning.md",
+      "title": "Third-Party Integration Security",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["specialized modules"],
+      "topics": ["OAuth testing", "SAML attacks", "social login", "API key exposure"],
+      "learning_objectives": [
+        "Test OAuth implementation security",
+        "Execute SAML attack techniques",
+        "Identify social login vulnerabilities",
+        "Detect API key exposure"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 42,
+      "filename": "42-Mobile-Application-Security-Learning.md",
+      "title": "Mobile Application Security",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["mobile development basics"],
+      "topics": ["Android testing", "iOS assessment", "mobile vulnerabilities", "reverse engineering"],
+      "learning_objectives": [
+        "Perform Android security testing",
+        "Conduct iOS security assessments",
+        "Identify mobile-specific vulnerabilities",
+        "Execute mobile reverse engineering"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    },
+    {
+      "id": 43,
+      "filename": "43-IoT-Security-Fundamentals-Learning.md",
+      "title": "IoT Security Fundamentals",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["networking", "embedded systems basics"],
+      "topics": ["IoT protocols", "firmware extraction", "hardware interfaces", "network services"],
+      "learning_objectives": [
+        "Analyze IoT protocol implementations",
+        "Extract and analyze firmware",
+        "Test hardware interfaces",
+        "Discover and test network services"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    },
+    {
+      "id": 44,
+      "filename": "44-API-and-GraphQL-Advanced-Learning.md",
+      "title": "API and GraphQL Advanced",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["API security", "GraphQL basics"],
+      "topics": ["advanced API attacks", "introspection abuse", "versioning flaws", "rate limit bypass"],
+      "learning_objectives": [
+        "Execute advanced API attack techniques",
+        "Abuse GraphQL introspection",
+        "Exploit API versioning vulnerabilities",
+        "Bypass rate limiting controls"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 45,
+      "filename": "45-WebAssembly-Security-Learning.md",
+      "title": "WebAssembly Security",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["JavaScript", "binary analysis"],
+      "topics": ["WASM analysis", "memory safety", "import/export testing", "debug extraction"],
+      "learning_objectives": [
+        "Analyze WebAssembly binaries",
+        "Identify memory safety issues",
+        "Test import/export functions",
+        "Extract debug information"
+      ],
+      "estimated_hours": 10,
+      "status": "published"
+    },
+    {
+      "id": 46,
+      "filename": "46-Blockchain-and-Smart-Contract-Learning.md",
+      "title": "Blockchain and Smart Contract",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["blockchain basics", "programming"],
+      "topics": ["smart contract vulnerabilities", "reentrancy", "access control", "integer overflow"],
+      "learning_objectives": [
+        "Identify smart contract vulnerabilities",
+        "Exploit reentrancy attacks",
+        "Test access control mechanisms",
+        "Detect integer overflow issues"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    },
+    {
+      "id": 47,
+      "filename": "47-Automation-and-Tool-Development-Learning.md",
+      "title": "Automation and Tool Development",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["programming", "security testing"],
+      "topics": ["tool creation", "exploit development", "framework building", "pipeline integration"],
+      "learning_objectives": [
+        "Develop security testing tools",
+        "Create custom exploits",
+        "Build automation frameworks",
+        "Integrate security into pipelines"
+      ],
+      "estimated_hours": 15,
+      "status": "published"
+    },
+    {
+      "id": 48,
+      "filename": "48-Reverse-Engineering-for-Security-Learning.md",
+      "title": "Reverse Engineering for Security",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["programming", "assembly basics"],
+      "topics": ["binary analysis", "dynamic analysis", "anti-analysis bypass", "vulnerability discovery"],
+      "learning_objectives": [
+        "Analyze binaries for security issues",
+        "Perform dynamic analysis techniques",
+        "Bypass anti-analysis protections",
+        "Discover vulnerabilities via RE"
+      ],
+      "estimated_hours": 15,
+      "status": "published"
+    },
+    {
+      "id": 49,
+      "filename": "49-Compliance-and-Standards-Learning.md",
+      "title": "Compliance and Standards",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["security testing experience"],
+      "topics": ["compliance frameworks", "testing standards", "report requirements", "legal considerations"],
+      "learning_objectives": [
+        "Understand security compliance frameworks",
+        "Apply penetration testing standards",
+        "Meet report compliance requirements",
+        "Navigate legal and ethical considerations"
+      ],
+      "estimated_hours": 8,
+      "status": "published"
+    },
+    {
+      "id": 50,
+      "filename": "50-Advanced-Threat-Modeling-and-Risk-Assessment-Learning.md",
+      "title": "Advanced Threat Modeling and Risk Assessment",
+      "category": "expert",
+      "difficulty": "expert",
+      "prerequisites": ["all previous modules"],
+      "topics": ["threat modeling methodologies", "risk assessment", "attack trees", "security architecture"],
+      "learning_objectives": [
+        "Apply threat modeling methodologies",
+        "Conduct risk assessments",
+        "Construct attack trees",
+        "Analyze security architecture"
+      ],
+      "estimated_hours": 12,
+      "status": "published"
+    }
+  ],
+  "learning_paths": {
+    "beginner": {
+      "name": "Beginner Learning Path",
+      "description": "Foundational knowledge and basic skills",
+      "modules": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "estimated_total_hours": 76,
+      "completion_criteria": "Complete all exercises and assessments with 80% score"
+    },
+    "intermediate": {
+      "name": "Intermediate Learning Path",
+      "description": "Applied techniques and tool usage",
+      "modules": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+      "estimated_total_hours": 81,
+      "completion_criteria": "Complete all exercises and assessments with 80% score"
+    },
+    "advanced": {
+      "name": "Advanced Learning Path",
+      "description": "Complex attack chains and evasion techniques",
+      "modules": [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+      "estimated_total_hours": 94,
+      "completion_criteria": "Complete all exercises and assessments with 80% score"
+    },
+    "specialized": {
+      "name": "Specialized Learning Path",
+      "description": "Domain-specific deep dives",
+      "modules": [31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+      "estimated_total_hours": 87,
+      "completion_criteria": "Complete all exercises and assessments with 80% score"
+    },
+    "expert": {
+      "name": "Expert Learning Path",
+      "description": "Advanced research and novel techniques",
+      "modules": [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+      "estimated_total_hours": 114,
+      "completion_criteria": "Complete all exercises and assessments with 80% score"
+    }
+  },
+  "tags": [
+    "security testing",
+    "penetration testing",
+    "bug bounty",
+    "web security",
+    "API security",
+    "mobile security",
+    "cloud security",
+    "cryptography",
+    "reverse engineering",
+    "automation",
+    "compliance",
+    "threat modeling"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "domain": "Brain",
+  "description": "Autonomous agent system infrastructure — core orchestration, execution, memory, runtime, session management, tools, and utilities for building intelligent agents.",
+  "subdirectories": [
+    {
+      "name": "core",
+      "description": "Core types, interfaces, and base classes defining the Brain domain contract layer",
+      "purpose": "Provides fundamental abstractions including agent interfaces, event system, configuration types, error hierarchy, and type registry"
+    },
+    {
+      "name": "executions",
+      "description": "Task execution infrastructure for planning, scheduling, and monitoring agent operations",
+      "purpose": "Manages execution plans, task scheduling, step execution with retry logic, progress monitoring, and error handling strategies"
+    },
+    {
+      "name": "memory",
+      "description": "Memory subsystem providing short-term working memory and long-term knowledge storage",
+      "purpose": "Implements working memory, persistent storage, memory indexing, conversation buffers, knowledge graphs, and memory consolidation"
+    },
+    {
+      "name": "runtime",
+      "description": "Execution environment management for safe and efficient agent operation",
+      "purpose": "Handles process lifecycle, resource monitoring, sandboxed code execution, health checking, and metrics collection"
+    },
+    {
+      "name": "session-managements",
+      "description": "Session lifecycle management for agent state persistence and recovery",
+      "purpose": "Provides session creation, state persistence, checkpoint management, session isolation, and checkpoint-based recovery"
+    },
+    {
+      "name": "tools",
+      "description": "Extensible tool plugin system for agent interaction with external systems",
+      "purpose": "Enables dynamic tool registration, safe execution with timeouts, input validation, and standardized result formats"
+    },
+    {
+      "name": "utils",
+      "description": "Common utility functions and helper classes shared across the Brain domain",
+      "purpose": "Offers structured logging, data serialization, schema validation, timing utilities, and cross-platform path handling"
+    }
+  ],
+  "file_count": 0,
+  "files": []
+}

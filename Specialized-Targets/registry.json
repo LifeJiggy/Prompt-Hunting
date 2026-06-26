@@ -1,0 +1,498 @@
+{
+  "domain": "specialized_targets",
+  "version": "1.0.0",
+  "total_files": 50,
+  "categories": {
+    "iot_embedded": {
+      "name": "IoT & Embedded Systems",
+      "description": "Internet of Things devices, embedded systems, wearables, firmware, and real-time operating systems",
+      "files": [
+        {
+          "id": "01",
+          "filename": "01-IoT-Device-Security.md",
+          "title": "IoT Device Security",
+          "subtopics": ["firmware_analysis", "hardware_debugging", "iot_protocols", "cloud_backend", "botnet_recruitment"],
+          "risk_level": "high"
+        },
+        {
+          "id": "28",
+          "filename": "28-Wearable-Technology-Security.md",
+          "title": "Wearable Technology Security",
+          "subtopics": ["fitness_trackers", "smartwatches", "biometric_data", "bluetooth_exploitation"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "29",
+          "filename": "29-Smart-Home-Device-Security.md",
+          "title": "Smart Home Device Security",
+          "subtopics": ["voice_assistants", "smart_cameras", "home_automation", "zigbee_zwave"],
+          "risk_level": "high"
+        },
+        {
+          "id": "30",
+          "filename": "30-Embedded-System-Security.md",
+          "title": "Embedded System Security",
+          "subtopics": ["microcontrollers", "embedded_linux", "memory_corruption", "side_channel"],
+          "risk_level": "high"
+        },
+        {
+          "id": "31",
+          "filename": "31-Real-Time-Operating-System-Security.md",
+          "title": "Real-Time Operating System Security",
+          "subtopics": ["freertos", "vxworks", "qnx", "kernel_exploitation"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "32",
+          "filename": "32-Firmware-Security-Analysis.md",
+          "title": "Firmware Security Analysis",
+          "subtopics": ["firmware_extraction", "reverse_engineering", "secure_boot_bypass", "supply_chain"],
+          "risk_level": "critical"
+        }
+      ]
+    },
+    "mobile": {
+      "name": "Mobile Application Security",
+      "description": "Mobile platform security testing for iOS, Android, and hybrid applications",
+      "files": [
+        {
+          "id": "02",
+          "filename": "02-Mobile-Application-Testing.md",
+          "title": "Mobile Application Testing",
+          "subtopics": ["apk_analysis", "runtime_instrumentation", "certificate_bypass", "deep_link_abuse"],
+          "risk_level": "high"
+        }
+      ]
+    },
+    "cloud_containers": {
+      "name": "Cloud & Container Security",
+      "description": "Cloud infrastructure, containerization, and orchestration platform security",
+      "files": [
+        {
+          "id": "03",
+          "filename": "03-Cloud-Infrastructure-Security.md",
+          "title": "Cloud Infrastructure Security",
+          "subtopics": ["aws_azure_gcp", "iam_misconfiguration", "metadata_exploitation", "serverless"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "04",
+          "filename": "04-Container-Security.md",
+          "title": "Container Security",
+          "subtopics": ["docker_daemon", "container_escape", "image_supply_chain", "runtime_security"],
+          "risk_level": "high"
+        },
+        {
+          "id": "05",
+          "filename": "05-Kubernetes-Cluster-Security.md",
+          "title": "Kubernetes Cluster Security",
+          "subtopics": ["api_anonymous", "etcd_exploitation", "rbac_escalation", "service_account"],
+          "risk_level": "critical"
+        }
+      ]
+    },
+    "blockchain_defi": {
+      "name": "Blockchain & DeFi Security",
+      "description": "Smart contracts, decentralized finance, NFTs, Web3 applications, and cryptocurrency exchanges",
+      "files": [
+        {
+          "id": "06",
+          "filename": "06-Blockchain-Smart-Contracts.md",
+          "title": "Blockchain Smart Contracts",
+          "subtopics": ["reentrancy", "flash_loan", "access_control", "oracle_manipulation"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "07",
+          "filename": "07-DeFi-Protocol-Security.md",
+          "title": "DeFi Protocol Security",
+          "subtopics": ["amm_manipulation", "lending_attacks", "yield_farming", "governance"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "08",
+          "filename": "08-NFT-Marketplace-Security.md",
+          "title": "NFT Marketplace Security",
+          "subtopics": ["metadata_manipulation", "royalty_bypass", "auction_exploitation", "marketplace_listing"],
+          "risk_level": "high"
+        },
+        {
+          "id": "09",
+          "filename": "09-Web3-Application-Security.md",
+          "title": "Web3 Application Security",
+          "subtopics": ["wallet_hijacking", "rpc_abuse", "signature_manipulation", "frontend_injection"],
+          "risk_level": "high"
+        },
+        {
+          "id": "10",
+          "filename": "10-Cryptocurrency-Exchange-Security.md",
+          "title": "Cryptocurrency Exchange Security",
+          "subtopics": ["api_key_abuse", "withdrawal_manipulation", "kyc_bypass", "trading_engine"],
+          "risk_level": "critical"
+        }
+      ]
+    },
+    "finance": {
+      "name": "Financial Systems Security",
+      "description": "Traditional finance APIs, banking systems, and financial institution security",
+      "files": [
+        {
+          "id": "11",
+          "filename": "11-Traditional-Finance-API-Security.md",
+          "title": "Traditional Finance API Security",
+          "subtopics": ["open_banking", "psd2_sca", "swift_validation", "payment_gateway"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "13",
+          "filename": "13-Financial-Institution-Security.md",
+          "title": "Financial Institution Security",
+          "subtopics": ["core_banking", "atm_security", "swift_infrastructure", "fraud_detection"],
+          "risk_level": "critical"
+        }
+      ]
+    },
+    "healthcare": {
+      "name": "Healthcare Systems Security",
+      "description": "Healthcare infrastructure, medical devices, and patient data protection",
+      "files": [
+        {
+          "id": "12",
+          "filename": "12-Healthcare-System-Security.md",
+          "title": "Healthcare System Security",
+          "subtopics": ["ehr_exploitation", "dicom_analysis", "hl7_fhir", "phi_exposure"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "27",
+          "filename": "27-Medical-Device-Security.md",
+          "title": "Medical Device Security",
+          "subtopics": ["infusion_pumps", "pacemaker_security", "imaging_systems", "fda_compliance"],
+          "risk_level": "critical"
+        }
+      ]
+    },
+    "government_enterprise": {
+      "name": "Government & Enterprise Security",
+      "description": "Government systems, enterprise infrastructure, and Fortune 500 security",
+      "files": [
+        {
+          "id": "14",
+          "filename": "14-Government-System-Security.md",
+          "title": "Government System Security",
+          "subtopics": ["govcloud", "classified_systems", "citizen_data", "pki"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "44",
+          "filename": "44-Enterprise-Corporate-Security.md",
+          "title": "Enterprise Corporate Security",
+          "subtopics": ["active_directory", "enterprise_applications", "network_segmentation", "emm"],
+          "risk_level": "high"
+        },
+        {
+          "id": "45",
+          "filename": "45-Fortune-500-Company-Security.md",
+          "title": "Fortune 500 Company Security",
+          "subtopics": ["global_operations", "regulatory_compliance", "executive_protection", "ma_security"],
+          "risk_level": "high"
+        }
+      ]
+    },
+    "education": {
+      "name": "Education Platform Security",
+      "description": "Learning management systems, education platforms, and academic research security",
+      "files": [
+        {
+          "id": "15",
+          "filename": "15-Education-Platform-Security.md",
+          "title": "Education Platform Security",
+          "subtopics": ["lms_exploitation", "student_data", "virtual_classroom", "ferpa_compliance"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "19",
+          "filename": "19-Learning-Management-System-Security.md",
+          "title": "Learning Management System Security",
+          "subtopics": ["moodle_security", "canvas_exploitation", "blackboard_testing", "assessment_tampering"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "47",
+          "filename": "47-Academic-Research-Security.md",
+          "title": "Academic Research Security",
+          "subtopics": ["research_integrity", "data_sharing", "cross_institutional", "lab_network"],
+          "risk_level": "medium"
+        }
+      ]
+    },
+    "ecommerce_social": {
+      "name": "E-commerce & Social Media Security",
+      "description": "E-commerce platforms, social media systems, and content management systems",
+      "files": [
+        {
+          "id": "16",
+          "filename": "16-E-commerce-Platform-Security.md",
+          "title": "E-commerce Platform Security",
+          "subtopics": ["payment_processing", "inventory_management", "pricing_manipulation", "order_logic"],
+          "risk_level": "high"
+        },
+        {
+          "id": "17",
+          "filename": "17-Social-Media-Platform-Security.md",
+          "title": "Social Media Platform Security",
+          "subtopics": ["moderation_bypass", "user_enumeration", "social_graph", "api_abuse"],
+          "risk_level": "high"
+        },
+        {
+          "id": "18",
+          "filename": "18-Content-Management-System-Security.md",
+          "title": "Content Management System Security",
+          "subtopics": ["wordpress_exploitation", "drupal_assessment", "joomla_testing", "headless_cms"],
+          "risk_level": "medium"
+        }
+      ]
+    },
+    "industrial_ics": {
+      "name": "Industrial & ICS Security",
+      "description": "Industrial control systems, manufacturing, supply chain, and critical infrastructure",
+      "files": [
+        {
+          "id": "20",
+          "filename": "20-Human-Resources-System-Security.md",
+          "title": "Human Resources System Security",
+          "subtopics": ["employee_pii", "payroll_integrity", "benefits_admin", "hris_security"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "21",
+          "filename": "21-Supply-Chain-Management-Security.md",
+          "title": "Supply Chain Management Security",
+          "subtopics": ["procurement_manipulation", "logistics_tracking", "inventory_tampering", "vendor_management"],
+          "risk_level": "high"
+        },
+        {
+          "id": "22",
+          "filename": "22-Manufacturing-Control-System-Security.md",
+          "title": "Manufacturing Control System Security",
+          "subtopics": ["scada_vulnerability", "dcs_security", "plc_exploitation", "mes_security"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "23",
+          "filename": "23-Smart-Building-Automation.md",
+          "title": "Smart Building Automation",
+          "subtopics": ["bacnet_exploitation", "hvac_manipulation", "access_control", "bms_security"],
+          "risk_level": "high"
+        },
+        {
+          "id": "24",
+          "filename": "24-Connected-Vehicle-Security.md",
+          "title": "Connected Vehicle Security",
+          "subtopics": ["can_bus", "v2x_communication", "infotainment", "ota_updates"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "25",
+          "filename": "25-Autonomous-System-Security.md",
+          "title": "Autonomous System Security",
+          "subtopics": ["lidar_spoofing", "gps_spoofing", "drone_exploitation", "fleet_management"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "26",
+          "filename": "26-Industrial-Control-System-Security.md",
+          "title": "Industrial Control System Security",
+          "subtopics": ["scada_protocol", "plc_logic", "hmi_exploitation", "sis_security"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "36",
+          "filename": "36-Air-Traffic-Control-System-Security.md",
+          "title": "Air Traffic Control System Security",
+          "subtopics": ["radar_security", "communication_network", "ads_b", "flight_data"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "37",
+          "filename": "37-Power-Grid-Security.md",
+          "title": "Power Grid Security",
+          "subtopics": ["substation_automation", "transmission_security", "smart_grid", "ami_security"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "38",
+          "filename": "38-Water-Treatment-Facility-Security.md",
+          "title": "Water Treatment Facility Security",
+          "subtopics": ["treatment_scada", "chemical_dosing", "water_quality", "distribution_network"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "39",
+          "filename": "39-Transportation-System-Security.md",
+          "title": "Transportation System Security",
+          "subtopics": ["rail_signaling", "aviation_ground", "maritime_navigation", "its_security"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "40",
+          "filename": "40-Energy-Management-System-Security.md",
+          "title": "Energy Management System Security",
+          "subtopics": ["smart_grid_management", "renewable_energy", "energy_trading", "demand_response"],
+          "risk_level": "high"
+        }
+      ]
+    },
+    "emerging_tech": {
+      "name": "Emerging & Network Technology Security",
+      "description": "Network devices, telecommunications, satellite systems, and advanced connectivity",
+      "files": [
+        {
+          "id": "33",
+          "filename": "33-Network-Device-Security.md",
+          "title": "Network Device Security",
+          "subtopics": ["router_exploitation", "switch_security", "firewall_bypass", "protocol_exploitation"],
+          "risk_level": "high"
+        },
+        {
+          "id": "34",
+          "filename": "34-Telecommunication-System-Security.md",
+          "title": "Telecommunication System Security",
+          "subtopics": ["4g_5g_exploitation", "ims_security", "ss7_attacks", "diameter_exploitation"],
+          "risk_level": "critical"
+        },
+        {
+          "id": "35",
+          "filename": "35-Satellite-Communication-Security.md",
+          "title": "Satellite Communication Security",
+          "subtopics": ["ground_station", "satellite_protocol", "gps_spoofing", "link_hijacking"],
+          "risk_level": "critical"
+        }
+      ]
+    },
+    "institutions": {
+      "name": "Institutions & Organizations",
+      "description": "Research institutions, non-profits, startups, open source projects, and international organizations",
+      "files": [
+        {
+          "id": "41",
+          "filename": "41-Research-Institution-Security.md",
+          "title": "Research Institution Security",
+          "subtopics": ["research_data", "intellectual_property", "hpc_security", "grant_management"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "42",
+          "filename": "42-Non-Profit-Organization-Security.md",
+          "title": "Non-Profit Organization Security",
+          "subtopics": ["donor_data", "fundraising_platform", "program_management", "volunteer_systems"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "43",
+          "filename": "43-Startup-Company-Security.md",
+          "title": "Startup Company Security",
+          "subtopics": ["rapid_development", "shared_infrastructure", "seed_funding", "pre_revenue_compliance"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "46",
+          "filename": "46-Open-Source-Project-Security.md",
+          "title": "Open Source Project Security",
+          "subtopics": ["repository_access", "contributor_auth", "release_signing", "dependency_security"],
+          "risk_level": "medium"
+        },
+        {
+          "id": "48",
+          "filename": "48-International-Organization-Security.md",
+          "title": "International Organization Security",
+          "subtopics": ["multi_jurisdictional", "diplomatic_comm", "cross_border_data", "treaty_compliance"],
+          "risk_level": "high"
+        },
+        {
+          "id": "49",
+          "filename": "49-Developing-Country-Infrastructure.md",
+          "title": "Developing Country Infrastructure",
+          "subtopics": ["legacy_systems", "resource_constraints", "emerging_tech", "aid_systems"],
+          "risk_level": "high"
+        },
+        {
+          "id": "50",
+          "filename": "50-Global-Scale-System-Security.md",
+          "title": "Global Scale System Security",
+          "subtopics": ["global_cdn", "distributed_database", "planet_scale", "cross_region"],
+          "risk_level": "critical"
+        }
+      ]
+    }
+  },
+  "attack_chains": [
+    {
+      "chain_id": "AC-001",
+      "name": "IoT to Enterprise",
+      "description": "Lateral movement from IoT device through cloud backend to enterprise network",
+      "files": ["01", "03", "44"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-002",
+      "name": "Mobile to Financial",
+      "description": "Mobile app exploitation leading to financial system compromise",
+      "files": ["02", "11", "13"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-003",
+      "name": "Supply Chain to ICS",
+      "description": "Supply chain compromise leading to manufacturing and ICS exploitation",
+      "files": ["21", "22", "26"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-004",
+      "name": "Cloud to Blockchain",
+      "description": "Cloud infrastructure exploitation leading to smart contract and exchange compromise",
+      "files": ["03", "06", "10"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-005",
+      "name": "Medical to Healthcare",
+      "description": "Medical device exploitation leading to healthcare system compromise",
+      "files": ["27", "12"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-006",
+      "name": "Smart Home to Critical Infrastructure",
+      "description": "Smart home device exploitation leading to power grid compromise",
+      "files": ["29", "37"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-007",
+      "name": "Vehicle to Transportation",
+      "description": "Connected vehicle exploitation leading to broader transportation system compromise",
+      "files": ["24", "39"],
+      "risk_level": "critical"
+    },
+    {
+      "chain_id": "AC-008",
+      "name": "Satellite to Telecom",
+      "description": "Satellite communication exploitation leading to telecommunications compromise",
+      "files": ["35", "34"],
+      "risk_level": "critical"
+    }
+  ],
+  "metadata": {
+    "created": "2025-06-26",
+    "last_updated": "2025-06-26",
+    "author": "MiMoCode Specialized Targets Team",
+    "license": "Educational and Authorized Testing Only",
+    "total_attack_chains": 8,
+    "total_categories": 12,
+    "critical_risk_files": 25,
+    "high_risk_files": 17,
+    "medium_risk_files": 8
+  }
+}

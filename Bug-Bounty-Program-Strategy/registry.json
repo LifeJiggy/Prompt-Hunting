@@ -1,0 +1,548 @@
+{
+  "domain": "Bug-Bounty-Program-Strategy",
+  "version": "2.0",
+  "lastUpdated": "2026-06-26",
+  "description": "Complete playbook for bug bounty program selection, optimization, and long-term maximization strategies",
+  "totalModules": 50,
+  "categories": [
+    {
+      "id": "foundation",
+      "name": "Program Selection & Evaluation",
+      "description": "Core modules for evaluating and selecting programs to maximize returns",
+      "modules": [
+        {
+          "id": 1,
+          "file": "01-Program-Selection-Criteria.md",
+          "title": "Program Selection Criteria",
+          "difficulty": "beginner",
+          "readTime": "25 min",
+          "tags": ["selection", "evaluation", "framework", "scoring"],
+          "priority": "high"
+        },
+        {
+          "id": 2,
+          "file": "02-Time-Management-Optimization.md",
+          "title": "Time Management Optimization",
+          "difficulty": "beginner-intermediate",
+          "readTime": "30 min",
+          "tags": ["time", "scheduling", "productivity", "allocation"],
+          "priority": "high"
+        },
+        {
+          "id": 3,
+          "file": "03-ROI-Maximization-Strategies.md",
+          "title": "ROI Maximization Strategies",
+          "difficulty": "intermediate",
+          "readTime": "35 min",
+          "tags": ["roi", "return", "optimization", "portfolio"],
+          "priority": "high"
+        },
+        {
+          "id": 4,
+          "file": "04-Program-Reputation-Analysis.md",
+          "title": "Program Reputation Analysis",
+          "difficulty": "beginner",
+          "readTime": "20 min",
+          "tags": ["reputation", "quality", "signals", "analysis"],
+          "priority": "medium"
+        },
+        {
+          "id": 5,
+          "file": "05-Reward-Structure-Evaluation.md",
+          "title": "Reward Structure Evaluation",
+          "difficulty": "beginner",
+          "readTime": "25 min",
+          "tags": ["rewards", "payment", "bounty", "evaluation"],
+          "priority": "high"
+        },
+        {
+          "id": 6,
+          "file": "06-Scope-Assessment-Techniques.md",
+          "title": "Scope Assessment Techniques",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["scope", "attack-surface", "enumeration", "assessment"],
+          "priority": "medium"
+        },
+        {
+          "id": 7,
+          "file": "07-Response-Time-Analysis.md",
+          "title": "Response Time Analysis",
+          "difficulty": "beginner",
+          "readTime": "20 min",
+          "tags": ["response-time", "triage", "velocity", "analysis"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "program-types",
+      "name": "Program Types & Structures",
+      "description": "Understanding different program models and their strategic implications",
+      "modules": [
+        {
+          "id": 8,
+          "file": "08-Collaboration-Opportunities.md",
+          "title": "Collaboration Opportunities",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["collaboration", "teams", "partnerships", "working-together"],
+          "priority": "medium"
+        },
+        {
+          "id": 9,
+          "file": "09-Private-vs-Public-Programs.md",
+          "title": "Private vs Public Programs",
+          "difficulty": "beginner-intermediate",
+          "readTime": "25 min",
+          "tags": ["private", "public", "invitation", "access"],
+          "priority": "medium"
+        },
+        {
+          "id": 10,
+          "file": "10-VDI-Program-Strategy.md",
+          "title": "VDI Program Strategy",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["vdi", "disclosure", "policy", "strategy"],
+          "priority": "medium"
+        },
+        {
+          "id": 11,
+          "file": "11-Seasonal-Program-Analysis.md",
+          "title": "Seasonal Program Analysis",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["seasonal", "timing", "cycles", "calendar"],
+          "priority": "medium"
+        },
+        {
+          "id": 12,
+          "file": "12-Program-Maturity-Assessment.md",
+          "title": "Program Maturity Assessment",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["maturity", "lifecycle", "stages", "assessment"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "rewards",
+      "name": "Rewards & Economics",
+      "description": "Maximizing financial returns and understanding reward systems",
+      "modules": [
+        {
+          "id": 13,
+          "file": "13-Reward-Trends-Analysis.md",
+          "title": "Reward Trends Analysis",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["rewards", "trends", "analysis", "forecasting"],
+          "priority": "medium"
+        },
+        {
+          "id": 14,
+          "file": "14-Program-Scope-Expansion.md",
+          "title": "Program Scope Expansion",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["scope", "expansion", "opportunities", "first-mover"],
+          "priority": "medium"
+        },
+        {
+          "id": 15,
+          "file": "15-Communication-Channel-Optimization.md",
+          "title": "Communication Channel Optimization",
+          "difficulty": "beginner-intermediate",
+          "readTime": "20 min",
+          "tags": ["communication", "triage", "response", "optimization"],
+          "priority": "medium"
+        },
+        {
+          "id": 16,
+          "file": "16-Duplicate-Submission-Avoidance.md",
+          "title": "Duplicate Submission Avoidance",
+          "difficulty": "beginner",
+          "readTime": "20 min",
+          "tags": ["duplicates", "efficiency", "checking", "avoidance"],
+          "priority": "medium"
+        },
+        {
+          "id": 17,
+          "file": "17-Program-Specific-Rules.md",
+          "title": "Program Specific Rules",
+          "difficulty": "beginner",
+          "readTime": "20 min",
+          "tags": ["rules", "compliance", "policy", "requirements"],
+          "priority": "medium"
+        },
+        {
+          "id": 18,
+          "file": "18-Reward-Negotiation-Tactics.md",
+          "title": "Reward Negotiation Tactics",
+          "difficulty": "advanced",
+          "readTime": "30 min",
+          "tags": ["negotiation", "rewards", "bounty", "maximization"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "relationships",
+      "name": "Program Relationships",
+      "description": "Building and maintaining productive long-term relationships with programs",
+      "modules": [
+        {
+          "id": 19,
+          "file": "19-Program-Health-Monitoring.md",
+          "title": "Program Health Monitoring",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["health", "monitoring", "indicators", "vitality"],
+          "priority": "medium"
+        },
+        {
+          "id": 20,
+          "file": "20-Long-Term-Program-Relationships.md",
+          "title": "Long-Term Program Relationships",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["relationships", "trust", "long-term", "building"],
+          "priority": "high"
+        },
+        {
+          "id": 21,
+          "file": "21-Program-Launch-Strategy.md",
+          "title": "Program Launch Strategy",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["launch", "new-programs", "first-mover", "early-access"],
+          "priority": "medium"
+        },
+        {
+          "id": 22,
+          "file": "22-Competition-Analysis.md",
+          "title": "Competition Analysis",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["competition", "analysis", "positioning", "advantage"],
+          "priority": "medium"
+        },
+        {
+          "id": 23,
+          "file": "23-Program-Specialization.md",
+          "title": "Program Specialization",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["specialization", "expertise", "niche", "authority"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "intelligence",
+      "name": "Risk & Intelligence",
+      "description": "Advanced analysis, risk management, and intelligence gathering",
+      "modules": [
+        {
+          "id": 24,
+          "file": "24-Risk-Assessment-Per-Program.md",
+          "title": "Risk Assessment Per Program",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["risk", "assessment", "mitigation", "management"],
+          "priority": "medium"
+        },
+        {
+          "id": 25,
+          "file": "25-Time-Zone-Optimization.md",
+          "title": "Time Zone Optimization",
+          "difficulty": "intermediate",
+          "readTime": "20 min",
+          "tags": ["time-zone", "global", "scheduling", "coverage"],
+          "priority": "medium"
+        },
+        {
+          "id": 26,
+          "file": "26-Program-Diversity-Strategy.md",
+          "title": "Program Diversity Strategy",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["diversity", "portfolio", "risk", "balance"],
+          "priority": "medium"
+        },
+        {
+          "id": 27,
+          "file": "27-Reward-Consistency-Analysis.md",
+          "title": "Reward Consistency Analysis",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["consistency", "reliability", "variance", "predictability"],
+          "priority": "medium"
+        },
+        {
+          "id": 28,
+          "file": "28-Program-Exit-Strategy.md",
+          "title": "Program Exit Strategy",
+          "difficulty": "intermediate",
+          "readTime": "25 min",
+          "tags": ["exit", "transition", "departure", "strategy"],
+          "priority": "medium"
+        },
+        {
+          "id": 29,
+          "file": "29-Program-Feedback-Analysis.md",
+          "title": "Program Feedback Analysis",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["feedback", "analysis", "improvement", "learning"],
+          "priority": "medium"
+        },
+        {
+          "id": 30,
+          "file": "30-Advanced-Program-Intelligence.md",
+          "title": "Advanced Program Intelligence",
+          "difficulty": "advanced",
+          "readTime": "40 min",
+          "tags": ["intelligence", "analysis", "prediction", "strategic"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "network",
+      "name": "Network & Collaboration",
+      "description": "Leveraging relationships and network effects for strategic advantage",
+      "modules": [
+        {
+          "id": 31,
+          "file": "31-Program-Network-Analysis.md",
+          "title": "Program Network Analysis",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["network", "mapping", "relationships", "ecosystem"],
+          "priority": "medium"
+        },
+        {
+          "id": 32,
+          "file": "32-Collaboration-Network-Building.md",
+          "title": "Collaboration Network Building",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["collaboration", "network", "partnerships", "building"],
+          "priority": "medium"
+        },
+        {
+          "id": 33,
+          "file": "33-Program-Influence-Strategies.md",
+          "title": "Program Influence Strategies",
+          "difficulty": "advanced",
+          "readTime": "30 min",
+          "tags": ["influence", "advocacy", "policy", "shaping"],
+          "priority": "medium"
+        },
+        {
+          "id": 34,
+          "file": "34-Reward-Prediction-Models.md",
+          "title": "Reward Prediction Models",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["prediction", "modeling", "forecasting", "data-driven"],
+          "priority": "medium"
+        },
+        {
+          "id": 35,
+          "file": "35-Program-Saturation-Analysis.md",
+          "title": "Program Saturation Analysis",
+          "difficulty": "intermediate",
+          "readTime": "30 min",
+          "tags": ["saturation", "competition", "density", "avoidance"],
+          "priority": "medium"
+        },
+        {
+          "id": 36,
+          "file": "36-Seasoned-Hunter-Advantages.md",
+          "title": "Seasoned Hunter Advantages",
+          "difficulty": "advanced",
+          "readTime": "25 min",
+          "tags": ["experience", "advantages", "reputation", "leverage"],
+          "priority": "medium"
+        },
+        {
+          "id": 37,
+          "file": "37-Program-Trend-Forecasting.md",
+          "title": "Program Trend Forecasting",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["trends", "forecasting", "prediction", "proactive"],
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced Strategy",
+      "description": "High-level strategic thinking, optimization, and master-level frameworks",
+      "modules": [
+        {
+          "id": 38,
+          "file": "38-Resource-Allocation-Strategy.md",
+          "title": "Resource Allocation Strategy",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["resources", "allocation", "optimization", "distribution"],
+          "priority": "medium"
+        },
+        {
+          "id": 39,
+          "file": "39-Program-Success-Metrics.md",
+          "title": "Program Success Metrics",
+          "difficulty": "intermediate-advanced",
+          "readTime": "30 min",
+          "tags": ["metrics", "kpi", "measurement", "tracking"],
+          "priority": "medium"
+        },
+        {
+          "id": 40,
+          "file": "40-Advanced-Program-Selection.md",
+          "title": "Advanced Program Selection",
+          "difficulty": "advanced",
+          "readTime": "40 min",
+          "tags": ["selection", "advanced", "portfolio", "prediction"],
+          "priority": "high"
+        },
+        {
+          "id": 41,
+          "file": "41-Program-Relationship-Management.md",
+          "title": "Program Relationship Management",
+          "difficulty": "advanced",
+          "readTime": "40 min",
+          "tags": ["relationships", "crm", "management", "development"],
+          "priority": "medium"
+        },
+        {
+          "id": 42,
+          "file": "42-Collaboration-ROI-Analysis.md",
+          "title": "Collaboration ROI Analysis",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["collaboration", "roi", "analysis", "optimization"],
+          "priority": "medium"
+        },
+        {
+          "id": 43,
+          "file": "43-Program-Discovery-Methods.md",
+          "title": "Program Discovery Methods",
+          "difficulty": "intermediate-advanced",
+          "readTime": "35 min",
+          "tags": ["discovery", "methods", "hidden", "opportunities"],
+          "priority": "medium"
+        },
+        {
+          "id": 44,
+          "file": "44-Advanced-Scope-Analysis.md",
+          "title": "Advanced Scope Analysis",
+          "difficulty": "advanced",
+          "readTime": "40 min",
+          "tags": ["scope", "analysis", "attack-surface", "enumeration"],
+          "priority": "medium"
+        },
+        {
+          "id": 45,
+          "file": "45-Program-Performance-Tracking.md",
+          "title": "Program Performance Tracking",
+          "difficulty": "intermediate-advanced",
+          "readTime": "35 min",
+          "tags": ["performance", "tracking", "optimization", "data-driven"],
+          "priority": "medium"
+        },
+        {
+          "id": 46,
+          "file": "46-Reward-Maximization-Framework.md",
+          "title": "Reward Maximization Framework",
+          "difficulty": "advanced",
+          "readTime": "40 min",
+          "tags": ["rewards", "maximization", "framework", "systematic"],
+          "priority": "high"
+        },
+        {
+          "id": 47,
+          "file": "47-Program-Specialization-Deep-Dive.md",
+          "title": "Program Specialization Deep Dive",
+          "difficulty": "advanced",
+          "readTime": "40 min",
+          "tags": ["specialization", "expertise", "deep-dive", "authority"],
+          "priority": "medium"
+        },
+        {
+          "id": 48,
+          "file": "48-Time-Investment-ROI.md",
+          "title": "Time Investment ROI",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["time", "investment", "roi", "hourly"],
+          "priority": "medium"
+        },
+        {
+          "id": 49,
+          "file": "49-Program-Network-Optimization.md",
+          "title": "Program Network Optimization",
+          "difficulty": "advanced",
+          "readTime": "35 min",
+          "tags": ["network", "optimization", "portfolio", "efficiency"],
+          "priority": "medium"
+        },
+        {
+          "id": 50,
+          "file": "50-Advanced-Program-Strategy.md",
+          "title": "Advanced Program Strategy",
+          "difficulty": "advanced",
+          "readTime": "45 min",
+          "tags": ["advanced", "strategy", "mastery", "frameworks"],
+          "priority": "high"
+        }
+      ]
+    }
+  ],
+  "learningPaths": {
+    "beginner": {
+      "name": "Getting Started",
+      "description": "Essential modules for new bug bounty hunters",
+      "modules": [1, 2, 5, 6, 7, 9, 16, 17],
+      "estimatedTime": "3.5 hours"
+    },
+    "intermediate": {
+      "name": "Optimization",
+      "description": "Modules for active hunters looking to improve results",
+      "modules": [3, 4, 8, 10, 11, 13, 14, 15, 18, 21, 22, 23, 25, 26, 27, 28, 29, 35, 39, 43, 45],
+      "estimatedTime": "10 hours"
+    },
+    "advanced": {
+      "name": "Mastery",
+      "description": "Elite strategies for maximum return and competitive advantage",
+      "modules": [12, 19, 20, 24, 30, 31, 32, 33, 34, 36, 37, 38, 40, 41, 42, 44, 46, 47, 48, 49, 50],
+      "estimatedTime": "12 hours"
+    },
+    "roi-focused": {
+      "name": "ROI Maximizer",
+      "description": "Modules focused on maximizing return on investment",
+      "modules": [1, 2, 3, 5, 20, 40, 46, 48, 50],
+      "estimatedTime": "5 hours"
+    },
+    "relationship-builder": {
+      "name": "Relationship Builder",
+      "description": "Modules for building productive program relationships",
+      "modules": [4, 8, 9, 15, 19, 20, 21, 31, 32, 33, 41],
+      "estimatedTime": "5.5 hours"
+    }
+  },
+  "tags": {
+    "foundation": ["selection", "evaluation", "time", "roi", "reputation", "rewards", "scope", "response-time"],
+    "programs": ["private", "public", "vdi", "seasonal", "maturity", "launch"],
+    "economics": ["bounty", "payment", "negotiation", "trends", "consistency"],
+    "relationships": ["trust", "collaboration", "network", "competition", "specialization"],
+    "intelligence": ["risk", "analysis", "prediction", "forecasting", "monitoring"],
+    "strategy": ["optimization", "allocation", "portfolio", "diversification", "maximization"]
+  }
+}
