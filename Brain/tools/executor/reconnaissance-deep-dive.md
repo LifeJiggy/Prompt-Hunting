@@ -460,4 +460,41 @@ class ReconExecutionLog:
 
 ---
 
+## Asset Classification
+
+| Asset Type | Discovery Method | Validation | Storage |
+|------------|-----------------|------------|---------|
+| Subdomain | DNS brute-force, CT logs | HTTP probe | asset_db |
+| IP Address | DNS resolution, port scan | Service check | asset_db |
+| Endpoint | Path brute-force, JS analysis | Response code | endpoint_db |
+| Technology | Header analysis, fingerprint | Version match | tech_db |
+| Email | OSINT, MX records | SMTP verify | contact_db |
+| Secret | Code analysis, config extract | Pattern match | secret_db |
+
+---
+
+## Recon Tool Configuration
+
+| Tool | Default Args | Rate Limit | Output Format |
+|------|-------------|------------|---------------|
+| subfinder | -d {domain} -o {output} | 10 req/s | text |
+| httpx | -l {input} -o {output} | 20 req/s | json |
+| nuclei | -u {target} -o {output} | 5 req/s | json |
+| ffuf | -u {url}/FUZZ -o {output} | 50 req/s | json |
+| waybackurls | {domain} | 100 req/s | text |
+| gau {domain} | 100 req/s | text |
+
+---
+
+## Asset Deduplication Rules
+
+| Rule | Description | Priority |
+|------|-------------|----------|
+| Exact match | Identical strings | High |
+| Normalized match | Case-insensitive | Medium |
+| Subdomain match | Parent domain | Low |
+| IP match | Same IP, different host | Medium |
+
+---
+
 *Part of the Brain tools executor subsystem — Prompt-Hunting.*

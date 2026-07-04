@@ -413,4 +413,111 @@ class CaseStudyExecutionLog:
 
 ---
 
-*Part of the Brain tools executor subsystem — Prompt-Hunting.*
+## Impact Assessment Framework
+
+| Impact Type | Measurement | Weight |
+|-------------|-------------|--------|
+| Financial | Direct monetary loss | 30% |
+| Operational | Service disruption | 25% |
+| Reputational | Brand damage | 20% |
+| Regulatory | Compliance violation | 15% |
+| Strategic | Competitive disadvantage | 10% |
+
+---
+
+## Timeline Analysis Metrics
+
+| Phase | Avg Duration | Best Practice |
+|-------|--------------|---------------|
+| Discovery to Report | 1-7 days | Report immediately |
+| Report to Triage | 1-14 days | Follow up at 7 days |
+| Triage to Fix | 1-90 days | Track progress |
+| Fix to Verification | 1-30 days | Verify fix |
+| Disclosure | 90 days | Follow policy |
+
+---
+
+## Case Study Extraction Methods
+
+```python
+def extract_case_patterns(
+    self,
+    case_files: list[str]
+) -> list[Pattern]:
+    """Extract patterns from case study files."""
+    patterns = []
+    
+    for case_file in case_files:
+        content = self._load_case(case_file)
+        
+        # Extract attack technique
+        technique = self._extract_technique(content)
+        
+        # Extract timeline
+        timeline = self._extract_timeline(content)
+        
+        # Extract impact
+        impact = self._extract_impact(content)
+        
+        # Extract lessons
+        lessons = self._extract_lessons(content)
+        
+        patterns.append(Pattern(
+            technique=technique,
+            timeline=timeline,
+            impact=impact,
+            lessons=lessons
+        ))
+    
+    return patterns
+```
+
+---
+
+## Cross-Case Pattern Analysis
+
+| Pattern Type | Frequency | Avg Severity | Avg Reward |
+|--------------|-----------|--------------|------------|
+| Auth bypass | 15% | High | $2000 |
+| SQL injection | 12% | Critical | $3000 |
+| IDOR | 20% | Medium | $500 |
+| XSS | 18% | Medium | $750 |
+| SSRF | 8% | High | $1500 |
+| Config error | 10% | Low | $250 |
+| Business logic | 17% | High | $2000 |
+
+---
+
+## Lessons Learned Framework
+
+| Lesson Category | Key Takeaway | Application |
+|-----------------|--------------|-------------|
+| Detection gap | Early detection reduces impact | Improve monitoring |
+| Response time | Faster response limits damage | Automate response |
+| Communication | Clear disclosure builds trust | Follow policy |
+| Root cause | Address systemic issues | Fix architecture |
+| Prevention | Proactive testing prevents | Regular audits |
+
+---
+
+## Case Study Query Interface
+
+```python
+def query_cases(
+    self,
+    category: str = None,
+    severity: str = None,
+    timeframe: str = None
+) -> list[CaseStudy]:
+    """Query case studies with filters."""
+    cases = self._load_all_cases()
+    
+    if category:
+        cases = [c for c in cases if c.category == category]
+    if severity:
+        cases = [c for c in cases if c.severity == severity]
+    if timeframe:
+        cases = [c for c in cases if c.date >= timeframe]
+    
+    return sorted(cases, key=lambda x: x.severity, reverse=True)
+```

@@ -367,6 +367,57 @@ class StrategyExecutionLog:
 
 ---
 
+## Program Health Indicators
+
+| Indicator | Healthy | Warning | Critical |
+|-----------|---------|---------|----------|
+| Response time | < 7 days | 7-14 days | > 14 days |
+| Payment speed | < 30 days | 30-60 days | > 60 days |
+| Triage quality | > 80% accepted | 60-80% | < 60% |
+| Scope clarity | Clear boundaries | Some ambiguity | Vague scope |
+| Communication | Active and helpful | Slow responses | No response |
+| Reward consistency | Predictable | Variable | Unpredictable |
+
+---
+
+## Portfolio Diversification Strategy
+
+| Category | Allocation | Risk Level | Expected ROI |
+|----------|------------|------------|--------------|
+| High-reward programs | 30% | medium | $500-5000/bug |
+| Medium-reward programs | 40% | low | $100-500/bug |
+| New/launch programs | 20% | high | $200-2000/bug |
+| Private/invite programs | 10% | medium | $300-3000/bug |
+
+---
+
+## Time Allocation Model
+
+| Activity | Recommended % | Daily Hours |
+|----------|---------------|-------------|
+| Reconnaissance | 25% | 2.0h |
+| Vulnerability testing | 40% | 3.2h |
+| Report writing | 15% | 1.2h |
+| Program research | 10% | 0.8h |
+| Skill development | 10% | 0.8h |
+
+Based on 8-hour hunting day.
+
+---
+
+## Program Selection Quick Reference
+
+| Signal | Good | Bad |
+|--------|------|-----|
+| Response time | < 7 days | > 14 days |
+| Payment history | On time | Delayed |
+| Triage quality | Detailed feedback | Generic rejections |
+| Scope definition | Clear boundaries | Vague or changing |
+| Reward range | Competitive | Below market |
+| Active hunters | Growing | Declining |
+
+---
+
 ## Analysis Scoring Model
 
 | Score Component | Weight | Calculation Method |
@@ -376,6 +427,84 @@ class StrategyExecutionLog:
 | Competition Score | 20% | Active Hunters⁻¹ × Novelty |
 | Relationship Score | 15% | Response Time × Payment Speed × Communication |
 | Risk Score | 10% | Program Stability × Policy Clarity |
+
+---
+
+## Learning Paths
+
+| Path | Modules | Estimated Time | Skill Level |
+|------|---------|----------------|-------------|
+| Getting Started | 01, 02, 05, 06, 07, 09, 16, 17 | 3.5 hours | beginner |
+| Optimization | 03, 04, 08, 10, 11, 13, 14, 15, 18, 21, 22, 23 | 10 hours | intermediate |
+| Mastery | 12, 19, 20, 24, 30, 31, 32, 33, 34, 36, 37, 38, 40, 41, 42, 44, 46, 47, 48, 49, 50 | 12 hours | advanced |
+| ROI Maximizer | 01, 02, 03, 05, 20, 40, 46, 48, 50 | 5 hours | advanced |
+| Relationship Builder | 04, 08, 09, 15, 19, 20, 21, 31, 32, 33, 41 | 5.5 hours | advanced |
+
+---
+
+## Tool Configuration by Analysis Type
+
+| Analysis Type | Primary Tool | Secondary Tool | Cache TTL | Parallel |
+|---------------|-------------|----------------|-----------|----------|
+| selection | program-selector | reputation-analyzer | 24h | yes |
+| roi | roi-calculator | time-tracker | 1h | no |
+| reputation | reputation-analyzer | health-monitor | 12h | yes |
+| reward | reward-tracker | prediction-model | 6h | yes |
+| scope | scope-analyzer | asset-mapper | 12h | yes |
+| intelligence | intelligence-gatherer | trend-forecaster | 4h | yes |
+| network | network-analyzer | collaboration-tracker | 24h | yes |
+| prediction | prediction-model | trend-forecaster | 12h | no |
+
+---
+
+## Error Recovery Matrix
+
+| Error Source | Recovery Strategy | Max Recovery Time |
+|-------------|-------------------|-------------------|
+| API rate limit | Wait and retry | 60s |
+| Data unavailable | Use cached data | 5s |
+| Parse error | Fallback parser | 10s |
+| Network timeout | Retry with backoff | 30s |
+| Invalid program | Log and skip | 1s |
+| Calculation error | Recalculate | 5s |
+
+---
+
+## Integration Points
+
+### With Registry
+
+```python
+program_data = self._registry.get_program("h1-target-123")
+# Returns: program details, scope, rewards, history
+```
+
+### With Session Manager
+
+```python
+session = self._session_manager.get(context["session_id"])
+# Returns: session context, hunter profile, program history
+```
+
+### With Chain Executor
+
+```python
+chain_result = self._chain_executor.run_step(
+    step_id="strategy_analysis",
+    tool="program-selector",
+    input={"criteria": selection_criteria}
+)
+# Returns: StrategyResult for strategy pipeline
+```
+
+### With Notification System
+
+```python
+self._notification_system.send(
+    channel="strategy_alerts",
+    message=f"New high-ROI program detected: {program_name}"
+)
+```
 
 ---
 

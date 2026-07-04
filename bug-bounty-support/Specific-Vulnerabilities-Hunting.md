@@ -20,7 +20,7 @@ This guide provides a comprehensive overview of the most common vulnerability cl
 
 ## Core Concepts
 
-### Injection Vulnerabilities
+## Injection Vulnerabilities
 
 Injection vulnerabilities occur when untrusted user input is incorporated into commands, queries, or code executed by the application. The most common types include:
 
@@ -34,7 +34,7 @@ Injection vulnerabilities occur when untrusted user input is incorporated into c
 
 **Template Injection (SSTI)**: Occurs when user input is incorporated into server-side templates, potentially leading to remote code execution.
 
-### Authentication and Session Management
+## Authentication and Session Management
 
 Authentication and session management vulnerabilities allow attackers to bypass authentication mechanisms or hijack user sessions:
 
@@ -48,7 +48,7 @@ Authentication and session management vulnerabilities allow attackers to bypass 
 
 **OAuth Vulnerabilities**: Issues with OAuth implementation, including open redirect, token leakage, or insufficient scope validation.
 
-### Access Control
+## Access Control
 
 Access control vulnerabilities allow users to perform actions beyond their intended permissions:
 
@@ -60,7 +60,7 @@ Access control vulnerabilities allow users to perform actions beyond their inten
 
 **Missing Function-Level Access Control**: When the application does not properly restrict access to administrative functions or API endpoints.
 
-### Cross-Site Scripting (XSS)
+## Cross-Site Scripting (XSS)
 
 XSS vulnerabilities allow attackers to inject malicious scripts into web pages viewed by other users:
 
@@ -70,7 +70,7 @@ XSS vulnerabilities allow attackers to inject malicious scripts into web pages v
 
 **DOM-based XSS**: The vulnerability exists in client-side JavaScript rather than server-side code.
 
-### Server-Side Request Forgery (SSRF)
+## Server-Side Request Forgery (SSRF)
 
 SSRF vulnerabilities allow attackers to make the server issue requests to internal or external resources:
 
@@ -80,7 +80,7 @@ SSRF vulnerabilities allow attackers to make the server issue requests to intern
 
 **Service Enumeration**: Identifying internal services and their versions through response analysis.
 
-### Business Logic Vulnerabilities
+## Business Logic Vulnerabilities
 
 Business logic vulnerabilities are flaws in the application's logic that allow attackers to manipulate intended functionality:
 
@@ -92,7 +92,7 @@ Business logic vulnerabilities are flaws in the application's logic that allow a
 
 **Coupon/Promo Abuse**: Using coupons or promotional codes in unintended ways.
 
-### File Upload Vulnerabilities
+## File Upload Vulnerabilities
 
 File upload vulnerabilities occur when applications do not properly validate uploaded files:
 
@@ -102,7 +102,7 @@ File upload vulnerabilities occur when applications do not properly validate upl
 
 **XXE in File Parsers**: Exploiting XML External Entity vulnerabilities in file parsers that process uploaded documents.
 
-### API Vulnerabilities
+## API Vulnerabilities
 
 Modern applications often rely on APIs that introduce their own set of vulnerabilities:
 
@@ -116,7 +116,7 @@ Modern applications often rely on APIs that introduce their own set of vulnerabi
 
 ## Methodology
 
-### Step 1: Reconnaissance
+## Step 1: Reconnaissance
 
 Before hunting for vulnerabilities, gather information about the target:
 
@@ -134,7 +134,7 @@ katana -u https://target.com -d 3 -jc -o urls.txt
 nmap -sV -sC target.com
 ```
 
-### Step 2: Map Attack Surface
+## Step 2: Map Attack Surface
 
 Identify potential entry points for user input:
 
@@ -149,7 +149,7 @@ linkfinder -i https://target.com/app.js -o cli
 ffuf -u https://target.com/FUZZ -w api_endpoints.txt -mc 200,301,302,403
 ```
 
-### Step 3: Test for Injection
+## Step 3: Test for Injection
 
 Systematically test for injection vulnerabilities:
 
@@ -162,7 +162,7 @@ sqlmap -u "https://target.com/page?id=1" --batch --risk=3 --level=5
 curl "https://target.com/api/cmd?input=test%0a'sleep%205'"
 ```
 
-### Step 4: Test for Authentication Issues
+## Step 4: Test for Authentication Issues
 
 Test authentication mechanisms for weaknesses:
 
@@ -175,7 +175,7 @@ hydra -l user@example.com -P passwords.txt target.com http-post-form "/login:use
 # Authenticate and observe session token changes
 ```
 
-### Step 5: Test for Access Control
+## Step 5: Test for Access Control
 
 Test for authorization vulnerabilities:
 
@@ -188,7 +188,7 @@ Test for authorization vulnerabilities:
 # Directly access protected URLs without authentication
 ```
 
-### Step 6: Test for XSS
+## Step 6: Test for XSS
 
 Test for cross-site scripting vulnerabilities:
 
@@ -201,7 +201,7 @@ Test for cross-site scripting vulnerabilities:
 # Analyze JavaScript for dangerous sinks (innerHTML, eval, etc.)
 ```
 
-### Step 7: Test for SSRF
+## Step 7: Test for SSRF
 
 Test for server-side request forgery:
 
@@ -213,7 +213,7 @@ curl "https://target.com/api/fetch?url=http://127.0.0.1"
 curl "https://target.com/api/fetch?url=http://169.254.169.254/latest/meta-data/"
 ```
 
-### Step 8: Document Findings
+## Step 8: Document Findings
 
 Document all findings with clear reproduction steps and impact analysis.
 
@@ -221,7 +221,7 @@ Document all findings with clear reproduction steps and impact analysis.
 
 ## Real-World Examples
 
-### Example 1: SQL Injection in Search Functionality
+## Example 1: SQL Injection in Search Functionality
 
 **Scenario**: A researcher discovered that the search functionality on a content management system was vulnerable to SQL injection, allowing extraction of sensitive data from the database.
 
@@ -238,7 +238,7 @@ Document all findings with clear reproduction steps and impact analysis.
 
 **Remediation**: Use parameterized queries or prepared statements for all database operations. Implement input validation and output encoding.
 
-### Example 2: IDOR in File Download Functionality
+## Example 2: IDOR in File Download Functionality
 
 **Scenario**: A researcher found that the file download functionality allowed accessing any user's files by modifying the file ID parameter.
 
@@ -255,7 +255,7 @@ Document all findings with clear reproduction steps and impact analysis.
 
 **Remediation**: Implement proper authorization checks to ensure users can only access their own files. Use indirect references instead of sequential IDs.
 
-### Example 3: CSRF on Email Change
+## Example 3: CSRF on Email Change
 
 **Scenario**: A researcher discovered that the email change functionality was vulnerable to CSRF, allowing an attacker to change a victim's email address without their knowledge.
 
@@ -274,7 +274,7 @@ Document all findings with clear reproduction steps and impact analysis.
 
 **Remediation**: Require current password verification for sensitive operations like email changes. Implement CSRF tokens for all state-changing operations.
 
-### Example 4: SSRF via Image Upload
+## Example 4: SSRF via Image Upload
 
 **Scenario**: A researcher found that the image upload functionality was vulnerable to SSRF, allowing the server to make requests to internal resources.
 
@@ -291,7 +291,7 @@ Document all findings with clear reproduction steps and impact analysis.
 
 **Remediation**: Implement URL validation to prevent requests to internal network addresses. Use a whitelist of allowed domains.
 
-### Example 5: Mass Assignment in User Profile Update
+## Example 5: Mass Assignment in User Profile Update
 
 **Scenario**: A researcher discovered that the user profile update endpoint was vulnerable to mass assignment, allowing privilege escalation by modifying the user's role.
 
@@ -312,7 +312,7 @@ Document all findings with clear reproduction steps and impact analysis.
 
 ## Advanced Techniques
 
-### Technique 1: Blind Injection Detection
+## Technique 1: Blind Injection Detection
 
 When injection vulnerabilities don't produce visible errors, use time-based or inference-based techniques:
 
@@ -326,7 +326,7 @@ When injection vulnerabilities don't produce visible errors, use time-based or i
 # Example: test' AND 1=1-- vs test' AND 1=2--
 ```
 
-### Technique 2: Second-Order Injection
+## Technique 2: Second-Order Injection
 
 Some injection vulnerabilities only manifest when the injected data is used in a different context:
 
@@ -336,7 +336,7 @@ Some injection vulnerabilities only manifest when the injected data is used in a
 3. Admin panel doesn't properly sanitize data from database
 ```
 
-### Technique 3: Prototype Pollution Leading to XSS
+## Technique 3: Prototype Pollution Leading to XSS
 
 In JavaScript applications, prototype pollution can lead to XSS:
 
@@ -346,7 +346,7 @@ In JavaScript applications, prototype pollution can lead to XSS:
 // This can lead to XSS when the polluted property is used in DOM manipulation
 ```
 
-### Technique 4: JWT Algorithm Confusion
+## Technique 4: JWT Algorithm Confusion
 
 When applications accept multiple JWT signing algorithms, confusion attacks may be possible:
 
@@ -357,7 +357,7 @@ When applications accept multiple JWT signing algorithms, confusion attacks may 
 4. Application verifies with the public key using HS256
 ```
 
-### Technique 5: GraphQL Introspection Abuse
+## Technique 5: GraphQL Introspection Abuse
 
 When GraphQL introspection is enabled, it reveals the entire API schema:
 
@@ -384,43 +384,43 @@ query IntrospectionQuery {
 
 ## Common Pitfalls
 
-### Pitfall 1: Relying Only on Automated Scanners
+## Pitfall 1: Relying Only on Automated Scanners
 
 **Mistake**: Assuming automated scanners will find all vulnerabilities.
 
 **Reality**: Automated tools miss many vulnerability classes, especially business logic flaws, authorization issues, and complex injection chains. Always combine automated testing with manual analysis.
 
-### Pitfall 2: Ignoring Business Logic
+## Pitfall 2: Ignoring Business Logic
 
 **Mistake**: Focusing only on technical vulnerabilities and ignoring business logic flaws.
 
 **Reality**: Business logic vulnerabilities often have higher impact and are less likely to be found by automated tools. Understanding the application's business logic is essential for effective hunting.
 
-### Pitfall 3: Not Testing Edge Cases
+## Pitfall 3: Not Testing Edge Cases
 
 **Mistake**: Only testing the "happy path" and not exploring edge cases.
 
 **Reality**: Many vulnerabilities exist in error conditions, boundary cases, and unusual input scenarios. Always test with unexpected inputs and conditions.
 
-### Pitfall 4: Overlooking Client-Side Code
+## Pitfall 4: Overlooking Client-Side Code
 
 **Mistake**: Focusing only on server-side vulnerabilities and ignoring client-side issues.
 
 **Reality**: Client-side code can contain sensitive information, API keys, and vulnerabilities like DOM-based XSS. Always analyze JavaScript and client-side logic.
 
-### Pitfall 5: Not Understanding the Technology Stack
+## Pitfall 5: Not Understanding the Technology Stack
 
 **Mistake**: Testing without understanding the underlying technology.
 
 **Reality**: Different frameworks and libraries have different vulnerability patterns. Understanding the technology stack helps identify likely vulnerability classes and testing approaches.
 
-### Pitfall 6: Giving Up Too Early
+## Pitfall 6: Giving Up Too Early
 
 **Mistake**: Moving to a different target after a few minutes without finding vulnerabilities.
 
 **Reality**: Deep vulnerability hunting requires patience and persistence. Some of the most valuable findings come from extended engagement with a target.
 
-### Pitfall 7: Not Documenting Negative Results
+## Pitfall 7: Not Documenting Negative Results
 
 **Mistake**: Only documenting successful findings and not recording what was tested.
 
@@ -430,7 +430,7 @@ query IntrospectionQuery {
 
 ## Tools and Resources
 
-### Vulnerability Scanners
+## Vulnerability Scanners
 
 **Burp Suite**: Comprehensive web application security testing tool with automated and manual testing capabilities.
 
@@ -440,7 +440,7 @@ query IntrospectionQuery {
 
 **Nuclei**: Fast and customizable vulnerability scanner based on template-based detection.
 
-### Injection Testing
+## Injection Testing
 
 **SQLMap**: Automatic SQL injection testing tool.
 
@@ -448,13 +448,13 @@ query IntrospectionQuery {
 
 **NoSQLMap**: Automated NoSQL injection testing tool.
 
-### XSS Testing
+## XSS Testing
 
 **XSStrike**: Advanced XSS detection and exploitation suite.
 
 **Dalfox**: Open-source parameter analysis and XSS scanner.
 
-### API Testing
+## API Testing
 
 **Postman**: API development and testing tool.
 
@@ -462,7 +462,7 @@ query IntrospectionQuery {
 
 **Arjun**: HTTP parameter discovery suite.
 
-### General Resources
+## General Resources
 
 **OWASP Testing Guide**: Comprehensive guide to web application security testing.
 
@@ -474,7 +474,7 @@ query IntrospectionQuery {
 
 ## Quick Reference Cheat Sheet
 
-### Vulnerability Classes and Detection Patterns
+## Vulnerability Classes and Detection Patterns
 
 | Vulnerability | Detection Pattern | Common Payloads |
 |--------------|-------------------|-----------------|
@@ -487,7 +487,7 @@ query IntrospectionQuery {
 | Command Injection | System command execution | `; ls`, `| cat /etc/passwd` |
 | Path Traversal | File system access | `../../../etc/passwd` |
 
-### Testing Checklist
+## Testing Checklist
 
 - [ ] Identify all user input points
 - [ ] Test for injection vulnerabilities
@@ -500,14 +500,14 @@ query IntrospectionQuery {
 - [ ] Test API endpoints
 - [ ] Document all findings
 
-### Severity Classification
+## Severity Classification
 
 - **Critical**: Remote code execution, SQL injection with data exfiltration, authentication bypass
 - **High**: Stored XSS, SSRF to internal, IDOR with sensitive data, CSRF on critical actions
 - **Medium**: Reflected XSS, CSRF on non-critical, information disclosure, open redirect
 - **Low**: Clickjacking, missing headers, verbose errors, version disclosure
 
-### Common Endpoint Patterns to Test
+## Common Endpoint Patterns to Test
 
 ```
 /api/v1/users/{id}
@@ -524,7 +524,7 @@ query IntrospectionQuery {
 /api/v1/export
 ```
 
-### Quick Payload Reference
+## Quick Payload Reference
 
 **SQL Injection**:
 ```
@@ -565,7 +565,7 @@ http://[::1]
 $(id)
 ```
 
-### Platform-Specific Testing Notes
+## Platform-Specific Testing Notes
 
 **HackerOne**: Focus on vulnerabilities with clear impact. Document all steps thoroughly.
 
@@ -575,9 +575,9 @@ $(id)
 
 **Immunefi**: Focus on smart contract vulnerabilities. Include financial impact calculations.
 
-### Vulnerability Hunting Methodology Deep Dive
+## Vulnerability Hunting Methodology Deep Dive
 
-#### Phase 1: Reconnaissance and Technology Fingerprinting
+## Phase 1: Reconnaissance and Technology Fingerprinting
 
 Before hunting for specific vulnerabilities, understand the target's technology stack:
 
@@ -595,7 +595,7 @@ curl -s https://target.com | grep -i "react\|angular\|vue\|jquery\|bootstrap"
 curl -s https://target.com | grep -i "wordpress\|drupal\|joomla"
 ```
 
-#### Phase 2: Attack Surface Mapping
+## Phase 2: Attack Surface Mapping
 
 Map all potential entry points for user input:
 
@@ -613,7 +613,7 @@ curl -s https://target.com/swagger.json 2>/dev/null | jq '.paths | keys[]'
 ffuf -u https://target.com/FUZZ -w admin_paths.txt -mc 200,301,302,403
 ```
 
-#### Phase 3: Vulnerability Class Testing
+## Phase 3: Vulnerability Class Testing
 
 Systematically test for each vulnerability class:
 
@@ -641,7 +641,7 @@ for param in $(cat params.txt); do
 done
 ```
 
-#### Phase 4: Business Logic Analysis
+## Phase 4: Business Logic Analysis
 
 Analyze application logic for flaws:
 
@@ -659,7 +659,7 @@ done
 curl -d "step=complete" https://target.com/api/checkout
 ```
 
-#### Phase 5: Impact Assessment and Reporting
+## Phase 5: Impact Assessment and Reporting
 
 Document findings with clear impact analysis:
 
@@ -670,9 +670,9 @@ Document findings with clear impact analysis:
 # Write report following platform guidelines
 ```
 
-### Advanced Vulnerability Hunting Techniques
+## Advanced Vulnerability Hunting Techniques
 
-#### Technique 1: Differential Analysis
+## Technique 1: Differential Analysis
 
 Compare application behavior under different conditions:
 
@@ -687,7 +687,7 @@ curl "https://target.com/search?q=test'" > sql_response.txt
 diff normal_response.txt sql_response.txt
 ```
 
-#### Technique 2: Timing Analysis
+## Technique 2: Timing Analysis
 
 Use timing differences to detect blind vulnerabilities:
 
@@ -701,7 +701,7 @@ time curl "https://target.com/api/cmd?input=test%0asleep%205"
 time curl "https://target.com/api/cmd?input=test"
 ```
 
-#### Technique 3: Error-Based Analysis
+## Technique 3: Error-Based Analysis
 
 Analyze error messages for information disclosure:
 
@@ -712,7 +712,7 @@ curl "https://target.com/page?id=1'" | grep -i "mysql\|syntax\|query"
 curl "https://target.com/page?param=<>" | grep -i "xml\|parse\|entity"
 ```
 
-#### Technique 4: Side-Channel Analysis
+## Technique 4: Side-Channel Analysis
 
 Use side channels to extract information:
 
@@ -728,7 +728,7 @@ done
 curl "https://target.com/api/login" -d '{"username":"admin","password":"wrong"}' | jq '.error'
 ```
 
-### Vulnerability Hunting Checklist
+## Vulnerability Hunting Checklist
 
 **Pre-Hunting**:
 - [ ] Understand application architecture
@@ -770,7 +770,7 @@ curl "https://target.com/api/login" -d '{"username":"admin","password":"wrong"}'
 - [ ] Test for business logic flaws
 - [ ] Test for information disclosure
 
-### Vulnerability Severity Assessment Guide
+## Vulnerability Severity Assessment Guide
 
 **Critical Vulnerabilities (CVSS 9.0-10.0)**:
 - Remote Code Execution
@@ -796,7 +796,7 @@ curl "https://target.com/api/login" -d '{"username":"admin","password":"wrong"}'
 - Verbose error messages
 - Version disclosure
 
-### Common Vulnerability Patterns by Framework
+## Common Vulnerability Patterns by Framework
 
 **PHP Applications**:
 - SQL injection in `mysql_query()` calls
@@ -822,7 +822,7 @@ curl "https://target.com/api/login" -d '{"username":"admin","password":"wrong"}'
 - Mass assignment vulnerabilities
 - CSRF in form handling
 
-### Vulnerability Hunting Resources
+## Vulnerability Hunting Resources
 
 **Learning Resources**:
 - OWASP Testing Guide
@@ -842,9 +842,9 @@ curl "https://target.com/api/login" -d '{"username":"admin","password":"wrong"}'
 - Research papers
 - Vulnerability databases
 
-### Vulnerability Hunting Automation Scripts
+## Vulnerability Hunting Automation Scripts
 
-#### Automated SQL Injection Testing Script
+## Automated SQL Injection Testing Script
 
 ```bash
 #!/bin/bash
@@ -858,7 +858,7 @@ while IFS= read -r param; do
 done < "$PARAMS_FILE"
 ```
 
-#### Automated XSS Testing Script
+## Automated XSS Testing Script
 
 ```bash
 #!/bin/bash
@@ -875,7 +875,7 @@ while IFS= read -r param; do
 done < "$PARAMS_FILE"
 ```
 
-#### Automated Command Injection Testing Script
+## Automated Command Injection Testing Script
 
 ```bash
 #!/bin/bash
@@ -892,9 +892,9 @@ while IFS= read -r param; do
 done < "$PARAMS_FILE"
 ```
 
-### Vulnerability Hunting Workflow Diagrams
+## Vulnerability Hunting Workflow Diagrams
 
-#### Standard Hunting Workflow
+## Standard Hunting Workflow
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -923,7 +923,7 @@ done < "$PARAMS_FILE"
 └─────────────────────────────────────────────────────────────┘
 ```
 
-#### SQL Injection Testing Flow
+## SQL Injection Testing Flow
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -955,9 +955,9 @@ done < "$PARAMS_FILE"
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Vulnerability Hunting Performance Metrics
+## Vulnerability Hunting Performance Metrics
 
-#### Time Investment Analysis
+## Time Investment Analysis
 
 | Activity | Average Time | Priority |
 |----------|--------------|----------|
@@ -967,7 +967,7 @@ done < "$PARAMS_FILE"
 | Exploitation | 2-6 hours | High |
 | Reporting | 2-4 hours | Medium |
 
-#### Finding Rate Analysis
+## Finding Rate Analysis
 
 | Vulnerability Class | Average Findings per 10 Hours | Difficulty |
 |--------------------|-------------------------------|------------|
@@ -979,7 +979,7 @@ done < "$PARAMS_FILE"
 | Authentication Bypass | 0-1 | High |
 | Business Logic | 1-2 | High |
 
-### Vulnerability Hunting Best Practices Summary
+## Vulnerability Hunting Best Practices Summary
 
 1. **Understand the Target**: Invest time in reconnaissance and technology fingerprinting
 2. **Systematic Testing**: Follow a structured methodology for each vulnerability class

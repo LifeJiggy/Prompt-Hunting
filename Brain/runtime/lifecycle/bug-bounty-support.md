@@ -363,6 +363,76 @@ Orchestrator (parent)
 | `/knowledge/*` | 200 req/s | 500 | 1s |
 | `/ethical/*` | 500 req/s | 1000 | 1s |
 
+## Recovery Procedures
+
+### Service Recovery
+
+1. On service crash: Support manager detects heartbeat failure, restarts service
+2. On cache corruption: Rebuild cache from source files
+3. On framework load failure: Fall back to last cached version
+
+### Fallback Behavior
+
+| Scenario | Fallback | Recovery |
+|----------|----------|----------|
+| Framework load fails | Use cached version | Reload on next cycle |
+| Template engine fails | Use default template | Restart engine |
+| Tool integrator fails | Use last known config | Revalidate on restart |
+| Knowledge base fails | Query cached patterns | Rebuild index |
+| Compliance worker fails | Block all submissions | Restart immediately |
+
+### Data Integrity
+
+- Framework file hashes verified on load
+- Template cache checksums validated
+- Tool config signatures checked
+- Knowledge base consistency verified
+- Ethical guideline version tracked
+
+## Audit Trail
+
+### Logged Events
+
+| Event | Log Level | Description |
+|-------|-----------|-------------|
+| `support.framework_loaded` | INFO | Framework loaded successfully |
+| `support.template_served` | INFO | Template served to worker |
+| `support.tool_config_served` | INFO | Tool config served |
+| `support.knowledge_query` | DEBUG | Knowledge base queried |
+| `support.ethical_check` | INFO | Ethical compliance check |
+| `support.cache_miss` | WARN | Cache miss occurred |
+| `support.error` | ERROR | Service error |
+
+### Log Retention
+
+- Service logs: 30 days
+- Access logs: 7 days
+- Error logs: 90 days
+- Audit trail: 180 days
+
+## Security Considerations
+
+### Access Control
+
+| Resource | Access Level | Description |
+|----------|-------------|-------------|
+| Frameworks | Read-only for workers | Workers read frameworks |
+| Templates | Read-only for workers | Workers read templates |
+| Tool configs | Read-only for workers | Workers read configs |
+| Knowledge base | Read for workers | Workers query KB |
+| Ethical guidelines | Read-only for all | Enforced by compliance |
+| Configuration | Write for admin | Only admin modifies |
+
+### Data Sensitivity
+
+| Data Type | Sensitivity | Handling |
+|-----------|------------|----------|
+| Framework content | Low | Store in plain text |
+| Tool configurations | Medium | Store with access control |
+| Ethical guidelines | High | Protect from modification |
+| Knowledge patterns | Medium | Store, version controlled |
+| Compliance rules | Confidential | Protect integrity |
+
 ## Configuration Reference
 
 | Config Key | Default | Description |

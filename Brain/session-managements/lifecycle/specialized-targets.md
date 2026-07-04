@@ -324,6 +324,75 @@ sessions/<session_id>/
 | Test Failure | Incompatible test | Skip; log reason |
 | State Corruption | Checksum mismatch | Restore from checkpoint |
 
+## Category-Specific Testing Framework
+
+### Category Testing Matrix
+
+| Category | Primary Focus | Specialized Tools | Key Vulnerabilities |
+|----------|---------------|-------------------|---------------------|
+| IoT | Device firmware, protocols | binwalk, nmap, firmwalker | Hardcoded creds, firmware flaws |
+| Mobile | App binary, API | jadx, frida, objection | Insecure storage, API flaws |
+| Cloud | Infrastructure, IAM | scoutuite, prowler | Misconfig, privilege escalation |
+| Container | Runtime, orchestration | trivy, grype | Escape, image vulnerabilities |
+| Blockchain | Smart contracts | mythril, slither | Reentrancy, overflow |
+| Healthcare | HIPAA compliance | Custom tools | PHI exposure, insecure interfaces |
+| Financial | PCI DSS compliance | Custom tools | Transaction flaws, auth bypass |
+
+### Category-Specific Vulnerability Classes
+
+| Category | Vulnerability Classes |
+|----------|----------------------|
+| IoT | Hardcoded credentials, firmware analysis, protocol flaws, physical access |
+| Mobile | Insecure storage, certificate pinning bypass, deep linking, code injection |
+| Cloud | IAM misconfiguration, exposed services, container escape, secrets management |
+| Container | Image vulnerabilities, runtime exploits, orchestrator flaws, network policy |
+| Blockchain | Reentrancy, integer overflow, access control, oracle manipulation |
+| Healthcare | PHI exposure, insecure interfaces, compliance violations, medical device flaws |
+| Financial | Transaction manipulation, auth bypass, data exposure, API flaws |
+
+### Testing Workflow per Category
+
+| Phase | IoT | Mobile | Cloud | Container | Blockchain |
+|-------|-----|--------|-------|-----------|------------|
+| Recon | Network scan, firmware download | APK analysis, API discovery | IAM enum, service discovery | Image scan, cluster recon | Contract source analysis |
+| Analysis | Firmware decompilation | Code analysis, manifest review | Config audit, policy review | Image audit, runtime analysis | Static analysis, formal verification |
+| Testing | Protocol fuzzing | Dynamic analysis, hooking | Privilege testing | Escape testing | Exploit development |
+| Validation | Device takeover | Data extraction | Resource access | Container escape | Funds extraction |
+
+## Module Categories by Domain
+
+### IoT and Embedded (Modules 01, 23-32)
+
+| Module | Focus |
+|--------|-------|
+| 01 | IoT device security testing |
+| 23 | Smart building automation |
+| 24 | Connected vehicle security |
+| 25 | Autonomous system security |
+| 26 | Industrial control systems |
+| 27 | Medical device security |
+| 28 | Wearable technology |
+| 29 | Smart home devices |
+| 30 | Embedded systems |
+| 31 | Real-time operating systems |
+| 32 | Firmware security analysis |
+
+### Cloud and Infrastructure (Modules 03-05, 33-40)
+
+| Module | Focus |
+|--------|-------|
+| 03 | Cloud infrastructure security |
+| 04 | Container security |
+| 05 | Kubernetes cluster security |
+| 33 | Network device security |
+| 34 | Telecommunication systems |
+| 35 | Satellite communication |
+| 36 | Air traffic control |
+| 37 | Power grid security |
+| 38 | Water treatment facilities |
+| 39 | Transportation systems |
+| 40 | Energy management systems |
+
 ## Usage Examples
 
 ### Creating an IoT Testing Session
@@ -356,8 +425,19 @@ session = create_specialized_session(
         "05-Kubernetes-Cluster-Security.md"
     ],
     testing_scope={"cloud_provider": "aws", "regions": ["us-east-1"]},
-    specialized_tools=["aws-cli", " scoutuite", "prowler"]
+    specialized_tools=["aws-cli", "scoutuite", "prowler"]
 )
+```
+
+### Running Category-Specific Tests
+
+```python
+result = run_specialized_test(
+    session_id=session.session_id,
+    test_type="firmware_analysis",
+    target="/path/to/firmware.bin"
+)
+print(f"Vulnerabilities found: {len(result.vulnerabilities)}")
 ```
 
 ### Querying Specialized Results
@@ -371,4 +451,35 @@ for s in sessions:
     print(f"Target: {s.target}, "
           f"Findings: {len(s.category_findings)}, "
           f"Tools used: {len(s.specialized_tools)}")
+```
+
+### Generating Category Report
+
+```python
+report = generate_category_report(
+    session_id=session.session_id,
+    format="markdown"
+)
+print(f"Findings by severity: {report.findings_by_severity}")
+print(f"Recommendations: {len(report.recommendations)}")
+```
+
+### Tracking Domain Expertise
+
+```python
+expertise = get_domain_expertise(
+    session_id=session.session_id
+)
+for domain, level in expertise.items():
+    print(f"{domain}: {level}")
+```
+
+### Generating Test Summary
+
+```python
+summary = generate_test_summary(
+    session_id=session.session_id
+)
+print(f"Tests executed: {summary.tests_executed}")
+print(f"Success rate: {summary.success_rate}%")
 ```

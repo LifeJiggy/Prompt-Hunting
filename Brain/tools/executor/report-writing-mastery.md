@@ -419,4 +419,88 @@ class ReportExecutionLog:
 
 ---
 
-*Part of the Brain tools executor subsystem — Prompt-Hunting.*
+## Report Section Checklist
+
+| Section | Required | Quality Check |
+|---------|----------|---------------|
+| Title | Yes | Clear, descriptive |
+| Severity | Yes | CVSS calculated |
+| Executive Summary | Yes | 2-3 paragraphs |
+| Technical Detail | Yes | Step-by-step |
+| Impact Statement | Yes | Business context |
+| PoC | Yes | Reproducible |
+| Remediation | Yes | Actionable |
+| References | Optional | CVE/CWE links |
+
+---
+
+## Severity Decision Matrix
+
+| CVSS Range | Severity | Response Priority |
+|------------|----------|-------------------|
+| 9.0-10.0 | Critical | Immediate |
+| 7.0-8.9 | High | 24 hours |
+| 4.0-6.9 | Medium | 7 days |
+| 0.1-3.9 | Low | 30 days |
+| 0.0 | Info | Best effort |
+
+---
+
+## Report Generation Pipeline
+
+```python
+def generate_report(
+    self,
+    findings: list[dict],
+    template: str,
+    options: dict
+) -> ReportResult:
+    """
+    Execute report generation pipeline.
+    
+    Pipeline stages:
+    1. Load template
+    2. Process findings
+    3. Calculate CVSS scores
+    4. Generate sections
+    5. Apply formatting
+    6. Quality check
+    7. Export format
+    """
+```
+
+---
+
+## Platform-Specific Requirements
+
+| Platform | Title Format | Max Length | Required Sections |
+|----------|-------------|------------|-------------------|
+| HackerOne | [Vuln Type] in [Feature] | 100 chars | Title, Summary, Steps, Impact, Remediation |
+| Bugcrowd | [Category]: [Vuln] in [Feature] | 100 chars | VRT Category, Description, Impact, Remediation |
+| Intigriti | [Vuln Type] - [Feature] | 80 chars | Title, Description, PoC, Impact, Remediation |
+| Immunefi | [DeFi Protocol] - [Vuln] | 100 chars | Title, Summary, PoC, Impact, Fix |
+
+---
+
+## Common Rejection Reasons
+
+| Reason | Prevention | Recovery |
+|--------|------------|----------|
+| Duplicate submission | Check existing reports | Acknowledge, request merge |
+| Out of scope | Verify scope first | Appeal with evidence |
+| Informational only | Increase impact | Chain with other bugs |
+| No PoC provided | Include reproduction steps | Provide detailed PoC |
+| Best practice issue | Demonstrate real impact | Show exploitation path |
+
+---
+
+## Report Quality Checklist
+
+| Check | Status | Notes |
+|-------|--------|-------|
+| Title is clear | [ ] | One-line description |
+| Severity matches CVSS | [ ] | Score calculated |
+| Steps to reproduce | [ ] | Numbered list |
+| Impact demonstrated | [ ] | Business context |
+| Remediation provided | [ ] | Specific fix |
+| Evidence attached | [ ] | Screenshots/PoC |

@@ -409,3 +409,69 @@ Orchestrator (parent)
 | `metrics.retention_days` | 90 | Metrics retention period |
 | `notification.enabled` | true | Enable strategy notifications |
 | `notification.channels` | ["log", "webhook"] | Notification channels |
+
+## Recovery Procedures
+
+### Strategy Recovery
+
+1. On analyzer crash: Manager captures error state, restarts analyzer with preserved program data
+2. On database corruption: Rebuild from checkpoint files, re-analyze affected programs
+3. On system reboot: Resume from last strategy snapshot, refresh stale data
+
+### Data Recovery
+
+1. Strategy recommendations preserved in checkpoint files
+2. Transaction log enables replay from last committed state
+3. Corrupted analysis data detected via checksums, discarded with warning
+4. Historical metrics backed up every 24 hours
+
+### Fallback Behavior
+
+| Scenario | Fallback | Recovery |
+|----------|----------|----------|
+| Program DB unreachable | Use cached data | Refresh on reconnect |
+| ROI calculator failure | Use cached ROI values | Recalculate on restart |
+| Time tracker failure | Pause tracking | Resume with gap annotation |
+| Strategy optimizer failure | Use last recommendations | Recalculate on restart |
+
+## Audit Trail
+
+### Logged Events
+
+| Event | Log Level | Description |
+|-------|-----------|-------------|
+| `strategy.program_analyzed` | INFO | Program analysis completed |
+| `strategy.recommendation_generated` | INFO | Recommendation produced |
+| `strategy.reward_calculated` | INFO | ROI calculated |
+| `strategy.health_check` | DEBUG | Health check performed |
+| `strategy.error` | ERROR | Error occurred |
+| `strategy.config_changed` | WARN | Configuration modified |
+
+### Log Retention
+
+- Strategy logs: 90 days
+- Audit trail: 365 days
+- Error logs: 180 days
+- Performance metrics: 30 days
+
+## Security Considerations
+
+### Access Control
+
+| Resource | Access Level | Description |
+|----------|-------------|-------------|
+| Program data | Read-only for workers | Workers read program data |
+| Strategy recommendations | Read for hunters | Hunters read recommendations |
+| ROI calculations | Read for manager | Manager accesses ROI |
+| Configuration | Write for admin | Only admin modifies config |
+| Audit logs | Append-only | No modification of audit logs |
+
+### Data Sensitivity
+
+| Data Type | Sensitivity | Handling |
+|-----------|------------|----------|
+| Program URLs | Low | Store in plain text |
+| Reward amounts | Medium | Store, no encryption needed |
+| Hunter credentials | High | Encrypt at rest |
+| Strategy algorithms | Confidential | Protect from disclosure |
+| ROI calculations | Medium | Store with access control |

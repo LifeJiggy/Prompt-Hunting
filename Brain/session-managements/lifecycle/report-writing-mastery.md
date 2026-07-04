@@ -331,6 +331,66 @@ sessions/<session_id>/
 | Format Incompatibility | Markdown render issue | Use fallback format |
 | State Corruption | Checksum mismatch | Restore from checkpoint |
 
+## Report Quality Framework
+
+### Quality Dimensions
+
+| Dimension | Weight | Description |
+|-----------|--------|-------------|
+| `clarity` | 0.25 | Clear, concise writing |
+| `completeness` | 0.25 | All required sections present |
+| `accuracy` | 0.20 | Technical accuracy of content |
+| `impact` | 0.15 | Impact clearly articulated |
+| `formatting` | 0.15 | Proper formatting and structure |
+
+### Quality Scoring
+
+| Score Range | Quality Level | Action |
+|-------------|---------------|--------|
+| 90-100 | Excellent | Ready for submission |
+| 75-89 | Good | Minor revisions needed |
+| 60-74 | Acceptable | Moderate revisions needed |
+| 40-59 | Needs Work | Major revisions needed |
+| 0-39 | Poor | Rewrite recommended |
+
+### Report Section Checklist
+
+| Section | Required | Description |
+|---------|----------|-------------|
+| Title | Yes | Clear, descriptive title |
+| Summary | Yes | Executive summary of finding |
+| Impact | Yes | Business impact assessment |
+| Description | Yes | Detailed vulnerability description |
+| Steps to Reproduce | Yes | Step-by-step PoC instructions |
+| Remediation | Yes | Fix recommendations |
+| Severity | Yes | CVSS or program-specific rating |
+| References | Optional | CVE, OWASP, external references |
+| Attachments | Optional | Screenshots, videos, code |
+
+## Program-Specific Formatting
+
+### HackerOne Format
+
+| Element | Requirement |
+|---------|-------------|
+| Title | `[Vulnerability Type] - Brief Description` |
+| Summary | 1-2 sentences |
+| Severity | CVSS 3.1 score |
+| Impact | Business impact |
+| Step by Step | Numbered list |
+| Support | Attachments, code |
+
+### Bugcrowd Format
+
+| Element | Requirement |
+|---------|-------------|
+| Title | Clear vulnerability name |
+| Vulnerability Type | VRT category |
+| Severity | Bugcrowd priority |
+| Description | Detailed explanation |
+| Steps | Numbered reproduction steps |
+| Impact | Business impact |
+
 ## Usage Examples
 
 ### Creating a Report Session
@@ -355,6 +415,41 @@ session = create_report_session(
 )
 ```
 
+### Creating a Draft Version
+
+```python
+draft = create_draft(
+    session_id=session.session_id,
+    content="# Stored XSS in User Profile\n\n## Summary\n...",
+    version=1
+)
+print(f"Draft v{draft.version} created")
+```
+
+### Running Quality Assessment
+
+```python
+quality = assess_quality(
+    session_id=session.session_id,
+    draft_version=3
+)
+print(f"Quality score: {quality.score}/100")
+print(f"Clarity: {quality.clarity}")
+print(f"Completeness: {quality.completeness}")
+```
+
+### Submitting Report
+
+```python
+submission = submit_report(
+    session_id=session.session_id,
+    program="hackerone-example",
+    draft_version=4
+)
+print(f"Submitted: {submission.submitted_at}")
+print(f"Status: {submission.status}")
+```
+
 ### Querying Report Status
 
 ```python
@@ -366,4 +461,28 @@ for s in sessions:
     print(f"Finding: {s.finding['title']}, "
           f"Versions: {len(s.draft_versions)}, "
           f"Status: {s.submission_status}")
+```
+
+### Tracking Program Response
+
+```python
+response = track_program_response(
+    session_id=session.session_id
+)
+if response:
+    print(f"Status: {response.status}")
+    print(f"Bounty: {response.bounty_amount}")
+    print(f"Feedback: {response.feedback}")
+```
+
+### Comparing Report Versions
+
+```python
+diff = compare_draft_versions(
+    session_id=session.session_id,
+    version_a=1,
+    version_b=3
+)
+print(f"Changes: {len(diff.changes)}")
+print(f"Improvements: {diff.improvements}")
 ```

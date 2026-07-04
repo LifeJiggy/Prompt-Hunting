@@ -396,3 +396,60 @@ Orchestrator (parent)
 | `intelligence.min_pattern_confidence` | 0.7 | Min confidence for pattern |
 | `case.max_analysis_time` | 300 | Max time per case (seconds) |
 | `case.batch_size` | 10 | Cases per batch |
+
+## Recovery Procedures
+
+### Analysis Recovery
+
+1. On worker crash: Manager captures error state, restarts worker with preserved data
+2. On pattern DB corruption: Rebuild from checkpoint, re-analyze affected cases
+3. On system reboot: Resume from last analysis snapshot
+
+### Data Recovery
+
+1. Pattern extractions preserved in checkpoint files
+2. Timeline data backed up after each case
+3. Impact assessments serialized after each calculation
+4. Intelligence reports archived with version control
+
+### Fallback Behavior
+
+| Scenario | Fallback | Recovery |
+|----------|----------|----------|
+| Case file unreadable | Skip case, log warning | Retry on next cycle |
+| Pattern DB full | Archive oldest patterns | Continue analysis |
+| Timeline builder fails | Use partial timeline | Rebuild on restart |
+| Impact assessor fails | Use estimated impact | Recalculate on restart |
+
+## Audit Trail
+
+### Logged Events
+
+| Event | Log Level | Description |
+|-------|-----------|-------------|
+| `case.analysis_started` | INFO | Case analysis began |
+| `case.analysis_complete` | INFO | Case analysis finished |
+| `pattern.extracted` | INFO | Pattern extracted |
+| `trend.detected` | INFO | Trend detected |
+| `intelligence.generated` | INFO | Intelligence report generated |
+| `case.error` | ERROR | Analysis error |
+| `case.skipped` | WARN | Case skipped |
+
+### Log Retention
+
+- Analysis logs: 90 days
+- Pattern logs: 365 days
+- Intelligence reports: indefinite
+- Error logs: 180 days
+
+## Security Considerations
+
+### Data Sensitivity
+
+| Data Type | Sensitivity | Handling |
+|-----------|------------|----------|
+| Case study content | Public | Already disclosed |
+| Extracted patterns | Internal | Protect from disclosure |
+| Intelligence reports | Confidential | Access control required |
+| Trend data | Internal | Version controlled |
+| Impact assessments | Internal | Store with access control |

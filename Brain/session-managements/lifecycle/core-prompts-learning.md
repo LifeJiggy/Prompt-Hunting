@@ -325,6 +325,77 @@ sessions/<session_id>/
 | Progress Loss | Checkpoint corruption | Restore from backup |
 | State Corruption | Checksum mismatch | Restore from last valid checkpoint |
 
+## Learning Progress Tracking
+
+### Skill Level Definitions
+
+| Level | Description | Requirements |
+|-------|-------------|--------------|
+| `beginner` | Basic understanding | Complete 5 modules |
+| `intermediate` | Practical skills | Complete 15 modules, 70% avg score |
+| `advanced` | Expert knowledge | Complete 30 modules, 85% avg score |
+| `expert` | Mastery | Complete all modules, 90% avg score |
+
+### Assessment Types
+
+| Type | Description | Passing Score | Retakes |
+|------|-------------|---------------|---------|
+| `knowledge_check` | Quick concept verification | 70% | Unlimited |
+| `module_quiz` | End-of-module assessment | 75% | 3 |
+| `practical_exam` | Hands-on vulnerability finding | Pass/Fail | 2 |
+| `comprehensive` | Cross-module assessment | 80% | 2 |
+
+### Learning Path Structure
+
+| Path | Modules | Duration | Skill Focus |
+|------|---------|----------|-------------|
+| `web-security-fundamentals` | 1-20 | 40 hours | Core web vulnerabilities |
+| `advanced-web-security` | 21-40 | 60 hours | Advanced techniques |
+| `specialized-security` | 41-50 | 30 hours | Domain-specific security |
+| `full-curriculum` | 1-50 | 130 hours | Complete security training |
+
+### Progress Metrics
+
+| Metric | Description | Calculation |
+|--------|-------------|-------------|
+| `completion_rate` | Percentage of modules completed | completed / total |
+| `average_score` | Average assessment score | sum(scores) / count |
+| `study_time` | Total study time | sum(durations) |
+| `practical_ratio` | Practical vs theoretical | practical_hours / total_hours |
+| `skill_depth` | Depth of knowledge per skill | avg(score per skill) |
+
+## Module Grouping by Skill
+
+### Core Web Security (Modules 1-10)
+
+| Module | Skill | Difficulty |
+|--------|-------|------------|
+| 1 | Reconnaissance | Beginner |
+| 2 | JavaScript Analysis | Intermediate |
+| 3 | API Analysis | Intermediate |
+| 4 | Authentication | Intermediate |
+| 5 | Authorization | Advanced |
+| 6 | Input Validation | Beginner |
+| 7 | Business Logic | Advanced |
+| 8 | Client-Side Storage | Intermediate |
+| 9 | Cryptography | Advanced |
+| 10 | Error Handling | Beginner |
+
+### Advanced Vulnerabilities (Modules 11-20)
+
+| Module | Skill | Difficulty |
+|--------|-------|------------|
+| 11 | File Upload | Intermediate |
+| 12 | SSRF | Advanced |
+| 13 | CSRF | Intermediate |
+| 14 | CORS | Intermediate |
+| 15 | Race Conditions | Advanced |
+| 16 | Third-Party Components | Intermediate |
+| 17 | Configuration | Beginner |
+| 18 | Network Security | Advanced |
+| 19 | Mobile/API | Advanced |
+| 20 | Reporting | Beginner |
+
 ## Usage Examples
 
 ### Creating a Learning Session
@@ -344,6 +415,29 @@ session = create_learning_session(
 )
 ```
 
+### Recording Module Completion
+
+```python
+complete_module(
+    session_id=session.session_id,
+    module_name="6-Input-Validation-and-Sanitization-Learning.md",
+    score=85,
+    study_time_seconds=3600,
+    notes="Learned about SQL injection prevention"
+)
+```
+
+### Taking an Assessment
+
+```python
+result = take_assessment(
+    session_id=session.session_id,
+    assessment_type="module_quiz",
+    module_name="7-Business-Logic-Flaws-Learning.md"
+)
+print(f"Score: {result.score}%, Passed: {result.passed}")
+```
+
 ### Querying Learning Progress
 
 ```python
@@ -355,4 +449,44 @@ for s in sessions:
     print(f"Path: {s.learning_path}, "
           f"Completed: {len(s.modules_completed)}, "
           f"Goals met: {s.goals_met}")
+```
+
+### Checking Skill Level
+
+```python
+skill_level = get_skill_level(learner_id="researcher-01")
+print(f"Current level: {skill_level.level}")
+print(f"Modules completed: {skill_level.modules_completed}")
+print(f"Average score: {skill_level.average_score}")
+```
+
+### Generating Progress Report
+
+```python
+report = generate_progress_report(
+    session_id=session.session_id
+)
+print(f"Completion: {report.completion_rate}%")
+print(f"Time invested: {report.total_study_time_hours}h")
+print(f"Goals achieved: {report.goals_achieved}")
+```
+
+### Recommending Next Module
+
+```python
+next_module = recommend_next_module(
+    session_id=session.session_id
+)
+print(f"Recommended: {next_module.name}")
+print(f"Reason: {next_module.reason}")
+```
+
+### Generating Skill Assessment
+
+```python
+assessment = generate_skill_assessment(
+    learner_id="researcher-01"
+)
+for skill, level in assessment.skills.items():
+    print(f"{skill}: {level}")
 ```

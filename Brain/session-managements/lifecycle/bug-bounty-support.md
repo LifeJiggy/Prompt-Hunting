@@ -289,6 +289,103 @@ sessions/<session_id>/
 | Methodology Gap | Step skipped | Log gap; continue tracking |
 | Debug Session Error | Console error | Log error; restart debug |
 
+## Framework Configuration
+
+### Reconnaissance Framework
+
+When `framework="recon"`, the session loads reconnaissance-oriented modules:
+
+| Module | Purpose | Activation |
+|--------|---------|------------|
+| `Reconnaissance.md` | Core recon methodology | Auto-activate |
+| `Tools-Integration.md` | Tool configuration | Auto-activate |
+| `Advanced-Techniques.md` | Advanced recon techniques | On-demand |
+
+### Detection Framework
+
+When `framework="detection"`, the session loads detection-oriented modules:
+
+| Module | Purpose | Activation |
+|--------|---------|------------|
+| `Vulnerability-Detection.md` | Detection methodology | Auto-activate |
+| `Core-Aspects-for-Bug-Security-Hunting.md` | Core hunting aspects | Auto-activate |
+| `Specific-Vulnerabilities-Hunting.md` | Vuln-specific hunting | On-demand |
+
+### Exploitation Framework
+
+When `framework="exploitation"`, the session loads exploitation-oriented modules:
+
+| Module | Purpose | Activation |
+|--------|---------|------------|
+| `Exploitation.md` | Exploitation methodology | Auto-activate |
+| `Chaining.md` | Vulnerability chaining | Auto-activate |
+| `PoC-Development.md` | Proof-of-concept development | On-demand |
+
+### Reporting Framework
+
+When `framework="reporting"`, the session loads reporting-oriented modules:
+
+| Module | Purpose | Activation |
+|--------|---------|------------|
+| `Reporting.md` | Report writing methodology | Auto-activate |
+| `PoC-Development.md` | PoC documentation | Auto-activate |
+| `Advanced-Bug-Bounty-Prompt.md` | Advanced reporting | On-demand |
+
+## Tool Integration Details
+
+### Burp Suite Integration
+
+| Feature | Configuration | Description |
+|---------|---------------|-------------|
+| Proxy | `burp.proxy_host`, `burp.proxy_port` | HTTP proxy connection |
+| Repeater | `burp.repeater_enabled` | Manual request testing |
+| Intruder | `burp.intruder_enabled` | Automated fuzzing |
+| Scanner | `burp.scanner_enabled` | Automated scanning |
+| Extensions | `burp.extensions` | Custom extension loading |
+
+### Browser Console Integration
+
+| Feature | Configuration | Description |
+|---------|---------------|-------------|
+| DOM Access | `browser.dom_access` | Read DOM elements |
+| Network | `browser.network_monitor` | Monitor network requests |
+| Storage | `browser.storage_access` | Access localStorage/cookies |
+| Execution | `browser.script_execution` | Execute JavaScript |
+
+### VSCode Integration
+
+| Feature | Configuration | Description |
+|---------|---------------|-------------|
+| Workspace | `vscode.workspace` | Project workspace path |
+| Extensions | `vscode.extensions` | Required extensions |
+| Tasks | `vscode.tasks` | Automated tasks |
+| Debug | `vscode.debug_config` | Debug configuration |
+
+## Methodology Tracking
+
+### Standard Methodology Steps
+
+| Step | Description | Required |
+|------|-------------|----------|
+| 1. Scope Definition | Define testing scope | Yes |
+| 2. Reconnaissance | Gather target information | Yes |
+| 3. Enumeration | Enumerate attack surface | Yes |
+| 4. Vulnerability Discovery | Identify potential vulnerabilities | Yes |
+| 5. Exploitation | Attempt to exploit vulnerabilities | Yes |
+| 6. Impact Assessment | Assess vulnerability impact | Yes |
+| 7. Reporting | Document findings | Yes |
+| 8. Remediation | Provide remediation advice | Optional |
+
+### Compliance Checks
+
+| Check | Description | Failure Action |
+|-------|-------------|----------------|
+| `scope_adherence` | Stay within defined scope | Pause session |
+| `rate_limiting` | Respect target rate limits | Reduce intensity |
+| `data_handling` | Proper handling of sensitive data | Encrypt data |
+| `disclosure` | Follow responsible disclosure | Alert user |
+| `documentation` | Document all testing activities | Log activity |
+
 ## Usage Examples
 
 ### Creating a Support Session
@@ -318,6 +415,35 @@ update_methodology_progress(
 )
 ```
 
+### Configuring Burp Integration
+
+```python
+configure_tool(
+    session_id=session.session_id,
+    tool="burp",
+    config={
+        "proxy_host": "127.0.0.1",
+        "proxy_port": 8080,
+        "extensions": ["logger++", "autorize"]
+    }
+)
+```
+
+### Running a Debug Session
+
+```python
+debug_session = start_debug_session(
+    session_id=session.session_id,
+    target_url="https://example.com/api/endpoint",
+    debug_type="browser_console"
+)
+# Execute JavaScript in debug context
+result = execute_debug_script(
+    debug_id=debug_session.debug_id,
+    script="document.cookie"
+)
+```
+
 ### Querying Support Sessions
 
 ```python
@@ -329,4 +455,45 @@ for s in sessions:
     print(f"Framework: {s.framework}, "
           f"Modules: {len(s.modules_loaded)}, "
           f"Tools: {len(s.tools_integrated)}")
+```
+
+### Checking Ethical Compliance
+
+```python
+compliance = check_ethical_compliance(
+    session_id=session.session_id
+)
+print(f"Compliant: {compliance.is_compliant}")
+for violation in compliance.violations:
+    print(f"Violation: {violation.description}")
+```
+
+### Generating Methodology Report
+
+```python
+report = generate_methodology_report(
+    session_id=session.session_id
+)
+print(f"Steps completed: {report.steps_completed}/{report.total_steps}")
+print(f"Compliance score: {report.compliance_score}")
+```
+
+### Exporting Session Data
+
+```python
+export_session_data(
+    session_id=session.session_id,
+    format="json",
+    output_path="support-session-export.json"
+)
+```
+
+### Generating Tool Usage Report
+
+```python
+tool_report = generate_tool_usage_report(
+    session_id=session.session_id
+)
+for tool, usage in tool_report.items():
+    print(f"{tool}: {usage.calls} calls, {usage.avg_response_time}ms avg")
 ```

@@ -342,3 +342,80 @@ state_transitions:
 | `core-prompts-learning` | Learning prompts enhance support knowledge |
 | `report-writing-mastery` | Report templates inform reporting support |
 | `advanced-automation` | Automation tools feed tool integration state |
+
+## Framework Effectiveness Tracking
+
+```
+effectiveness_tracking:
+  metrics:
+    - finding_rate: "findings per hour of framework usage"
+    - accuracy_rate: "true positives / (true positives + false positives)"
+    - coverage_rate: "vulnerability classes detected / total classes"
+    - time_efficiency: "time saved compared to manual approach"
+    - user_satisfaction: "subjective satisfaction score 1-10"
+  tracking_rules:
+    - track_per_framework: "maintain separate metrics for each framework"
+    - track_per_vuln_class: "maintain separate metrics per vulnerability class"
+    - track_over_time: "maintain historical effectiveness trends"
+    - compare_frameworks: "compare effectiveness across frameworks"
+  improvement_actions:
+    - low_accuracy: "refine patterns, reduce false positives"
+    - low_coverage: "add new patterns, expand vulnerability classes"
+    - low_efficiency: "optimize tool usage, reduce redundant operations"
+    - declining_trend: "investigate root cause, update framework"
+```
+
+## Support Knowledge Base Management
+
+```
+knowledge_base_management:
+  categories:
+    - techniques: "exploitation techniques library"
+    - patterns: "detection patterns library"
+    - tools: "tool configurations and usage guides"
+    - templates: "report templates and PoC templates"
+    - lessons: "lessons learned from past hunts"
+    - references: "reference materials and documentation"
+  update_frequency:
+    - techniques: "update after each successful exploitation"
+    - patterns: "update when new false positives are discovered"
+    - tools: "update when tool versions change"
+    - templates: "update when report formats change"
+    - lessons: "update after each session"
+    - references: "update monthly or when new resources found"
+  quality_metrics:
+    - completeness: "percentage of vulnerability classes covered"
+    - accuracy: "percentage of entries that are correct"
+    - currency: "percentage of entries that are up-to-date"
+    - usefulness: "average usefulness rating from users"
+```
+
+## Tool Integration State Management
+
+```
+tool_integration:
+  state_tracking:
+    - connection_status: "connected | disconnected | error"
+    - version: "current tool version"
+    - last_health_check: "ISO-8601 timestamp"
+    - configuration_hash: "SHA-256 of current config"
+    - performance_metrics:
+        average_response_time_ms: "float"
+        success_rate: "float"
+        error_rate: "float"
+    - resource_usage:
+        cpu_percent: "float"
+        memory_mb: "float"
+        disk_io: "float"
+  integration_checkpoints:
+    - on_connect: "save connection state and config"
+    - on_disconnect: "save disconnection reason"
+    - on_error: "save error details and recovery state"
+    - on_config_change: "save new configuration"
+    - on_version_change: "save old and new version info"
+  recovery_procedures:
+    - tool_crash: "restart tool, reload last known config"
+    - connection_lost: "attempt reconnect, fallback to cached data"
+    - config_corrupted: "restore last known good config"
+    - version_mismatch: "update tool, verify compatibility"
+```

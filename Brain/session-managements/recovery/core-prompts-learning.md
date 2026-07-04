@@ -337,3 +337,194 @@ For account issues: recover progress from backup, merge with current state, reso
 - `8-Client-Side-Storage-Security-Learning.md` — Client storage learning state covering storage security theory, cookie analysis practice, and client-side assessment. Includes storage learning objectives, cookie labs, and assessment tracking.
 
 - `9-Cryptography-and-Data-Protection-Learning.md` — Crypto learning state covering cryptographic theory, key management practice, and crypto assessment. Includes crypto learning objectives, key management labs, and assessment tracking.
+
+- `10-Error-Handling-and-Information-Disclosure-Learning.md` — Error handling learning state covering error theory, information disclosure practice, and error assessment. Includes error learning objectives, disclosure labs, and assessment tracking.
+
+### Injection Learning Modules (11-20)
+
+- `11-File-Upload-and-Processing-Learning.md` — File upload learning state covering upload security theory, bypass technique practice, and upload assessment. Includes upload learning objectives, bypass labs, and assessment tracking.
+
+- `12-Server-Side-Request-Forgery-SSRF-Learning.md` — SSRF learning state covering SSRF theory, internal network probing practice, and SSRF assessment. Includes SSRF learning objectives, probing labs, and assessment tracking.
+
+- `13-Cross-Site-Request-Forgery-CSRF-Learning.md` — CSRF learning state covering CSRF theory, token analysis practice, and CSRF assessment. Includes CSRF learning objectives, token labs, and assessment tracking.
+
+- `14-Cross-Origin-Resource-Sharing-CORS-Learning.md` — CORS learning state covering CORS theory, origin policy practice, and CORS assessment. Includes CORS learning objectives, origin labs, and assessment tracking.
+
+- `15-Race-Conditions-and-Concurrency-Issues-Learning.md` — Race condition learning state covering concurrency theory, timing practice, and race assessment. Includes race learning objectives, timing labs, and assessment tracking.
+
+- `16-Third-Party-Component-Analysis-Learning.md` — Third-party learning state covering component security theory, dependency analysis practice, and component assessment. Includes component learning objectives, dependency labs, and assessment tracking.
+
+- `17-Configuration-and-Misconfiguration-Hunting-Learning.md` — Config learning state covering configuration theory, misconfig discovery practice, and config assessment. Includes config learning objectives, misconfig labs, and assessment tracking.
+
+- `18-Network-and-Infrastructure-Security-Learning.md` — Network learning state covering network security theory, infrastructure testing practice, and network assessment. Includes network learning objectives, infrastructure labs, and assessment tracking.
+
+- `19-Mobile-and-API-Specific-Vulnerabilities-Learning.md` — Mobile/API learning state covering mobile security theory, API vulnerability practice, and mobile assessment. Includes mobile learning objectives, API labs, and assessment tracking.
+
+- `20-Reporting-and-Proof-of-Concept-Development-Learning.md` — Reporting learning state covering report writing theory, PoC development practice, and reporting assessment. Includes reporting learning objectives, PoC labs, and assessment tracking.
+
+### Advanced Injection Learning (21-30)
+
+- `21-Web-Application-Firewall-WAF-Bypass-Learning.md` — WAF bypass learning state covering WAF theory, bypass technique practice, and WAF assessment. Includes WAF learning objectives, bypass labs, and assessment tracking.
+
+- `22-HTTP-Request-Smuggling-Learning.md` — HTTP smuggling learning state covering smuggling theory, CL.TE/TE.CL practice, and smuggling assessment. Includes smuggling learning objectives, smuggling labs, and assessment tracking.
+
+- `23-Subdomain-Takeover-Learning.md` — Subdomain takeover learning state covering takeover theory, CNAME analysis practice, and takeover assessment. Includes takeover learning objectives, CNAME labs, and assessment tracking.
+
+- `24-Host-Header-Injection-Learning.md` — Host header learning state covering host header theory, injection practice, and host header assessment. Includes host header learning objectives, injection labs, and assessment tracking.
+
+- `25-XML-External-Entity-XXE-Injection-Learning.md` — XXE learning state covering XXE theory, entity injection practice, and XXE assessment. Includes XXE learning objectives, entity labs, and assessment tracking.
+
+- `26-Insecure-Deserialization-Learning.md` — Deserialization learning state covering deserialization theory, gadget chain practice, and deserialization assessment. Includes deserialization learning objectives, gadget labs, and assessment tracking.
+
+- `27-Command-Injection-Learning.md` — Command injection learning state covering command injection theory, OS command practice, and command injection assessment. Includes command injection learning objectives, OS command labs, and assessment tracking.
+
+- `28-NoSQL-Injection-Learning.md` — NoSQLi learning state covering NoSQL injection theory, operator injection practice, and NoSQLi assessment. Includes NoSQLi learning objectives, operator labs, and assessment tracking.
+
+- `29-GraphQL-Vulnerabilities-Learning.md` — GraphQL learning state covering GraphQL security theory, introspection practice, and GraphQL assessment. Includes GraphQL learning objectives, introspection labs, and assessment tracking.
+
+- `30-WebSocket-Security-Learning.md` — WebSocket learning state covering WebSocket security theory, hijacking practice, and WebSocket assessment. Includes WebSocket learning objectives, hijacking labs, and assessment tracking.
+
+### Specialized Learning (31-40)
+
+- `31-Server-Side-Template-Injection-SSTI-Learning.md` — SSTI learning state covering template injection theory, engine detection practice, and SSTI assessment. Includes SSTI learning objectives, engine labs, and assessment tracking.
+
+- `32-JSON-Web-Token-JWT-Vulnerabilities-Learning.md` — JWT learning state covering JWT security theory, token manipulation practice, and JWT assessment. Includes JWT learning objectives, token labs, and assessment tracking.
+
+- `33-Content-Security-Policy-CSP-Bypass-Learning.md` — CSP bypass learning state covering CSP theory, bypass technique practice, and CSP assessment. Includes CSP learning objectives, bypass labs, and assessment tracking.
+
+- `34-Clickjacking-and-UI-Redressing-Learning.md` — Clickjacking learning state covering clickjacking theory, framebusting practice, and clickjacking assessment. Includes clickjacking learning objectives, framebusting labs, and assessment tracking.
+
+- `35-HTTP-Parameter-Pollution-Learning.md` — HPP learning state covering HPP theory, pollution technique practice, and HPP assessment. Includes HPP learning objectives, pollution labs, and assessment tracking.
+
+- `36-LDAP-Injection-Learning.md` — LDAP learning state covering LDAP injection theory, directory enumeration practice, and LDAP assessment. Includes LDAP learning objectives, directory labs, and assessment tracking.
+
+- `37-Session-Puzzling-and-Fixation-Learning.md` — Session puzzling learning state covering session theory, manipulation practice, and session assessment. Includes session learning objectives, manipulation labs, and assessment tracking.
+
+- `38-Insecure-File-Handling-Learning.md` — File handling learning state covering file security theory, path traversal practice, and file handling assessment. Includes file learning objectives, traversal labs, and assessment tracking.
+
+- `39-Advanced-Client-Side-Attacks-Learning.md` — Client-side learning state covering advanced client attacks theory, DOM exploitation practice, and client-side assessment. Includes client-side learning objectives, DOM labs, and assessment tracking.
+
+- `40-Cloud-Security-and-Misconfigurations-Learning.md` — Cloud learning state covering cloud security theory, misconfig discovery practice, and cloud assessment. Includes cloud learning objectives, misconfig labs, and assessment tracking.
+
+### Specialized Domain Learning (41-50)
+
+- `41-Third-Party-Integration-Security-Learning.md` — Third-party integration learning state covering integration security theory, vulnerability practice, and integration assessment. Includes integration learning objectives, vulnerability labs, and assessment tracking.
+
+- `42-Mobile-Application-Security-Learning.md` — Mobile app learning state covering mobile security theory, app testing practice, and mobile assessment. Includes mobile learning objectives, app testing labs, and assessment tracking.
+
+- `43-IoT-and-Embedded-Device-Security-Learning.md` — IoT learning state covering IoT security theory, embedded device testing practice, and IoT assessment. Includes IoT learning objectives, embedded labs, and assessment tracking.
+
+- `44-API-Security-and-GraphQL-Learning.md` — API/GraphQL learning state covering API security theory, GraphQL testing practice, and API assessment. Includes API learning objectives, GraphQL labs, and assessment tracking.
+
+- `45-WebAssembly-and-Modern-Web-Technologies-Learning.md` — WebAssembly learning state covering WASM security theory, modern web testing practice, and WASM assessment. Includes WASM learning objectives, modern web labs, and assessment tracking.
+
+- `46-Blockchain-and-Cryptocurrency-Security-Learning.md` — Blockchain learning state covering blockchain security theory, smart contract practice, and blockchain assessment. Includes blockchain learning objectives, smart contract labs, and assessment tracking.
+
+- `47-Automation-and-Tool-Development-Learning.md` — Automation learning state covering automation theory, tool development practice, and automation assessment. Includes automation learning objectives, tool development labs, and assessment tracking.
+
+- `48-Advanced-Reverse-Engineering-Learning.md` — Reverse engineering learning state covering RE theory, binary analysis practice, and RE assessment. Includes RE learning objectives, binary analysis labs, and assessment tracking.
+
+- `49-Compliance-and-Regulatory-Security-Learning.md` — Compliance learning state covering compliance theory, regulatory testing practice, and compliance assessment. Includes compliance learning objectives, regulatory labs, and assessment tracking.
+
+- `50-Advanced-Threat-Modeling-and-Risk-Assessment-Learning.md` — Threat modeling learning state covering threat theory, risk assessment practice, and threat modeling assessment. Includes threat learning objectives, risk assessment labs, and assessment tracking.
+
+---
+
+## State Serialization Format
+
+```json
+{
+  "domain": "core-prompts-learning",
+  "session_id": "learn-001",
+  "learning_path": {
+    "current_module": 15,
+    "total_modules": 50,
+    "completion_percentage": 30,
+    "estimated_time_remaining": "20 hours",
+    "prerequisites_met": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  },
+  "completed_modules": [
+    {
+      "module_id": 1,
+      "completion_date": "",
+      "time_spent": "2 hours",
+      "assessment_score": 95,
+      "lab_completed": true
+    }
+  ],
+  "in_progress_modules": {
+    "15": {
+      "progress": 0.6,
+      "current_section": "race_condition_testing",
+      "time_spent": "1.5 hours",
+      "notes": ""
+    }
+  },
+  "assessment_scores": {
+    "module_1": 95,
+    "module_2": 88,
+    "module_3": 92
+  },
+  "skill_certifications": [
+    {
+      "certification": "SQL Injection Expert",
+      "date_obtained": "",
+      "score": 95,
+      "valid_until": ""
+    }
+  ],
+  "practice_results": {
+    "module_1": {
+      "lab_1": {"completed": true, "score": 90},
+      "lab_2": {"completed": true, "score": 85}
+    }
+  },
+  "notes": {
+    "module_1": "Key concepts...",
+    "module_2": "Important patterns..."
+  },
+  "learning_recommendations": [
+    {"module": 16, "reason": "Prerequisite for advanced topics"},
+    {"module": 20, "reason": "Recommended for reporting skills"}
+  ]
+}
+```
+
+---
+
+## Recovery Checkpoint Protocol
+
+### Phase 1: Pre-flight Validation
+1. Validate learning platform availability
+2. Check for platform updates or changes
+3. Verify user account status
+4. Confirm learning path integrity
+5. Validate checkpoint file integrity
+
+### Phase 2: State Loading
+1. Load learning state from checkpoint
+2. Deserialize progress data
+3. Restore assessment scores
+4. Load practice results
+5. Restore notes and annotations
+
+### Phase 3: Progress Verification
+1. Validate completed module count
+2. Confirm assessment scores are accurate
+3. Check learning path position is correct
+4. Verify prerequisite completion
+5. Confirm skill certifications are intact
+
+### Phase 4: Path Restoration
+1. Restore learning path position
+2. Reload recommended next steps
+3. Re-establish learning objectives
+4. Verify learning recommendations
+5. Confirm learning priorities
+
+### Phase 5: Learning Resume
+1. Resume learning from restored position
+2. Re-enable continuous checkpointing
+3. Validate learning progress
+4. Log recovery metrics
+5. Return to normal learning after validation

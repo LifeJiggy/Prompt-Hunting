@@ -394,3 +394,51 @@ restore_procedure:
 | `bug-bounty-program-strategy` | Case insights inform program selection |
 | `advanced-chaining-techniques` | Case chains inform chaining strategy |
 | `report-writing-mastery` | Case reports inform reporting approach |
+
+## Insight Impact Assessment
+
+```
+insight_impact:
+  assessment_dimensions:
+    - applicability: "how broadly applicable is this insight?"
+      scale: "narrow | moderate | broad | universal"
+    - actionability: "how easily can this insight be acted upon?"
+      scale: "passive | researchable | actionable | immediately_actionable"
+    - confidence: "how confident are we in this insight?"
+      scale: "speculative | probable | likely | certain"
+    - timeliness: "how time-sensitive is this insight?"
+      scale: "evergreen | medium_term | short_term | immediate"
+    - novelty: "how new or unique is this insight?"
+      scale: "well_known | somewhat_known | novel | groundbreaking"
+  impact_score_calculation:
+    formula: "applicability * 0.25 + actionability * 0.25 + confidence * 0.2 + timeliness * 0.15 + novelty * 0.15"
+    score_range: "1.0 - 5.0"
+    impact_levels:
+      - transformative: "score >= 4.5"
+      - significant: "3.5 <= score < 4.5"
+      - moderate: "2.5 <= score < 3.5"
+      - minor: "score < 2.5"
+```
+
+## Pattern Validation Framework
+
+```
+pattern_validation:
+  validation_methods:
+    - historical_application: "pattern applied to past cases successfully"
+    - controlled_testing: "pattern tested in controlled environment"
+    - real_world_application: "pattern applied to real target successfully"
+    - peer_review: "pattern reviewed by other hunters"
+    - cross_reference: "pattern matches known vulnerability databases"
+  validation_states:
+    - unvalidated: "pattern extracted but not tested"
+    - partially_validated: "pattern tested in limited scenarios"
+    - validated: "pattern tested in multiple scenarios"
+    - proven: "pattern consistently effective in practice"
+    - deprecated: "pattern no longer effective"
+  validation_requirements:
+    minimum_applications: 3
+    minimum_success_rate: 0.7
+    peer_review_required: false
+    cross_reference_recommended: true
+```

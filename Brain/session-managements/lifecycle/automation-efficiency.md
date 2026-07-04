@@ -336,6 +336,107 @@ sessions/<session_id>/
 | Resource Exhaustion | Memory/CPU during profiling | Reduce profiling intensity |
 | State Corruption | Checksum mismatch | Restore from last valid checkpoint |
 
+## Profiling Methodology
+
+### Profiling Types
+
+| Type | Description | Tools | Duration |
+|------|-------------|-------|----------|
+| `cpu_profiling` | CPU usage per function/stage | cProfile, py-spy | 5-15 min |
+| `memory_profiling` | Memory allocation tracking | memory_profiler, tracemalloc | 5-20 min |
+| `io_profiling` | Disk and network I/O patterns | iostat, strace | 10-30 min |
+| `pipeline_profiling` | End-to-end pipeline timing | Custom timers | Full run |
+| `concurrency_profiling` | Thread/async usage patterns | py-spy, thread dump | 5-15 min |
+
+### Profiling Data Structure
+
+Each profiling run collects structured data:
+
+```json
+{
+  "run_id": "profile_abc123",
+  "timestamp": "2025-01-15T10:00:00Z",
+  "target_workflow": "full-scan-pipeline",
+  "profiling_type": "pipeline_profiling",
+  "duration_seconds": 3600,
+  "stages": [
+    {
+      "name": "subdomain_enum",
+      "duration_seconds": 300,
+      "cpu_percent": 45.2,
+      "memory_mb": 512,
+      "io_read_mb": 100,
+      "io_write_mb": 50
+    }
+  ],
+  "bottlenecks": [
+    {
+      "stage": "port_scanning",
+      "type": "cpu_bound",
+      "severity": "high",
+      "recommendation": "Parallelize port scanning across 10 threads"
+    }
+  ]
+}
+```
+
+### Benchmark Comparison Framework
+
+| Metric | Baseline | Optimized | Improvement | Target |
+|--------|----------|-----------|-------------|--------|
+| Duration | 3600s | 1800s | 50% | 40% |
+| Memory Peak | 2GB | 1.2GB | 40% | 30% |
+| Error Rate | 5% | 1% | 80% | 75% |
+| Throughput | 100 req/s | 250 req/s | 150% | 100% |
+| CPU Utilization | 30% | 70% | 133% | 100% |
+
+## Optimization Strategies
+
+### Speed Optimization
+
+| Strategy | Applicable Stage | Expected Improvement |
+|----------|-----------------|---------------------|
+| Parallel execution | Independent stages | 2-10x |
+| Caching | Repeated queries | 5-50x |
+| Connection pooling | Network I/O | 2-5x |
+| Batch processing | Data processing | 3-10x |
+| Lazy loading | Resource initialization | 10-100x |
+| Compression | Data transfer | 2-5x |
+
+### Reliability Optimization
+
+| Strategy | Applicable Stage | Expected Improvement |
+|----------|-----------------|---------------------|
+| Retry with backoff | External calls | 90-99% recovery |
+| Circuit breaker | Service dependencies | Prevents cascade |
+| Timeout enforcement | Long-running ops | Prevents hangs |
+| Graceful degradation | Non-critical stages | Partial success |
+| Health checks | All stages | Early failure detection |
+
+### Resource Optimization
+
+| Strategy | Applicable Stage | Expected Improvement |
+|----------|-----------------|---------------------|
+| Memory pooling | Memory-intensive ops | 30-50% reduction |
+| Lazy resource loading | Initialization | 20-40% reduction |
+| Compression | Data storage | 50-80% reduction |
+| Connection reuse | Network ops | 30-60% reduction |
+| Batch operations | I/O operations | 40-70% reduction |
+
+## Module Categories
+
+| Category | Modules | Focus |
+|----------|---------|-------|
+| Workflow Design | 01-03 | Architecture and patterns |
+| Integration | 04, 27, 42-44 | API and tool integration |
+| Analysis | 05, 12-13, 36-37 | Data analysis and benchmarking |
+| Monitoring | 06, 08, 17, 40 | Observability and metrics |
+| Optimization | 14-15, 18, 41 | Performance and scalability |
+| Operations | 09-11, 20-22, 32 | Deployment and maintenance |
+| Quality | 16, 19, 34-35 | Testing and debugging |
+| Security | 30, 38 | Security and compliance |
+| Strategy | 23-26, 31, 33, 39, 45-50 | Planning and standards |
+
 ## Usage Examples
 
 ### Creating an Optimization Session
@@ -358,6 +459,29 @@ session = create_optimization_session(
 )
 ```
 
+### Running a Profiling Session
+
+```python
+profile_result = run_profiling(
+    session_id=session.session_id,
+    profiling_type="pipeline_profiling",
+    sample_count=10
+)
+print(f"Bottlenecks found: {len(profile_result.bottlenecks)}")
+```
+
+### Comparing Baseline to Optimized
+
+```python
+comparison = compare_metrics(
+    session_id=session.session_id,
+    baseline=session.baseline_metrics,
+    current=session.current_metrics
+)
+for metric, improvement in comparison.items():
+    print(f"{metric}: {improvement}% improvement")
+```
+
 ### Querying Optimization Results
 
 ```python
@@ -368,4 +492,17 @@ sessions = find_optimization_sessions(
 for s in sessions:
     print(f"Workflow: {s.target_workflow}, "
           f"Improvement: {s.improvements.get('speed', 'N/A')}")
+```
+
+### Applying an Optimization
+
+```python
+apply_optimization(
+    session_id=session.session_id,
+    optimization_id="parallel-scanning",
+    change={
+        "type": "parallel_execution",
+        "config": {"workers": 10, "chunk_size": 100}
+    }
+)
 ```

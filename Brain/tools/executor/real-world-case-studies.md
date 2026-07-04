@@ -537,4 +537,16 @@ class PatternExecutionLog:
 
 ---
 
+## Detection Signature Examples
+
+| Vuln Class | Detection Pattern | Tool |
+|------------|-------------------|------|
+| SQLi | Union-based data extraction | sqlmap |
+| XSS | Script tag reflection | nuclei |
+| SSRF | Internal IP access | custom |
+| XXE | External entity resolution | custom |
+| SSTI | Template expression evaluation | nuclei |
+
+---
+
 *Part of the Brain tools executor subsystem — Prompt-Hunting.*

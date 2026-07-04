@@ -312,6 +312,80 @@ sessions/<session_id>/
 | State Corruption | Checksum mismatch | Restore from checkpoint |
 | Reference Broken | External link dead | Log; continue analysis |
 
+## Case Study Analysis Framework
+
+### Analysis Dimensions
+
+Each case study is analyzed across multiple dimensions:
+
+| Dimension | Description | Weight |
+|-----------|-------------|--------|
+| `discovery` | How the vulnerability was found | 0.20 |
+| `exploitation` | How the vulnerability was exploited | 0.25 |
+| `impact` | What was the business impact | 0.25 |
+| `remediation` | How was it fixed | 0.15 |
+| `prevention` | How could it have been prevented | 0.15 |
+
+### Pattern Extraction Schema
+
+```json
+{
+  "pattern_id": "pat_abc123",
+  "source_cases": ["case_001", "case_002"],
+  "vulnerability_class": "xss",
+  "pattern_type": "exploitation_technique",
+  "description": "Stored XSS via markdown rendering",
+  "applicable_targets": ["cms", "forum", "blog"],
+  "detection_signatures": [
+    "Unescaped HTML in markdown output",
+    "Missing Content-Security-Policy header"
+  ],
+  "mitigation_patterns": [
+    "HTML entity encoding",
+    "CSP with nonce"
+  ]
+}
+```
+
+### Intelligence Synthesis
+
+Cross-case analysis produces actionable intelligence:
+
+| Intelligence Type | Description | Output |
+|-------------------|-------------|--------|
+| `trend` | Emerging vulnerability patterns | Trend report |
+| `technique` | Common exploitation techniques | Technique library |
+| `defense` | Effective defense mechanisms | Defense guide |
+| `tool` | Tools used in exploitation | Tool inventory |
+| `lesson` | Key lessons learned | Lesson database |
+
+## Module Categories
+
+### Vulnerability Classes (Modules 5-10, 31-49)
+
+| Category | Modules | Focus |
+|----------|---------|-------|
+| Injection | 5-7 | Critical infrastructure, zero-day, chains |
+| Web Application | 31-35 | Auth, authz, session, validation, logic |
+| Data Security | 36-40 | Info disclosure, crypto, communication, components |
+| Infrastructure | 41-43 | Zero trust, MFA, privilege escalation |
+| Post-Exploitation | 44-47 | Lateral movement, exfiltration, persistence, anti-forensics |
+| Operations | 48-50 | IR failure, compliance, post-mortem |
+
+### Research Methodology (Modules 8-16)
+
+| Module | Focus |
+|--------|-------|
+| 8 | Real-world impact assessment methodology |
+| 9 | Timeline analysis from discovery to fix |
+| 10 | Reward maximization strategies |
+| 11 | Report quality analysis |
+| 12 | Triage process understanding |
+| 13 | Program response analysis |
+| 14 | Disclosure timeline study |
+| 15 | Collaborative hunting cases |
+| 16 | Cross-program vulnerability patterns |
+
 ## Usage Examples
 
 ### Creating a Case Study Session
@@ -329,6 +403,30 @@ session = create_case_study_session(
 )
 ```
 
+### Extracting Patterns
+
+```python
+pattern = extract_pattern(
+    session_id=session.session_id,
+    case_name="06-Zero-Day-Exploitation-Case.md",
+    pattern_type="exploitation_technique"
+)
+print(f"Pattern: {pattern.description}")
+print(f"Applicable targets: {pattern.applicable_targets}")
+```
+
+### Synthesizing Intelligence
+
+```python
+synthesis = synthesize_intelligence(
+    session_id=session.session_id,
+    min_cases=5
+)
+for trend in synthesis.trends:
+    print(f"Trend: {trend.description}")
+    print(f"Cases: {len(trend.source_cases)}")
+```
+
 ### Querying Case Study Results
 
 ```python
@@ -339,4 +437,58 @@ sessions = find_case_study_sessions(
 for s in sessions:
     print(f"Cases analyzed: {len(s.cases_analyzed)}, "
           f"Patterns: {len(s.patterns_extracted)}")
+```
+
+### Generating Intelligence Report
+
+```python
+report = generate_intelligence_report(
+    session_id=session.session_id,
+    format="markdown"
+)
+print(f"Total patterns: {report.total_patterns}")
+print(f"Key insights: {len(report.insights)}")
+```
+
+### Cross-Case Correlation
+
+```python
+correlations = find_cross_case_correlations(
+    session_id=session.session_id,
+    min_cases=3
+)
+for corr in correlations:
+    print(f"Correlation: {corr.pattern} across {len(corr.cases)} cases")
+```
+
+### Generating Mitigation Recommendations
+
+```python
+mitigations = generate_mitigations(
+    session_id=session.session_id,
+    pattern_type="exploitation_technique"
+)
+for mit in mitigations:
+    print(f"Mitigation: {mit.description}, Priority: {mit.priority}")
+```
+
+### Exporting Intelligence Data
+
+```python
+export_intelligence_data(
+    session_id=session.session_id,
+    format="json",
+    output_path="case-intelligence-export.json"
+)
+```
+
+### Generating Case Summary Report
+
+```python
+report = generate_case_summary(
+    session_id=session.session_id,
+    case_name="06-Zero-Day-Exploitation-Case.md"
+)
+print(f"Key findings: {len(report.key_findings)}")
+print(f"Patterns extracted: {len(report.patterns)}")
 ```

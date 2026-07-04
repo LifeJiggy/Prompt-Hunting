@@ -383,6 +383,56 @@ Terminal state. All report workers terminated.
 
 All 54 files serve as report writing modules. See the state definitions for the complete organized listing.
 
+## Inter-Process Communication
+
+### Message Types
+
+| Message | Producer | Consumer | Description |
+|---------|----------|----------|-------------|
+| `draft.section` | Draft Writer | Review Workers | Section drafted |
+| `review.comment` | Review Workers | Draft Writer | Review feedback |
+| `revision.complete` | Draft Writer | QA Checker | Revision done |
+| `qa.result` | QA Checker | Draft Writer | QA result |
+| `submission.ready` | Preparer | External | Report ready |
+| `feedback.received` | External | Feedback Analyzer | Program feedback |
+
+### Report Sections
+
+| Section | Source Files | Writer |
+|---------|-------------|--------|
+| Title | 01, 13, 14 | Title Formulator |
+| Executive Summary | 07, 23, 24 | Summary Writer |
+| Technical Description | 02, 08, 22, 43 | Technical Writer |
+| Impact Statement | 23, 24, 44 | Impact Writer |
+| Proof of Concept | 04, 47 | PoC Developer |
+| Remediation | 06, 29 | Remediation Writer |
+| Timeline | 11 | Timeline Writer |
+| References | 10, 32, 33 | Reference Formatter |
+
+### Report Quality Metrics
+
+| Metric | Target | Description |
+|--------|--------|-------------|
+| `completeness_score` | > 0.95 | All sections present |
+| `technical_accuracy` | > 0.90 | Claims verifiable |
+| `impact_demonstration` | > 0.85 | Impact demonstrated |
+| `grammar_score` | > 0.95 | Grammar quality |
+| `formatting_score` | > 0.90 | Formatting consistency |
+| `reproducibility_score` | > 0.95 | PoC reproducible |
+| `overall_score` | > 0.90 | Weighted overall |
+
+### Version Control Schema
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `version_id` | string | Version identifier |
+| `report_id` | string | Parent report ID |
+| `created_at` | datetime | Creation timestamp |
+| `state` | enum | drafting, reviewing, completed |
+| `sections` | json | Section content hashes |
+| `review_comments` | [json] | Review comments |
+| `qa_results` | json | QA check results |
+
 ## Process Relationships
 
 ```
@@ -391,35 +441,40 @@ Orchestrator (parent)
   +-- Report Writing Manager
         |
         +-- Draft Writer
-        |     +-- Title Formulator
-        |     +-- Executive Summary Writer
-        |     +-- Technical Writer
-        |     +-- Impact Writer
-        |     +-- Remediation Writer
-        |     +-- PoC Developer
+        |     +-- Title Formulator (01, 13, 14)
+        |     +-- Executive Summary Writer (07, 23, 24)
+        |     +-- Technical Writer (02, 08, 22, 43)
+        |     +-- Impact Writer (23, 24, 44)
+        |     +-- Remediation Writer (06, 29)
+        |     +-- PoC Developer (04, 47)
+        |     +-- Timeline Writer (11)
+        |     +-- Reference Formatter (10, 32, 33)
         |
         +-- Review Workers
-        |     +-- Technical Reviewer
-        |     +-- Grammar Reviewer
+        |     +-- Technical Reviewer (22)
+        |     +-- Grammar Reviewer (21)
         |     +-- Impact Reviewer
-        |     +-- Severity Reviewer
+        |     +-- Severity Reviewer (05)
+        |     +-- Peer Reviewer (30, 38)
         |
         +-- QA Checker
-        |     +-- Completeness Checker
-        |     +-- Accuracy Checker
-        |     +-- Compliance Checker
-        |     +-- Platform Checker
+        |     +-- Completeness Checker (20)
+        |     +-- Accuracy Checker (22)
+        |     +-- Compliance Checker (25, 26)
+        |     +-- Platform Checker (Bugcrowd, HackerOne)
+        |     +-- Quality Metrics Checker (49)
         |
         +-- Submission Preparer
-        |     +-- Formatter
-        |     +-- Attachment Manager
-        |     +-- Version Controller
-        |     +-- Archive Manager
+        |     +-- Formatter (32, 34, 35)
+        |     +-- Attachment Manager (15)
+        |     +-- Version Controller (36)
+        |     +-- Archive Manager (45)
         |
         +-- Continuous Improvement
-              +-- Feedback Analyzer
-              +-- Metrics Collector
-              +-- Template Updater
+              +-- Feedback Analyzer (17, 39, 40)
+              +-- Metrics Collector (37)
+              +-- Template Updater (19)
+              +-- Personalization Engine (41, 42)
 ```
 
 ## Configuration Reference
@@ -434,3 +489,7 @@ Orchestrator (parent)
 | `report.platform_format` | auto | Platform-specific formatting |
 | `report.peer_review_enabled` | true | Enable peer review |
 | `report.archiving_enabled` | true | Enable archiving |
+| `report.auto_title` | true | Auto-generate title |
+| `report.auto_summary` | true | Auto-generate summary |
+| `report.max_attachments` | 10 | Max attachments per report |
+| `report.attachment_max_size_mb` | 10 | Max attachment size |

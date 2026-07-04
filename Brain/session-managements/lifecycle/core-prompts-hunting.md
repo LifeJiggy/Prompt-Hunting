@@ -331,6 +331,63 @@ sessions/<session_id>/
 | State Corruption | Checksum mismatch | Restore from checkpoint |
 | Scope Violation | Target out of scope | Suspend and alert |
 
+## Hunting Methodology Tracking
+
+### Standard Hunting Phases
+
+| Phase | Description | Duration | Key Activities |
+|-------|-------------|----------|----------------|
+| `recon` | Reconnaissance | 20% of time | Subdomain enum, tech fingerprint |
+| `enumeration` | Asset enumeration | 20% of time | Endpoint discovery, parameter mapping |
+| `testing` | Vulnerability testing | 40% of time | Manual and automated testing |
+| `analysis` | Result analysis | 10% of time | Finding triage, severity assessment |
+| `validation` | Finding validation | 5% of time | PoC development, impact proof |
+| `reporting` | Report writing | 5% of time | Documentation, submission |
+
+### Testing Strategy Matrix
+
+| Vulnerability Class | Detection Method | Tools | Priority |
+|---------------------|-----------------|-------|----------|
+| XSS | Input reflection, DOM analysis | Burp, XSStrike | High |
+| SQL Injection | Error-based, blind, time-based | SQLMap, Burp | Critical |
+| IDOR | Parameter manipulation | Manual, Autorize | High |
+| SSRF | URL parameter testing | Manual, SSRFmap | High |
+| CSRF | State-changing request analysis | Burp, Manual | Medium |
+| Auth Bypass | Authentication flow testing | Manual, Hydra | Critical |
+| File Upload | Upload restriction bypass | Manual, Burp | High |
+
+### Finding Severity Classification
+
+| Severity | Criteria | Examples |
+|----------|----------|----------|
+| Critical | Full system compromise, data breach | RCE, SQLi with data access |
+| High | Significant impact, privilege escalation | Stored XSS, IDOR to admin |
+| Medium | Limited impact, requires interaction | Reflected XSS, CSRF |
+| Low | Minimal impact, defense-in-depth | Missing headers, verbose errors |
+| Informational | No direct security impact | Version disclosure, comments |
+
+## Module Loading Strategy
+
+### Priority-Based Loading
+
+Modules are loaded based on hunting priority:
+
+| Priority | Modules | Load Order |
+|----------|---------|------------|
+| 1 - Critical | Auth, Injection, RCE | Load first |
+| 2 - High | XSS, SSRF, IDOR | Load second |
+| 3 - Medium | CSRF, Logic, Config | Load third |
+| 4 - Low | Info Disclosure, Headers | Load on demand |
+
+### Module Compatibility
+
+| Module Group | Compatible With | Conflicts |
+|--------------|----------------|-----------|
+| Web Application | All web modules | None |
+| API Testing | REST, GraphQL, WebSocket | None |
+| Mobile | Mobile-specific modules | Web-only modules |
+| Infrastructure | Network, Cloud modules | Application modules |
+
 ## Usage Examples
 
 ### Creating a Hunting Session
@@ -350,6 +407,21 @@ session = create_hunting_session(
 )
 ```
 
+### Tracking Test Execution
+
+```python
+record_test(
+    session_id=session.session_id,
+    test_id="test_xss_01",
+    endpoint="/api/search",
+    method="GET",
+    parameter="q",
+    payload="<script>alert(1)</script>",
+    result="reflected",
+    severity="high"
+)
+```
+
 ### Querying Hunting Results
 
 ```python
@@ -361,4 +433,56 @@ for s in sessions:
     print(f"Target: {s.target}, "
           f"Findings: {s.findings_count}, "
           f"By severity: {s.findings_by_severity}")
+```
+
+### Generating Hunting Report
+
+```python
+report = generate_hunting_report(
+    session_id=session.session_id,
+    format="markdown"
+)
+print(f"Total findings: {report.total_findings}")
+print(f"Critical: {report.critical_count}")
+print(f"High: {report.high_count}")
+```
+
+### Exporting Findings
+
+```python
+export_findings(
+    session_id=session.session_id,
+    format="json",
+    output_path="findings-export.json"
+)
+```
+
+### Calculating Test Coverage
+
+```python
+coverage = calculate_test_coverage(
+    session_id=session.session_id
+)
+print(f"Endpoints tested: {coverage.endpoints_tested}/{coverage.endpoints_total}")
+print(f"Coverage percentage: {coverage.percentage}%")
+```
+
+### Analyzing Finding Trends
+
+```python
+trends = analyze_finding_trends(
+    session_id=session.session_id
+)
+for trend in trends:
+    print(f"Trend: {trend.category}, Count: {trend.count}")
+```
+
+### Generating Vulnerability Summary
+
+```python
+summary = generate_vulnerability_summary(
+    session_id=session.session_id
+)
+print(f"Total vulnerabilities: {summary.total}")
+print(f"By class: {summary.by_class}")
 ```

@@ -317,6 +317,60 @@ sessions/<session_id>/
 | State Corruption | Checksum mismatch | Restore from checkpoint |
 | Classification Error | Wrong class assigned | Re-classify manually |
 
+## Pattern Extraction Framework
+
+### Pattern Categories
+
+| Category | Description | Examples |
+|----------|-------------|----------|
+| `input_validation` | Input handling flaws | XSS, SQLi, command injection |
+| `authentication` | Auth mechanism flaws | Bypass, token manipulation |
+| `authorization` | Access control flaws | IDOR, privilege escalation |
+| `session_management` | Session handling flaws | Fixation, hijacking |
+| `data_protection` | Data security flaws | Exposure, weak crypto |
+| `business_logic` | Logic design flaws | Race conditions, bypass |
+| `configuration` | Config security flaws | Defaults, misconfig |
+| `third_party` | Component vulnerabilities | Library flaws, supply chain |
+
+### Exploitation Technique Schema
+
+```json
+{
+  "technique_id": "tech_abc123",
+  "name": "Stored XSS via Markdown Rendering",
+  "vulnerability_class": "xss",
+  "complexity": "medium",
+  "prerequisites": [
+    "User can submit markdown content",
+    "Content rendered without sanitization"
+  ],
+  "steps": [
+    "Submit markdown with embedded HTML/JS",
+    "Content stored in database",
+    "Content rendered to other users",
+    "Script executes in victim context"
+  ],
+  "payloads": [
+    "[click me](javascript:alert(1))",
+    "<img src=x onerror=alert(1)>"
+  ],
+  "impact": "Session hijacking, data theft",
+  "mitigation": "HTML sanitization, CSP headers"
+}
+```
+
+### Classification Matrix
+
+| Vulnerability Class | Detection Signature | Testing Method | Tool |
+|---------------------|--------------------|-----------------|------|
+| XSS | Unescaped user input in HTML | Inject script payloads | XSStrike |
+| SQLi | Database error messages | Inject SQL syntax | SQLMap |
+| SSRF | Internal resource access | Inject internal URLs | Manual |
+| IDOR | Unauthorized data access | Modify identifiers | Autorize |
+| CSRF | Missing token validation | Forge state changes | Burp |
+| XXE | XML parsing errors | Inject external entities | XXEinject |
+| SSTI | Template expression eval | Inject template syntax | Tplmap |
+
 ## Usage Examples
 
 ### Creating a Disclosed Session
@@ -332,6 +386,94 @@ session = create_disclosed_session(
         "26-Clickjacking-UI-Redressing.md"
     ]
 )
+```
+
+### Extracting Exploitation Techniques
+
+```python
+technique = extract_exploitation_technique(
+    session_id=session.session_id,
+    case_name="02-XSS-Stored-Persistent-Attacks.md"
+)
+print(f"Technique: {technique.name}")
+print(f"Prerequisites: {technique.prerequisites}")
+```
+
+### Classifying Patterns
+
+```python
+classify_patterns(
+    session_id=session.session_id,
+    classification_rules={
+        "xss": {"input_reflection": True, "output_encoding": False},
+        "sqli": {"error_messages": True, "parameterized": False}
+    }
+)
+```
+
+### Building a Pattern Library
+
+```python
+library = build_pattern_library(
+    session_id=session.session_id,
+    min_occurrences=3
+)
+for pattern in library.patterns:
+    print(f"Pattern: {pattern.name}, Occurrences: {pattern.occurrences}")
+```
+
+### Tracking Exploitation Techniques
+
+```python
+techniques = get_exploitation_techniques(
+    session_id=session.session_id,
+    vulnerability_class="sqli"
+)
+for tech in techniques:
+    print(f"Technique: {tech.name}, Complexity: {tech.complexity}")
+```
+
+### Generating Detection Signatures
+
+```python
+signatures = generate_detection_signatures(
+    session_id=session.session_id,
+    format="suricata"
+)
+for sig in signatures:
+    print(f"Signature: {sig.name}, Rule: {sig.rule}")
+```
+
+### Exporting Pattern Data
+
+```python
+export_pattern_data(
+    session_id=session.session_id,
+    format="json",
+    output_path="disclosed-patterns-export.json"
+)
+```
+
+### Comparing Patterns Across Classes
+
+```python
+comparison = compare_patterns_across_classes(
+    session_id=session.session_id,
+    classes=["xss", "sqli", "ssrf"]
+)
+for cls, patterns in comparison.items():
+    print(f"{cls}: {len(patterns)} patterns")
+```
+
+### Generating Disclosure Timeline
+
+```python
+timeline = generate_disclosure_timeline(
+    session_id=session.session_id,
+    case_name="03-SQL-Injection-Data-Breaches.md"
+)
+print(f"Discovery to fix: {timeline.days_to_fix} days")
+print(f"Key milestones: {len(timeline.milestones)}")
 ```
 
 ### Querying Pattern Extraction Results

@@ -427,3 +427,47 @@ Orchestrator (parent)
 | `intelligence.max_patterns_per_report` | 50 | Max patterns in report |
 | `pattern.confidence_decay_rate` | 0.95 | Confidence decay per day |
 | `pattern.max_age_days` | 365 | Max pattern age before archival |
+
+## Recovery Procedures
+
+### Analysis Recovery
+
+1. On worker crash: Manager captures partial results, restarts worker
+2. On pattern DB corruption: Rebuild from last checkpoint
+3. On system reboot: Resume from last analysis state
+
+### Data Recovery
+
+1. Pattern extractions preserved in checkpoint files
+2. Trend data backed up after each detection cycle
+3. Case analysis results serialized after each class
+4. Intelligence reports archived with version control
+
+### Fallback Behavior
+
+| Scenario | Fallback | Recovery |
+|----------|----------|----------|
+| Case file unreadable | Skip, log warning | Retry next cycle |
+| Pattern DB full | Archive oldest entries | Continue |
+| Trend detector fails | Use cached trends | Recalculate |
+| Intelligence fails | Use cached report | Regenerate |
+
+## Audit Trail
+
+### Logged Events
+
+| Event | Log Level | Description |
+|-------|-----------|-------------|
+| `case.analysis_started` | INFO | Analysis began |
+| `case.analysis_complete` | INFO | Analysis finished |
+| `pattern.extracted` | INFO | Pattern extracted |
+| `trend.detected` | INFO | Trend detected |
+| `intelligence.generated` | INFO | Intel report generated |
+| `case.error` | ERROR | Analysis error |
+
+### Log Retention
+
+- Analysis logs: 90 days
+- Pattern logs: 365 days
+- Intelligence reports: indefinite
+- Error logs: 180 days

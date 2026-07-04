@@ -319,6 +319,98 @@ sessions/<session_id>/
 | Analysis Timeout | Deep analysis too slow | Reduce analysis depth |
 | State Corruption | Checksum mismatch | Restore from last valid checkpoint |
 
+## Program Analysis Framework
+
+### Program Profile Schema
+
+Each program profile includes:
+
+```json
+{
+  "program_name": "example-program",
+  "platform": "hackerone",
+  "type": "public",
+  "launch_date": "2024-01-01",
+  "reward_range": {"min": 100, "max": 10000, "currency": "USD"},
+  "avg_response_time_days": 3.5,
+  "avg_resolution_time_days": 14,
+  "total_reports_accepted": 450,
+  "total_bounties_paid": 500000,
+  "scope": {
+    "domains": ["*.example.com"],
+    "exclusions": ["admin.example.com"]
+  },
+  "vulnerability_types": ["xss", "sqli", "idor", "ssrf"],
+  "competition_level": "high",
+  "researcher_count": 500
+}
+```
+
+### ROI Calculation Model
+
+| Factor | Weight | Description |
+|--------|--------|-------------|
+| `reward_range_max` | 0.25 | Maximum potential reward |
+| `competition_level` | 0.20 | Inverse of competition |
+| `response_time` | 0.15 | Speed of program response |
+| `scope_coverage` | 0.15 | Alignment with researcher skills |
+| `acceptance_rate` | 0.15 | Historical acceptance rate |
+| `time_invested` | 0.10 | Estimated time to findings |
+
+ROI Score = Σ(Factor × Weight) × 100
+
+### Competitive Landscape Analysis
+
+| Metric | Low Competition | Medium | High Competition |
+|--------|----------------|--------|------------------|
+| Researchers | < 100 | 100-500 | > 500 |
+| Reports/week | < 5 | 5-20 | > 20 |
+| Avg bounty | High | Medium | Low |
+| Skill required | Basic | Intermediate | Advanced |
+
+## Engagement Planning
+
+### Plan Schema
+
+```json
+{
+  "plan_id": "plan_abc123",
+  "program": "example-program",
+  "target_date": "2025-02-01",
+  "time_budget_hours": 20,
+  "phases": [
+    {
+      "phase": "recon",
+      "duration_hours": 4,
+      "tools": ["subfinder", "httpx", "katana"],
+      "deliverables": ["asset_list.json", "endpoint_list.json"]
+    },
+    {
+      "phase": "testing",
+      "duration_hours": 12,
+      "focus_areas": ["xss", "idor"],
+      "tools": ["burp", "nuclei"],
+      "deliverables": ["findings.json"]
+    },
+    {
+      "phase": "reporting",
+      "duration_hours": 4,
+      "deliverables": ["reports/"]
+    }
+  ]
+}
+```
+
+### Strategy Decision Matrix
+
+| Program Characteristic | Strategy | Rationale |
+|----------------------|----------|-----------|
+| New program, low competition | Early entry, broad scope | First-mover advantage |
+| Established, high competition | Deep specialization | Niche expertise pays off |
+| Private, invitation only | Relationship building | Access requires trust |
+| Large scope, complex targets | Phased approach | Break into manageable chunks |
+| Fast response, good rewards | Volume hunting | Maximize submissions |
+
 ## Usage Examples
 
 ### Creating a Strategy Session
@@ -341,6 +433,28 @@ session = create_strategy_session(
 )
 ```
 
+### Building a Program Profile
+
+```python
+profile = build_program_profile(
+    session_id=session.session_id,
+    program_name="hackerone-example"
+)
+print(f"ROI Score: {profile.roi_score}")
+```
+
+### Generating an Engagement Plan
+
+```python
+plan = generate_engagement_plan(
+    session_id=session.session_id,
+    program="hackerone-example",
+    time_budget_hours=20
+)
+for phase in plan.phases:
+    print(f"{phase.phase}: {phase.duration_hours}h")
+```
+
 ### Querying Strategy Results
 
 ```python
@@ -351,4 +465,26 @@ sessions = find_strategy_sessions(
 for s in sessions:
     print(f"Programs analyzed: {len(s.target_programs)}, "
           f"Recommendations: {len(s.recommendations)}")
+```
+
+### Generating Strategy Report
+
+```python
+report = generate_strategy_report(
+    session_id=session.session_id,
+    format="markdown"
+)
+print(f"Top recommendation: {report.top_recommendation}")
+print(f"ROI projection: {report.roi_projection}")
+```
+
+### Tracking Program Performance
+
+```python
+performance = track_program_performance(
+    session_id=session.session_id,
+    program="hackerone-example"
+)
+print(f"Reports submitted: {performance.reports_submitted}")
+print(f"Acceptance rate: {performance.acceptance_rate}%")
 ```

@@ -20,11 +20,11 @@ VSCode enhances debugging capabilities by providing a full-featured development 
 
 ## Core Concepts
 
-### Browser Console Fundamentals
+## Browser Console Fundamentals
 
 The browser console serves as the primary interface for interacting with web applications during security testing. Understanding its capabilities and limitations is essential for effective debugging and security research.
 
-#### Console Object Methods
+## Console Object Methods
 
 The console object provides multiple methods for outputting information during debugging:
 
@@ -56,7 +56,7 @@ console.log('Phase 2: Testing');
 console.groupEnd();
 `
 
-#### Variable Inspection Techniques
+## Variable Inspection Techniques
 
 The console provides multiple ways to inspect and analyze variables:
 
@@ -79,7 +79,7 @@ Object.values(securitySettings);
 Object.entries(sessionData);
 `
 
-#### Network Request Monitoring
+## Network Request Monitoring
 
 The console enables monitoring and analysis of network requests:
 
@@ -105,11 +105,11 @@ PerformanceObserver.observe({
 });
 `
 
-### VSCode Debugging Architecture
+## VSCode Debugging Architecture
 
 VSCode provides a sophisticated debugging environment through its debug adapter protocol and extension ecosystem.
 
-#### Debug Configuration Types
+## Debug Configuration Types
 
 VSCode supports multiple debugging configurations for different scenarios:
 
@@ -148,7 +148,7 @@ VSCode supports multiple debugging configurations for different scenarios:
 }
 `
 
-#### Breakpoint Types and Usage
+## Breakpoint Types and Usage
 
 VSCode supports various breakpoint types for different debugging scenarios:
 
@@ -158,7 +158,7 @@ VSCode supports various breakpoint types for different debugging scenarios:
 - **Logpoints**: Log messages without pausing execution
 - **Function Breakpoints**: Pause at function entry
 
-#### Debug Console Integration
+## Debug Console Integration
 
 The debug console in VSCode provides interactive code execution during debugging:
 
@@ -179,11 +179,11 @@ function testSecurityBoundary() {
 }
 `
 
-### Data Flow Analysis
+## Data Flow Analysis
 
 Understanding how data flows through applications is crucial for security testing.
 
-#### Input Processing Traces
+## Input Processing Traces
 
 Track how user inputs are processed through the application:
 
@@ -200,7 +200,7 @@ const processedValue = processInput(originalValue);
 console.log('Transformation:', originalValue, '->', processedValue);
 `
 
-#### Response Analysis
+## Response Analysis
 
 Analyze how applications process and display response data:
 
@@ -224,9 +224,9 @@ observer.observe(document.body, {
 
 ## Methodology
 
-### Phase 1: Environment Setup
+## Phase 1: Environment Setup
 
-#### Browser Console Preparation
+## Browser Console Preparation
 
 Configure the browser console for optimal debugging:
 
@@ -235,7 +235,7 @@ Configure the browser console for optimal debugging:
 3. Set up console groupings for organized output
 4. Configure console persistence across page loads
 
-#### VSCode Configuration
+## VSCode Configuration
 
 Optimize VSCode for security research debugging:
 
@@ -244,9 +244,9 @@ Optimize VSCode for security research debugging:
 3. Set up workspace-specific settings
 4. Configure extensions for security testing
 
-### Phase 2: Application Analysis
+## Phase 2: Application Analysis
 
-#### Initial Reconnaissance
+## Initial Reconnaissance
 
 Begin with systematic application analysis:
 
@@ -258,7 +258,7 @@ console.log('Forms:', document.querySelectorAll('form'));
 console.log('API Endpoints:', performance.getEntriesByType('resource'));
 `
 
-#### Entry Point Identification
+## Entry Point Identification
 
 Identify all application entry points:
 
@@ -280,9 +280,9 @@ scripts.forEach(script => {
 });
 `
 
-### Phase 3: Breakpoint Strategy
+## Phase 3: Breakpoint Strategy
 
-#### Strategic Breakpoint Placement
+## Strategic Breakpoint Placement
 
 Set breakpoints at critical security points:
 
@@ -295,7 +295,7 @@ Set breakpoints at critical security points:
 // Output encoding
 `
 
-#### Conditional Breakpoint Logic
+## Conditional Breakpoint Logic
 
 Use conditions to focus on security-relevant scenarios:
 
@@ -311,9 +311,9 @@ url.includes('/admin');
 data.type === 'password';
 `
 
-### Phase 4: Data Collection
+## Phase 4: Data Collection
 
-#### Console Output Organization
+## Console Output Organization
 
 Organize console output for systematic analysis:
 
@@ -329,7 +329,7 @@ console.groupEnd();
 console.groupEnd();
 `
 
-#### Network Request Logging
+## Network Request Logging
 
 Capture and analyze network requests:
 
@@ -351,9 +351,9 @@ window.fetch = function(...args) {
 };
 `
 
-### Phase 5: Findings Documentation
+## Phase 5: Findings Documentation
 
-#### Evidence Capture
+## Evidence Capture
 
 Document findings with proper evidence:
 
@@ -382,7 +382,7 @@ function generateReport() {
 
 ## Real-World Examples
 
-### Example 1: Client-Side Authentication Bypass
+## Example 1: Client-Side Authentication Bypass
 
 **Scenario**: Testing authentication mechanisms in a single-page application
 
@@ -402,7 +402,7 @@ function generateReport() {
 - Documented evidence with console logs and breakpoints
 - Provided remediation recommendations
 
-### Example 2: API Security Testing
+## Example 2: API Security Testing
 
 **Scenario**: Analyzing API endpoints and authentication
 
@@ -422,7 +422,7 @@ function generateReport() {
 - Identified multiple authorization vulnerabilities
 - Provided detailed remediation guidance
 
-### Example 3: Session Management Analysis
+## Example 3: Session Management Analysis
 
 **Scenario**: Testing session handling mechanisms
 
@@ -442,7 +442,7 @@ function generateReport() {
 - Provided evidence through console monitoring
 - Recommended session security improvements
 
-### Example 4: Input Validation Testing
+## Example 4: Input Validation Testing
 
 **Scenario**: Comprehensive input validation analysis
 
@@ -462,7 +462,7 @@ function generateReport() {
 - Documented validation gaps with evidence
 - Provided validation and encoding recommendations
 
-### Example 5: Cross-Site Scripting Detection
+## Example 5: Cross-Site Scripting Detection
 
 **Scenario**: Identifying XSS vulnerabilities through debugging
 
@@ -486,9 +486,9 @@ function generateReport() {
 
 ## Advanced Techniques
 
-### Advanced Console Techniques
+## Advanced Console Techniques
 
-#### Custom Console Commands
+## Custom Console Commands
 
 Create custom console commands for repeated testing:
 
@@ -520,7 +520,7 @@ const SecurityTesting = {
 };
 `
 
-#### Advanced DOM Analysis
+## Advanced DOM Analysis
 
 Perform sophisticated DOM analysis:
 
@@ -542,9 +542,9 @@ function analyzeEventListeners(element) {
 }
 `
 
-### VSCode Advanced Debugging
+## VSCode Advanced Debugging
 
-#### Extension Integration
+## Extension Integration
 
 Leverage VSCode extensions for enhanced debugging:
 
@@ -560,7 +560,7 @@ Leverage VSCode extensions for enhanced debugging:
 }
 `
 
-#### Debug Script Automation
+## Debug Script Automation
 
 Automate debugging workflows:
 
@@ -579,9 +579,9 @@ Automate debugging workflows:
 }
 `
 
-### Custom Debugging Tools
+## Custom Debugging Tools
 
-#### Build Custom Debugging Extensions
+## Build Custom Debugging Extensions
 
 Create VSCode extensions for specialized debugging:
 
@@ -607,7 +607,7 @@ export function activate(context) {
 }
 `
 
-#### Debug Adapter Protocol Usage
+## Debug Adapter Protocol Usage
 
 Utilize the debug adapter protocol for advanced debugging:
 
@@ -633,43 +633,43 @@ Utilize the debug adapter protocol for advanced debugging:
 
 ## Common Pitfalls
 
-### 1. Console Output Overload
+## 1. Console Output Overload
 
 **Problem**: Excessive console output makes it difficult to identify relevant information.
 
 **Solution**: Use console filtering, grouping, and conditional logging to manage output volume.
 
-### 2. Breakpoint Interference
+## 2. Breakpoint Interference
 
 **Problem**: Breakpoints in non-relevant code paths interfere with testing workflow.
 
 **Solution**: Use conditional breakpoints and function breakpoints to target specific code paths.
 
-### 3. Memory Leaks in Long Sessions
+## 3. Memory Leaks in Long Sessions
 
 **Problem**: Extended debugging sessions cause memory issues.
 
 **Solution**: Regularly clear console output, close unused tabs, and restart debugging sessions.
 
-### 4. Source Map Issues
+## 4. Source Map Issues
 
 **Problem**: Source maps not loading correctly, making debugging difficult.
 
 **Solution**: Verify source map configuration, check file paths, and ensure proper build setup.
 
-### 5. Network Request Throttling
+## 5. Network Request Throttling
 
 **Problem**: Network monitoring affects application performance.
 
 **Solution**: Use selective filtering and conditional monitoring to reduce overhead.
 
-### 6. Console Context Confusion
+## 6. Console Context Confusion
 
 **Problem**: Confusion about console execution context.
 
 **Solution**: Always verify execution context and use proper scope references.
 
-### 7. Debug Session Management
+## 7. Debug Session Management
 
 **Problem**: Difficulty managing multiple debugging sessions.
 
@@ -679,14 +679,14 @@ Utilize the debug adapter protocol for advanced debugging:
 
 ## Tools and Resources
 
-### Browser Console Tools
+## Browser Console Tools
 
 - **Console API Reference**: MDN Web Docs documentation
 - **DevTools Extensions**: Browser-specific debugging extensions
 - **Console Utilities**: Custom utilities for security testing
 - **Performance Tools**: Browser performance analysis tools
 
-### VSCode Extensions
+## VSCode Extensions
 
 - **JavaScript Debugger**: Built-in JavaScript debugging support
 - **Debugger for Chrome**: Chrome debugging integration
@@ -695,14 +695,14 @@ Utilize the debug adapter protocol for advanced debugging:
 - **ESLint**: Code quality and security analysis
 - **Prettier**: Code formatting for readability
 
-### Debugging Libraries
+## Debugging Libraries
 
 - **debug**: Lightweight debugging library
 - **debugger**: Advanced debugging utilities
 - **v8-debugger**: V8 engine debugging tools
 - **chrome-remote-interface**: Chrome DevTools Protocol client
 
-### Online Resources
+## Online Resources
 
 - **MDN Web Docs**: Web technology documentation
 - **Chrome DevTools Documentation**: Official Chrome debugging guide
@@ -713,7 +713,7 @@ Utilize the debug adapter protocol for advanced debugging:
 
 ## Quick Reference Cheat Sheet
 
-### Console Commands
+## Console Commands
 
 | Command | Description |
 |---------|-------------|
@@ -724,7 +724,7 @@ Utilize the debug adapter protocol for advanced debugging:
 | console.clear() | Clear console output |
 | console.copy() | Copy object to clipboard |
 
-### VSCode Debug Commands
+## VSCode Debug Commands
 
 | Command | Description |
 |---------|-------------|
@@ -735,7 +735,7 @@ Utilize the debug adapter protocol for advanced debugging:
 | Shift+F11 | Step out |
 | Ctrl+Shift+F5 | Restart debugging |
 
-### Debug Configuration Tips
+## Debug Configuration Tips
 
 | Tip | Description |
 |-----|-------------|
@@ -745,7 +745,7 @@ Utilize the debug adapter protocol for advanced debugging:
 | Error Handling | Set breakpoints on error handlers |
 | Performance | Monitor execution timing |
 
-### Common Security Testing Patterns
+## Common Security Testing Patterns
 
 | Pattern | Description |
 |---------|-------------|
@@ -767,9 +767,9 @@ Utilize the debug adapter protocol for advanced debugging:
 
 ## Extended Reference Materials
 
-### Browser Console Advanced Features
+## Browser Console Advanced Features
 
-#### Console Memory Management
+## Console Memory Management
 
 Understanding console memory behavior is crucial for long debugging sessions:
 
@@ -791,7 +791,7 @@ Understanding console memory behavior is crucial for long debugging sessions:
 - Execution time analysis
 `
 
-#### Console Security Considerations
+## Console Security Considerations
 
 Security implications of console usage:
 
@@ -813,9 +813,9 @@ Security implications of console usage:
 - Validate session state
 `
 
-### VSCode Workspace Configuration
+## VSCode Workspace Configuration
 
-#### Project-Specific Settings
+## Project-Specific Settings
 
 Configure VSCode for security research projects:
 
@@ -837,7 +837,7 @@ Configure VSCode for security research projects:
 }
 `
 
-#### Extension Recommendations
+## Extension Recommendations
 
 Essential extensions for security research:
 
@@ -857,9 +857,9 @@ Essential extensions for security research:
 }
 `
 
-### Debugging Workflow Automation
+## Debugging Workflow Automation
 
-#### Task Configuration
+## Task Configuration
 
 Automate debugging workflows with VSCode tasks:
 
@@ -889,7 +889,7 @@ Automate debugging workflows with VSCode tasks:
 }
 `
 
-#### Launch Configurations
+## Launch Configurations
 
 Advanced debugging launch configurations:
 
@@ -924,9 +924,9 @@ Advanced debugging launch configurations:
 }
 `
 
-### Console API Reference
+## Console API Reference
 
-#### Console Methods Detailed Reference
+## Console Methods Detailed Reference
 
 Complete reference for console methods:
 
@@ -956,9 +956,9 @@ console.trace() - Stack trace
 console.select() - Element selection (Chrome)
 `
 
-### Network Monitoring Techniques
+## Network Monitoring Techniques
 
-#### Request Interception Patterns
+## Request Interception Patterns
 
 Advanced network request monitoring:
 
@@ -1004,9 +1004,9 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ entryTypes: ['resource'] });
 `
 
-### DOM Analysis Techniques
+## DOM Analysis Techniques
 
-#### DOM Tree Inspection
+## DOM Tree Inspection
 
 Advanced DOM inspection methods:
 
@@ -1049,9 +1049,9 @@ observer.observe(document.body, {
 });
 `
 
-### Debugging Best Practices
+## Debugging Best Practices
 
-#### Efficient Debugging Techniques
+## Efficient Debugging Techniques
 
 Maximize debugging efficiency:
 
@@ -1076,7 +1076,7 @@ Maximize debugging efficiency:
 - Profile frequently
 `
 
-#### Common Debugging Patterns
+## Common Debugging Patterns
 
 Frequently used debugging patterns:
 
@@ -1111,9 +1111,9 @@ try {
 }
 `
 
-### Advanced VSCode Features
+## Advanced VSCode Features
 
-#### Multi-Cursor Editing for Code Analysis
+## Multi-Cursor Editing for Code Analysis
 
 Use multi-cursor editing for efficient code analysis:
 
@@ -1135,7 +1135,7 @@ Use multi-cursor editing for efficient code analysis:
 - Replace with patterns
 `
 
-#### Integrated Terminal Usage
+## Integrated Terminal Usage
 
 Leverage VSCode's integrated terminal:
 
@@ -1155,9 +1155,9 @@ yarn audit
 prettier --write "src/**/*.js"
 `
 
-### Documentation Templates
+## Documentation Templates
 
-#### Bug Report Template
+## Bug Report Template
 
 Standard template for debugging-related bug reports:
 
@@ -1193,7 +1193,7 @@ Standard template for debugging-related bug reports:
 [Any other relevant information]
 `
 
-#### Security Finding Template
+## Security Finding Template
 
 Template for documenting security findings:
 
@@ -1235,9 +1235,9 @@ Template for documenting security findings:
 - [Best practices]
 `
 
-### Performance Optimization
+## Performance Optimization
 
-#### Debugging Performance Tips
+## Debugging Performance Tips
 
 Optimize debugging performance:
 
@@ -1262,7 +1262,7 @@ Optimize debugging performance:
 - Monitor memory usage
 `
 
-#### Code Performance Analysis
+## Code Performance Analysis
 
 Analyze code performance:
 
@@ -1285,9 +1285,9 @@ console.profile('Function Name');
 console.profileEnd('Function Name');
 `
 
-### Integration with Other Tools
+## Integration with Other Tools
 
-#### Browser Extension Integration
+## Browser Extension Integration
 
 Integrate debugging with browser extensions:
 
@@ -1309,7 +1309,7 @@ Integrate debugging with browser extensions:
 - Event tracking
 `
 
-#### External Tool Integration
+## External Tool Integration
 
 Connect with external debugging tools:
 
@@ -1331,9 +1331,9 @@ Connect with external debugging tools:
 - Deep inspection
 `
 
-### Community Resources
+## Community Resources
 
-#### Learning Resources
+## Learning Resources
 
 Essential learning materials:
 
@@ -1359,7 +1359,7 @@ Essential learning materials:
 - Discord: JavaScript communities
 `
 
-#### Tool Documentation
+## Tool Documentation
 
 Documentation for debugging tools:
 

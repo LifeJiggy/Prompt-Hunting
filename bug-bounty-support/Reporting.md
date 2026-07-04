@@ -20,7 +20,7 @@ Effective reporting also requires understanding the psychology of the triager. T
 
 ## Core Concepts
 
-### Report Anatomy
+## Report Anatomy
 
 Every bug bounty report consists of several key components that work together to tell a complete story:
 
@@ -38,7 +38,7 @@ Every bug bounty report consists of several key components that work together to
 
 **Remediation Recommendations**: Optional but highly recommended. Suggesting a fix demonstrates that you understand the underlying issue and are not just trying to exploit it. This builds trust with the program and increases the likelihood of a favorable triage.
 
-### Platform-Specific Conventions
+## Platform-Specific Conventions
 
 Each bug bounty platform has its own conventions and expectations for report formatting:
 
@@ -50,7 +50,7 @@ Each bug bounty platform has its own conventions and expectations for report for
 
 **Immunefi**: Immunefi focuses on blockchain and DeFi programs. Reports should include detailed technical analysis of smart contract vulnerabilities, financial impact calculations, and suggested fixes. Immunefi values reports that demonstrate understanding of the protocol's economic model and that quantify potential losses in monetary terms.
 
-### Severity Assessment
+## Severity Assessment
 
 Accurate severity assessment is crucial for ensuring your report is taken seriously and that you receive appropriate compensation. Use the CVSS 3.1 framework as your baseline:
 
@@ -72,7 +72,7 @@ Common severity mappings:
 - Medium: CVSS 4.0-6.9 (Reflected XSS, CSRF on sensitive actions, information disclosure)
 - Low: CVSS 0.1-3.9 (Clickjacking, missing headers, verbose error messages)
 
-### Report Writing Best Practices
+## Report Writing Best Practices
 
 **Be Specific**: Avoid vague language like "the application is vulnerable to XSS." Instead, specify exactly where the vulnerability exists and how it can be triggered.
 
@@ -84,7 +84,7 @@ Common severity mappings:
 
 **Follow Up**: If the triager asks clarifying questions, respond promptly and thoroughly. This demonstrates your commitment to helping the program resolve the issue.
 
-### Report Quality Indicators
+## Report Quality Indicators
 
 **Reproducibility**: Can someone else follow your steps and reproduce the vulnerability?
 
@@ -100,7 +100,7 @@ Common severity mappings:
 
 ## Methodology
 
-### Step 1: Validate the Finding
+## Step 1: Validate the Finding
 
 Before writing the report, ensure the vulnerability is valid and reproducible:
 
@@ -121,7 +121,7 @@ Common validation checks:
 
 Validation is critical because submitting invalid reports wastes triager time and can negatively impact your reputation on the platform. Take the time to verify your findings before submitting.
 
-### Step 2: Determine Scope
+## Step 2: Determine Scope
 
 Verify that the finding is within the program's scope:
 
@@ -135,7 +135,7 @@ Verify that the finding is within the program's scope:
 
 Understanding scope is essential because out-of-scope findings will be closed immediately, wasting your time and effort. Pay attention to wildcard inclusions and exclusions, as these can be tricky.
 
-### Step 3: Calculate Severity
+## Step 3: Calculate Severity
 
 Use the CVSS 3.1 calculator to determine appropriate severity:
 
@@ -149,7 +149,7 @@ Use the CVSS 3.1 calculator to determine appropriate severity:
 
 CVSS scoring is the industry standard and using it demonstrates professionalism. However, be prepared to justify your scoring if the triager disagrees.
 
-### Step 4: Write the Report
+## Step 4: Write the Report
 
 Follow the report anatomy structure:
 
@@ -177,7 +177,7 @@ Follow the report anatomy structure:
 [Suggested fix]
 ```
 
-### Step 5: Review and Submit
+## Step 5: Review and Submit
 
 Before submitting, review your report against this checklist:
 
@@ -196,7 +196,7 @@ Before submitting, review your report against this checklist:
 
 ## Real-World Examples
 
-### Example 1: Reflected XSS in Search Parameter
+## Example 1: Reflected XSS in Search Parameter
 
 **Scenario**: A researcher discovered that the search functionality on an e-commerce platform reflected user input without proper sanitization, allowing injection of JavaScript payloads.
 
@@ -227,7 +227,7 @@ Response:
 
 **Remediation**: Implement HTML entity encoding for all user-supplied input before rendering in HTML context. Use Content Security Policy headers to mitigate the impact of XSS vulnerabilities. Consider implementing a Web Application Firewall (WAF) as an additional layer of defense.
 
-### Example 2: IDOR in User Profile API
+## Example 2: IDOR in User Profile API
 
 **Scenario**: A researcher found that the user profile API endpoint allowed access to other users' data by modifying the user ID parameter.
 
@@ -264,7 +264,7 @@ Response:
 
 **Remediation**: Implement proper authorization checks to ensure authenticated users can only access their own profile data. Use indirect references (e.g., session-based user lookup) instead of direct user IDs in API endpoints. Implement access control lists (ACLs) for all data access operations.
 
-### Example 3: CSRF on Password Change
+## Example 3: CSRF on Password Change
 
 **Scenario**: A researcher discovered that the password change functionality did not implement CSRF protection, allowing an attacker to change a victim's password without their knowledge.
 
@@ -307,7 +307,7 @@ Response:
 
 **Remediation**: Implement CSRF tokens for all state-changing operations. Validate Origin and Referer headers to ensure requests originate from the legitimate application. Consider requiring re-authentication for sensitive operations like password changes.
 
-### Example 4: SSRF via Webhook URL Parameter
+## Example 4: SSRF via Webhook URL Parameter
 
 **Scenario**: A researcher discovered that the webhook configuration endpoint allowed arbitrary URLs to be specified, enabling Server-Side Request Forgery to internal services.
 
@@ -344,7 +344,7 @@ Response:
 
 **Remediation**: Implement URL validation to prevent requests to internal network addresses. Use a whitelist of allowed domains/IP ranges. Consider using a dedicated internal network for webhook requests with proper firewall rules. Implement egress filtering to prevent outbound requests to internal resources.
 
-### Example 5: Open Redirect via Parameter Manipulation
+## Example 5: Open Redirect via Parameter Manipulation
 
 **Scenario**: A researcher found that the logout endpoint contained an open redirect vulnerability, allowing an attacker to redirect users to malicious sites after logout.
 
@@ -378,7 +378,7 @@ Location: https://evil.example.com
 
 ## Advanced Techniques
 
-### Technique 1: Impact Escalation Through Chaining
+## Technique 1: Impact Escalation Through Chaining
 
 When a vulnerability alone might be medium severity, consider how it could be chained with other issues to create a higher-impact attack:
 
@@ -404,7 +404,7 @@ When reporting chained vulnerabilities, clearly explain each step and how they c
 5. Database access enables data exfiltration
 ```
 
-### Technique 2: Business Logic Exploitation
+## Technique 2: Business Logic Exploitation
 
 Business logic vulnerabilities often require more creative thinking than technical vulnerabilities:
 
@@ -418,7 +418,7 @@ Business logic vulnerabilities often require more creative thinking than technic
 
 Document the business context and explain why the logic flaw is exploitable. Include calculations showing potential financial impact.
 
-### Technique 3: Information Disclosure Chains
+## Technique 3: Information Disclosure Chains
 
 Combine multiple information disclosure issues to reveal sensitive information:
 
@@ -432,7 +432,7 @@ Combine multiple information disclosure issues to reveal sensitive information:
 
 When reporting information disclosure chains, show how each piece of information enables the next step in the attack chain.
 
-### Technique 4: Client-Side Attack Vectors
+## Technique 4: Client-Side Attack Vectors
 
 Client-side vulnerabilities can have significant impact through browser-based attacks:
 
@@ -446,7 +446,7 @@ Client-side vulnerabilities can have significant impact through browser-based at
 
 Include browser-specific details and test across multiple browsers to ensure consistent reproduction.
 
-### Technique 5: Account Takeover Chains
+## Technique 5: Account Takeover Chains
 
 Combine multiple vulnerabilities to achieve account takeover:
 
@@ -463,7 +463,7 @@ Document each step and explain how they combine to achieve the final impact.
 
 ## Common Pitfalls
 
-### Pitfall 1: Vague Impact Statements
+## Pitfall 1: Vague Impact Statements
 
 **Mistake**: "This vulnerability could potentially be used to access user data."
 
@@ -471,43 +471,43 @@ Document each step and explain how they combine to achieve the final impact.
 
 Always quantify the impact and specify exactly what an attacker can achieve.
 
-### Pitfall 2: Incomplete Reproduction Steps
+## Pitfall 2: Incomplete Reproduction Steps
 
 **Mistake**: "Navigate to the affected endpoint and trigger the vulnerability."
 
 **Fix**: Provide exact URLs, parameters, headers, and expected responses for each step. Include screenshots or video evidence where applicable.
 
-### Pitfall 3: Missing Precondition Documentation
+## Pitfall 3: Missing Precondition Documentation
 
 **Mistake**: Not mentioning that the vulnerability requires a specific user role or configuration.
 
 **Fix**: Document all prerequisites, including user roles, account settings, browser requirements, and environmental conditions.
 
-### Pitfall 4: Incorrect Severity Assessment
+## Pitfall 4: Incorrect Severity Assessment
 
 **Mistake**: Reporting a reflected XSS as Critical when it requires user interaction.
 
 **Fix**: Use the CVSS 3.1 calculator and justify each metric. Consider the real-world impact and attack complexity.
 
-### Pitfall 5: Duplicate Submissions
+## Pitfall 5: Duplicate Submissions
 
 **Mistake**: Reporting a vulnerability that has already been submitted by another researcher.
 
 **Fix**: Check existing reports before submitting. If you discover a duplicate, add new information to the existing report rather than creating a new one.
 
-### Pitfall 6: Aggressive or Unprofessional Tone
+## Pitfall 6: Aggressive or Unprofessional Tone
 
 **Mistake**: "This is a critical vulnerability that you should have caught. Your application is completely insecure."
 
 **Fix**: Maintain a professional, constructive tone. Focus on the technical details and impact, not on criticizing the program.
 
-### Pitfall 7: Missing Remediation Guidance
+## Pitfall 7: Missing Remediation Guidance
 
 **Mistake**: Not providing any suggestions for fixing the vulnerability.
 
 **Fix**: Include specific remediation recommendations that demonstrate your understanding of the issue and help the program fix it quickly.
 
-### Pitfall 8: Ignoring Platform Guidelines
+## Pitfall 8: Ignoring Platform Guidelines
 
 **Mistake**: Not following platform-specific formatting or submission guidelines.
 
@@ -517,7 +517,7 @@ Always quantify the impact and specify exactly what an attacker can achieve.
 
 ## Tools and Resources
 
-### Report Writing Tools
+## Report Writing Tools
 
 **Markdown Editors**: Obsidian, Typora, VS Code with Markdown preview
 
@@ -527,7 +527,7 @@ Always quantify the impact and specify exactly what an attacker can achieve.
 
 **Diagrams**: draw.io, Excalidraw, Mermaid for text-based diagrams
 
-### Severity Calculation
+## Severity Calculation
 
 **CVSS 3.1 Calculator**: https://www.first.org/cvss/calculator/3.1
 
@@ -535,7 +535,7 @@ Always quantify the impact and specify exactly what an attacker can achieve.
 
 **Bugcrowd VRT**: https://bugcrowd.com/vulnerability-rating-taxonomy
 
-### Platform-Specific Resources
+## Platform-Specific Resources
 
 **HackerOne Report Template**: https://support.hackerone.com/hc/en-us/articles/360001425632
 
@@ -543,7 +543,7 @@ Always quantify the impact and specify exactly what an attacker can achieve.
 
 **Intigriti Report Guidelines**: https://help.intigriti.com/hc/en-us/articles/360006738457
 
-### Writing Improvement
+## Writing Improvement
 
 **Grammarly**: Grammar and style checking
 
@@ -555,7 +555,7 @@ Always quantify the impact and specify exactly what an attacker can achieve.
 
 ## Quick Reference Cheat Sheet
 
-### Report Checklist
+## Report Checklist
 - [ ] Title: Specific, includes vulnerability type and endpoint
 - [ ] Summary: 1-3 sentences, clear and concise
 - [ ] Severity: Justified with CVSS 3.1 metrics
@@ -567,13 +567,13 @@ Always quantify the impact and specify exactly what an attacker can achieve.
 - [ ] Formatting: Follows platform-specific guidelines
 - [ ] Proofreading: Free of typos and grammatical errors
 
-### Severity Quick Reference
+## Severity Quick Reference
 - **Critical (9.0-10.0)**: RCE, SQLi with data exfil, auth bypass, chain leading to system compromise
 - **High (7.0-8.9)**: Stored XSS, SSRF to internal, IDOR with sensitive data, CSRF on critical actions
 - **Medium (4.0-6.9)**: Reflected XSS, CSRF on non-critical, info disclosure, open redirect
 - **Low (0.1-3.9)**: Clickjacking, missing headers, verbose errors, version disclosure
 
-### Title Formula
+## Title Formula
 ```
 [Vulnerability Type] in [Endpoint/Feature] via [Attack Vector]
 ```
@@ -582,14 +582,14 @@ Examples:
 - IDOR in user profile API via sequential user IDs
 - CSRF on password change via missing token validation
 
-### Impact Statement Formula
+## Impact Statement Formula
 ```
 An attacker could [action] affecting [target] by [method], resulting in [consequence].
 ```
 Example:
 "An attacker could steal session tokens from authenticated users by injecting malicious JavaScript via the search parameter, resulting in account takeover of any user who clicks a crafted link."
 
-### Common CVSS Metrics for Bug Bounty
+## Common CVSS Metrics for Bug Bounty
 | Vulnerability Type | AV | AC | PR | UI | S | C | I | A |
 |-------------------|----|----|----|----|---|---|---|---|
 | Reflected XSS | N | L | N | R | U | N | L | N |
@@ -599,15 +599,15 @@ Example:
 | IDOR | N | L | N | N | U | H | N | N |
 | CSRF | N | L | N | R | U | N | H | N |
 
-### Platform-Specific Notes
+## Platform-Specific Notes
 - **HackerOne**: Use CVSS 3.1, follow report template, check program policy
 - **Bugcrowd**: Map to VRT, include severity override if needed, check scope
 - **Intigriti**: Follow report template, include challenge submission if applicable
 - **Immunefi**: Include financial impact calculations, smart contract analysis
 
-### Report Writing Templates
+## Report Writing Templates
 
-#### Template 1: Standard Vulnerability Report
+## Template 1: Standard Vulnerability Report
 
 ```markdown
 # [Vulnerability Type] in [Endpoint/Feature]
@@ -616,12 +616,12 @@ Example:
 [1-3 sentence overview of the vulnerability]
 
 ## Vulnerability Details
-### Affected Endpoint
+## Affected Endpoint
 - URL: [Full URL]
 - Method: [HTTP Method]
 - Parameters: [List of affected parameters]
 
-### Vulnerability Description
+## Vulnerability Description
 [Detailed technical description of the vulnerability]
 
 ## Severity Assessment
@@ -631,10 +631,10 @@ Example:
 - Justification: [Why this severity is appropriate]
 
 ## Impact
-### Business Impact
+## Business Impact
 [Description of business risk and potential consequences]
 
-### Technical Impact
+## Technical Impact
 [Description of technical capabilities an attacker gains]
 
 ## Steps to Reproduce
@@ -644,24 +644,24 @@ Example:
 [Continue for all steps]
 
 ## Proof of Concept
-### Request
+## Request
 ```http
 [HTTP request with headers and body]
 ```
 
-### Response
+## Response
 ```http
 [HTTP response showing vulnerability]
 ```
 
-### Evidence
+## Evidence
 [Screenshots, videos, or other evidence]
 
 ## Remediation
-### Recommended Fix
+## Recommended Fix
 [Specific remediation recommendations]
 
-### Long-term Prevention
+## Long-term Prevention
 [Additional security measures to prevent similar issues]
 
 ## References
@@ -670,7 +670,7 @@ Example:
 - [Other relevant references]
 ```
 
-#### Template 2: Chain Vulnerability Report
+## Template 2: Chain Vulnerability Report
 
 ```markdown
 # Chained Vulnerabilities: [Primary] + [Secondary] = [Impact]
@@ -679,11 +679,11 @@ Example:
 [1-3 sentence overview of the vulnerability chain]
 
 ## Chain Overview
-### Individual Vulnerabilities
+## Individual Vulnerabilities
 1. **[Vulnerability 1]**: [Brief description]
 2. **[Vulnerability 2]**: [Brief description]
 
-### Chain Impact
+## Chain Impact
 [How the vulnerabilities combine to create greater impact]
 
 ## Severity Assessment
@@ -692,37 +692,37 @@ Example:
 - Justification: [Why the chain deserves combined severity]
 
 ## Impact
-### Combined Impact
+## Combined Impact
 [Description of the amplified impact from chaining]
 
-### Attack Scenario
+## Attack Scenario
 [Step-by-step attack scenario showing the chain in action]
 
 ## Reproduction Steps
-### Step 1: [First Vulnerability]
+## Step 1: [First Vulnerability]
 [Detailed reproduction steps]
 
-### Step 2: [Second Vulnerability]
+## Step 2: [Second Vulnerability]
 [Detailed reproduction steps]
 
-### Step 3: Chain Exploitation
+## Step 3: Chain Exploitation
 [How to chain the vulnerabilities]
 
 ## Proof of Concept
 [Technical evidence for each step of the chain]
 
 ## Remediation
-### Individual Fixes
+## Individual Fixes
 [Fixes for each individual vulnerability]
 
-### Chain Prevention
+## Chain Prevention
 [Additional measures to prevent chaining]
 
 ## References
 [Relevant references for each vulnerability]
 ```
 
-#### Template 3: Business Logic Vulnerability Report
+## Template 3: Business Logic Vulnerability Report
 
 ```markdown
 # Business Logic Flaw in [Feature]
@@ -731,17 +731,17 @@ Example:
 [1-3 sentence overview of the business logic flaw]
 
 ## Business Context
-### Intended Behavior
+## Intended Behavior
 [How the feature is supposed to work]
 
-### Actual Behavior
+## Actual Behavior
 [How the feature can be abused]
 
 ## Vulnerability Details
-### Affected Feature
+## Affected Feature
 [Description of the affected feature]
 
-### Flaw Description
+## Flaw Description
 [Detailed description of the logic flaw]
 
 ## Severity Assessment
@@ -750,13 +750,13 @@ Example:
 - Justification: [Why this severity is appropriate]
 
 ## Impact
-### Financial Impact
+## Financial Impact
 [Quantified financial impact if applicable]
 
-### Business Impact
+## Business Impact
 [Description of business consequences]
 
-### User Impact
+## User Impact
 [Impact on other users]
 
 ## Steps to Reproduce
@@ -768,26 +768,26 @@ Example:
 [Technical evidence demonstrating the logic flaw]
 
 ## Impact Calculation
-### Scenario 1: [Scenario]
+## Scenario 1: [Scenario]
 [Calculation of impact]
 
-### Scenario 2: [Scenario]
+## Scenario 2: [Scenario]
 [Calculation of impact]
 
 ## Remediation
-### Immediate Fix
+## Immediate Fix
 [Quick fix to prevent abuse]
 
-### Long-term Solution
+## Long-term Solution
 [Comprehensive fix to prevent similar issues]
 
 ## References
 [Relevant references]
 ```
 
-### Advanced Report Writing Techniques
+## Advanced Report Writing Techniques
 
-#### Technique 1: Storytelling in Reports
+## Technique 1: Storytelling in Reports
 
 Structure your report as a narrative that guides the triager through the vulnerability:
 
@@ -799,7 +799,7 @@ Structure your report as a narrative that guides the triager through the vulnera
 
 This narrative structure makes reports more engaging and easier to understand.
 
-#### Technique 2: Visual Evidence
+## Technique 2: Visual Evidence
 
 Use visual aids to enhance your report:
 
@@ -810,7 +810,7 @@ Use visual aids to enhance your report:
 
 Visual evidence makes reports more compelling and easier to verify.
 
-#### Technique 3: Comparative Analysis
+## Technique 3: Comparative Analysis
 
 Compare your vulnerability with known issues:
 
@@ -820,7 +820,7 @@ Compare your vulnerability with known issues:
 
 This demonstrates your understanding of the vulnerability class and helps with severity assessment.
 
-#### Technique 4: Economic Framing
+## Technique 4: Economic Framing
 
 Frame impact in economic terms:
 
@@ -830,7 +830,7 @@ Frame impact in economic terms:
 
 Economic framing helps business stakeholders understand the importance of the vulnerability.
 
-### Report Review Checklist
+## Report Review Checklist
 
 Before submitting your report, review it against this comprehensive checklist:
 
@@ -865,7 +865,7 @@ Before submitting your report, review it against this comprehensive checklist:
 - [ ] Grammar and spelling are correct
 - [ ] Report is well-organized
 
-### Post-Submission Activities
+## Post-Submission Activities
 
 After submitting your report:
 
@@ -875,7 +875,7 @@ After submitting your report:
 4. **Update if Needed**: If you discover new information, update the report
 5. **Learn from Feedback**: Use triager feedback to improve future reports
 
-### Common Report Writing Mistakes
+## Common Report Writing Mistakes
 
 **Mistake 1: Writing for Technical Audiences Only**
 - Reality: Triagers may not be experts in your specific testing approach
@@ -897,7 +897,7 @@ After submitting your report:
 - Reality: Disorganized reports are harder to review
 - Fix: Use clear sections and logical flow
 
-### Report Writing Best Practices Summary
+## Report Writing Best Practices Summary
 
 1. **Be Specific**: Use precise language and avoid vague statements
 2. **Be Clear**: Write for your audience, not for yourself
@@ -910,7 +910,7 @@ After submitting your report:
 9. **Be Honest**: Don't exaggerate impact or severity
 10. **Be Helpful**: Provide remediation guidance
 
-### Platform-Specific Report Formatting
+## Platform-Specific Report Formatting
 
 **HackerOne Formatting**:
 ```markdown
@@ -966,7 +966,7 @@ After submitting your report:
 [Remediation]
 ```
 
-### Report Writing Resources
+## Report Writing Resources
 
 **Writing Guides**:
 - Google Technical Writing Course
@@ -989,7 +989,7 @@ After submitting your report:
 - Intigriti Submission Guidelines
 - Immunefi Report Format
 
-### Quick Reference Cheat Sheet
+## Quick Reference Cheat Sheet
 1. **Validation**: Vulnerability reproduces consistently
 2. **Scope**: Affected endpoint/domain is in scope
 3. **Duplicates**: Checked existing reports for duplicates

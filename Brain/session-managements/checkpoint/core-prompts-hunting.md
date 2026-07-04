@@ -395,3 +395,55 @@ state_transitions:
 | `reconnaissance-deep-dive` | Recon results feed hunting targets |
 | `real-world-case-studies` | Case studies inform hunting strategy |
 | `report-writing-mastery` | Findings feed report generation |
+
+## Hunting Effectiveness Metrics
+
+```
+effectiveness_metrics:
+  per_vulnerability_class:
+    - class_name: "string"
+      tests_performed: "integer"
+      findings_discovered: "integer"
+      findings_per_test: "float"
+      average_severity: "float"
+      average_confidence: "float"
+      time_invested_minutes: "float"
+      efficiency_score: "findings per hour"
+  overall_metrics:
+    - total_tests_performed: "integer"
+    - total_findings_discovered: "integer"
+    - overall_findings_per_test: "float"
+    - overall_efficiency: "findings per hour"
+    - coverage_percentage: "float 0-100"
+    - average_time_per_class: "float minutes"
+    - classes_with_findings: "integer / total"
+    - classes_without_findings: "integer"
+  improvement_tracking:
+    - previous_session_metrics: "reference to last session"
+    - improvement_delta: "change from last session"
+    - trend: "improving | stable | declining"
+    - areas_for_improvement: "list of low-performing classes"
+```
+
+## Finding Quality Assessment
+
+```
+finding_quality:
+  assessment_criteria:
+    - reproducibility: "can the finding be reliably reproduced?"
+    - clarity: "is the finding clearly described?"
+    - impact: "is the impact well-demonstrated?"
+    - evidence: "is there sufficient supporting evidence?"
+    - uniqueness: "is this a novel finding?"
+  quality_scores:
+    - excellent: "all criteria met, high confidence"
+    - good: "most criteria met, solid evidence"
+    - acceptable: "core criteria met, needs minor improvement"
+    - poor: "multiple criteria not met, needs significant work"
+  improvement_areas:
+    - missing_evidence: "need more supporting evidence"
+    - unclear_impact: "impact not well demonstrated"
+    - reproducibility_issues: "finding hard to reproduce"
+    - incomplete_description: "description needs more detail"
+    - common_finding: "finding is well-known, low novelty"
+```
